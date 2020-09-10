@@ -3,4 +3,6 @@
 !Assets
 Assets/*
 !Assets/Scripts
+!Assets/Scenes
 Assets/Scripts/*.meta
+Assets/Scenes/*.meta
