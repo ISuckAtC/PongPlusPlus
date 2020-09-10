@@ -2,5 +2,7 @@
 !.gitignore
 !Assets
 Assets/*
+!Assets/*.meta
 !Assets/Scripts
 !Assets/Scenes
+!Assets/Physics\ Materials
