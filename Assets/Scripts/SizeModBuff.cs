@@ -10,7 +10,7 @@ public class SizeModBuff : MonoBehaviour
     {
         if (collider.tag == "Ball")
         {
-            collider.transform.localScale.Scale(new Vector3(SizeMod, SizeMod, 1));
+            collider.transform.localScale = new Vector3(SizeMod, SizeMod, 1);
             Destroy(gameObject);
         }
     }
