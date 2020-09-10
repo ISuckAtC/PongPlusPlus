@@ -8,9 +8,11 @@ public class PlatformMovement : MonoBehaviour
     public KeyCode Up, Down;
     public float speed;
 
+    Rigidbody2D rb;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
 
@@ -18,12 +20,11 @@ public class PlatformMovement : MonoBehaviour
     {
         if (Input.GetKey(Up)) 
         {
-            transform.Translate(Vector3.up * Time.deltaTime * speed);
+            rb.velocity = new Vector2(0, speed);
         }
-        
-        if(Input.GetKey(Down))
+        else if(Input.GetKey(Down))
         {
-            transform.Translate(Vector3.down * Time.deltaTime * speed);
-        }
+            rb.velocity = new Vector2(0, -speed);
+        } else rb.velocity = Vector2.zero;
     }
 }
