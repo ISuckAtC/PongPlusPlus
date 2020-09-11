@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 628347438}
   - component: {fileID: 628347437}
   m_Layer: 0
-  m_Name: Player (1)
+  m_Name: Player Bottom
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -356,7 +356,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!61 &628347434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -441,13 +441,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628347430}
-  m_LocalRotation: {x: -0.028709797, y: -0.028756486, z: 0.70709664, w: 0.70594853}
-  m_LocalPosition: {x: 0.021399975, y: -6.0410624, z: 0}
-  m_LocalScale: {x: 0.82513, y: 5, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalScale: {x: 1, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1494299453}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0.008, y: -4.658, z: 90.093}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!114 &628347437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 650898046}
   - component: {fileID: 650898045}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player Left
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -581,7 +581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650898038}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.015, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1494299453}
@@ -607,7 +607,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!114 &650898045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 690866838}
   - component: {fileID: 690866837}
   m_Layer: 0
-  m_Name: Player (1)
+  m_Name: Player Top
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -663,13 +663,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690866830}
-  m_LocalRotation: {x: -0.028709797, y: -0.028756486, z: 0.70709664, w: 0.70594853}
-  m_LocalPosition: {x: 0.002585888, y: 5.5354977, z: 0}
-  m_LocalScale: {x: 0.82513, y: 5, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 5, z: 0}
+  m_LocalScale: {x: 1, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1494299453}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!50 &690866833
 Rigidbody2D:
   serializedVersion: 4
@@ -690,7 +690,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!61 &690866835
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1475,7 +1475,7 @@ GameObject:
   - component: {fileID: 1506637771}
   - component: {fileID: 1506637770}
   m_Layer: 0
-  m_Name: Player (1)
+  m_Name: Player Right
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1501,7 +1501,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!61 &1506637767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1587,7 +1587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506637763}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.015, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 1494299453}
