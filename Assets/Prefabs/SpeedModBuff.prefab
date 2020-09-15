@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3511067337236422159}
   - component: {fileID: 3511067337236422156}
-  - component: {fileID: 3511067337236422157}
+  - component: {fileID: 7415351348927467419}
   - component: {fileID: 3511067337236422158}
   m_Layer: 0
-  m_Name: SizeModBuff
+  m_Name: SpeedModBuff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0.08745086, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.08745086, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3511067337236422157
+--- !u!114 &7415351348927467419
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,11 +93,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3511067337236422154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 787f2558099ae4d44a9ef37750595e25, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e10c691f11fef44bbf87cc784db3ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SizeMod: 0.5
-  Duration: 10
+  SpeedMod: 3
+  Duration: 15
 --- !u!58 &3511067337236422158
 CircleCollider2D:
   m_ObjectHideFlags: 0

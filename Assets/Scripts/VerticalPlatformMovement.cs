@@ -6,7 +6,7 @@ public class VerticalPlatformMovement : MonoBehaviour
 {
     // Public keycode properties allows you to set the keys in editor for easy testing
     public KeyCode Up, Down;
-    public float speed;
+    public float Speed;
 
     Rigidbody2D rb;
 
@@ -20,11 +20,11 @@ public class VerticalPlatformMovement : MonoBehaviour
     {
         if (Input.GetKey(Up)) 
         {
-            rb.velocity = new Vector2(0, speed);
+            rb.velocity = new Vector2(0, Speed);
         }
         else if(Input.GetKey(Down))
         {
-            rb.velocity = new Vector2(0, -speed);
+            rb.velocity = new Vector2(0, -Speed);
         } else rb.velocity = Vector2.zero;
     }
 }

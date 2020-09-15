@@ -18,4 +18,18 @@ public class BallBehavior : MonoBehaviour
     {
         
     }
+
+    public IEnumerator SizeModBuff(float duration, float mod)
+    {
+        transform.localScale = new Vector3(transform.localScale.x * mod, transform.localScale.y * mod, transform.localScale.z);
+        yield return new WaitForSeconds(duration);
+        transform.localScale = new Vector3(transform.localScale.x / mod, transform.localScale.y / mod, transform.localScale.z);
+    }
+
+    public IEnumerator SpeedModBuff(float duration, float mod)
+    {
+        rb.velocity *= mod;
+        yield return new WaitForSeconds(duration);
+        rb.velocity /= mod;
+    }
 }

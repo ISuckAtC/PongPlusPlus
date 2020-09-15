@@ -6,7 +6,7 @@ public class HorizontalPlatformMovement : MonoBehaviour
 {
     // Public keycode properties allows you to set the keys in editor for easy testing
     public KeyCode Left, Right;
-    public float speed;
+    public float Speed;
 
     Rigidbody2D rb;
 
@@ -20,11 +20,11 @@ public class HorizontalPlatformMovement : MonoBehaviour
     {
         if (Input.GetKey(Right)) 
         {
-            rb.velocity = new Vector2(speed, 0);
+            rb.velocity = new Vector2(Speed, 0);
         }
         else if(Input.GetKey(Left))
         {
-            rb.velocity = new Vector2(-speed, 0);
+            rb.velocity = new Vector2(-Speed, 0);
         } else rb.velocity = Vector2.zero;
     }
 }
