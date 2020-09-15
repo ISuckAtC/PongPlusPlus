@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformBehavior : MonoBehaviour
+public class BumperBehavior : MonoBehaviour
 {
-    Rigidbody2D rb;
+    public float BumpPower;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -22,7 +22,10 @@ public class PlatformBehavior : MonoBehaviour
         if (collision.gameObject.tag == "Ball") 
         {
             Rigidbody2D rbo = collision.gameObject.GetComponent<Rigidbody2D>(); // rbo -> rigidbody other
-            rbo.velocity = (rbo.velocity + rb.velocity).normalized * rbo.velocity.magnitude; // let platform movement alter ball trejectory
+
+            // Calculate bump vector by finding the difference in position and multiplying the normalized vector with the modifier
+            Vector2 bump = (new Vector2(rbo.transform.position.x - transform.position.x, rbo.transform.position.y - transform.position.y)).normalized * BumpPower;
+            rbo.velocity += bump;
         }
     }
 }

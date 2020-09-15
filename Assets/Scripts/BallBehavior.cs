@@ -16,7 +16,7 @@ public class BallBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.A)) Debug.Log(name + " | " + rb.velocity);
     }
 
     public IEnumerator SizeModBuff(float duration, float mod)
