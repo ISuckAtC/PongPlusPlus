@@ -8,3 +8,5 @@ Assets/*
 !Assets/Scenes
 !Assets/Physics\ Materials
 !Assets/Prefabs
+!Assets/Animation
+!Assets/Textures
