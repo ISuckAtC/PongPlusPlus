@@ -6,7 +6,7 @@ public class TestScriptUI : MonoBehaviour
     {
         Debug.Log("I got clicked");
         GameObject ball = Instantiate(Ball, new Vector3(0f,0f,0f), Quaternion.identity);
-        ball.GetComponent<Rigidbody2D>().velocity = new Vector2(3f, 0f);
+        ball.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range(-3f,3f), Random.Range(-3f,3f));
     }
 
     public GameObject Ball;
