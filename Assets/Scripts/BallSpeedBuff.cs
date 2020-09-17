@@ -10,7 +10,7 @@ public class BallSpeedBuff : MonoBehaviour
         if (collider.tag == "Ball")
         {
             BallBehavior bb = collider.GetComponent<BallBehavior>();
-            bb.StartCoroutine(bb.SpeedModBuff(Duration, SpeedMod));
+            bb.StartCoroutine(bb.SpeedModBuff(Duration, SpeedMod, true));
             Destroy(gameObject);
         }
     }
