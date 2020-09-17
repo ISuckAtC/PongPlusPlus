@@ -353,7 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Up: 119
   Down: 115
-  Speed: 0
+  Speed: 3
 --- !u!1 &6217373349592573379
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Up: 122
   Down: 120
-  Speed: 0
+  Speed: 3
 --- !u!1 &6217373349789318507
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,4 +673,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Up: 109
   Down: 110
-  Speed: 0
+  Speed: 3

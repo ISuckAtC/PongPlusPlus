@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6267848471718141542}
   - component: {fileID: 6267848471718141543}
   - component: {fileID: 6267848471718141540}
+  - component: {fileID: 840138391038422783}
   m_Layer: 0
   m_Name: Bumper
   m_TagString: Untagged
@@ -112,4 +113,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec65e95eac201f47be6a442be975594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BumpPower: 5
+  BumpPower: 0
+  SpeedUp: 3
+  SpeedUpDuration: 1
+--- !u!95 &840138391038422783
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6267848471718141541}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d478dcc68a9bbd6489419fe049a1911a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
