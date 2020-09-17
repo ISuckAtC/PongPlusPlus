@@ -2,7 +2,9 @@
 !.gitignore
 !Assets
 !ProjectSettings
-!WebGL\ Build
+!Build
+!TemplateData
+!index.html
 Assets/*
 !Assets/*.meta
 !Assets/Scripts
