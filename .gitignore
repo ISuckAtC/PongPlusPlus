@@ -2,6 +2,7 @@
 !.gitignore
 !Assets
 !ProjectSettings
+!Build
 !TemplateData
 !index.html
 Assets/*
