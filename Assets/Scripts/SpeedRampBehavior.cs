@@ -12,7 +12,7 @@ public class SpeedRampBehavior : MonoBehaviour
     {
         bc = GetComponent<BoxCollider2D>();
         sr = GetComponent<SpriteRenderer>();
-        bc.size = sr.size;
+        bc.size = new Vector2(bc.size.x, sr.size.y);
     }
 
     // Update is called once per frame

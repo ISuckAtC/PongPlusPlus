@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class BumperBehavior : MonoBehaviour
 {
-    public float BumpPower;
     public float SpeedUp;
     public float SpeedUpDuration;
+
+    public Motion bump;
 
     Animator anim;
     // Start is called before the first frame update
@@ -29,9 +30,9 @@ public class BumperBehavior : MonoBehaviour
             Rigidbody2D rbo = ball.GetComponent<Rigidbody2D>(); // rbo -> rigidbody other
 
             // Calculate bump vector by finding the difference in position and multiplying the normalized vector with the modifier
-            Vector2 bump = (new Vector2(rbo.transform.position.x - transform.position.x, rbo.transform.position.y - transform.position.y)).normalized * BumpPower;
+            //Vector2 bump = (new Vector2(rbo.transform.position.x - transform.position.x, rbo.transform.position.y - transform.position.y)).normalized * BumpPower;
             ball.GetComponent<BallBehavior>().StartCoroutine(ball.GetComponent<BallBehavior>().SpeedModBuff(SpeedUpDuration, SpeedUp, false));
-            anim.Play("Bumper");
+            anim.Play(bump.name);
         }
     }
 }
