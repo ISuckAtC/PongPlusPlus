@@ -30,9 +30,10 @@ public class DeathBarrierBehavior : MonoBehaviour
         {
 
             col.isTrigger = false;
-            Destroy(collider.gameObject);
+            collider.gameObject.layer = 8;
             Destroy(player);
-            sr.material = full;
+            // Forgot to push, uncomment when materials are in
+            //sr.material = full;
         }
     }
 }

@@ -36,10 +36,19 @@ public class BallBehavior : MonoBehaviour
     {
         currentBuffs++;
         rb.velocity = mult ? rb.velocity * mod :
-        rb.velocity.normalized * (rb.velocity + new Vector2(rb.velocity.x > 0 ? mod : -mod, rb.velocity.y > 0 ? mod : -mod)).magnitude;
+        rb.velocity.normalized * (new Vector2(rb.velocity.x + (rb.velocity.x > 0 ? mod : -mod), rb.velocity.y + (rb.velocity.y > 0 ? mod : -mod))).magnitude;
         yield return new WaitForSeconds(duration);
         rb.velocity = mult ? rb.velocity / mod :
-        rb.velocity.normalized * (rb.velocity - new Vector2(rb.velocity.x > 0 ? mod : -mod, rb.velocity.y > 0 ? mod : -mod)).magnitude;
+        rb.velocity.normalized * (new Vector2(rb.velocity.x - (rb.velocity.x > 0 ? mod : -mod), rb.velocity.y - (rb.velocity.y > 0 ? mod : -mod))).magnitude;
         currentBuffs--;
+    }
+
+    public IEnumerator Freeze(float duration)
+    {
+        Vector2 v = rb.velocity;
+        rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        yield return new WaitForSeconds(duration);
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.velocity = v;
     }
 }
