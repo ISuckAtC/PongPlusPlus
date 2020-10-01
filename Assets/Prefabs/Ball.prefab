@@ -133,6 +133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d68a3dc363f59d746be9a3cf0df6b3ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialVelocity: {x: 0, y: 0}
+  InitialVelocity: {x: 2, y: 0}
   CurrentVelocity: {x: 0, y: 0}
   currentBuffs: 0
