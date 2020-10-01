@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class GameControl : MonoBehaviour
             }
         }
         if (Input.GetKeyDown(KeyCode.G)) videoPlayer.Play();
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Prototype 2", LoadSceneMode.Single);
     }
 
     public void Winner(GameObject player)
