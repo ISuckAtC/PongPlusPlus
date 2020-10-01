@@ -214,6 +214,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper
       objectReference: {fileID: 0}
+    - target: {fileID: 6267848471718141541, guid: 8a134fdc0c3f7ef46b0c45b72ddef2b3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a134fdc0c3f7ef46b0c45b72ddef2b3, type: 3}
 --- !u!4 &103908306 stripped
@@ -235,7 +240,7 @@ GameObject:
   - component: {fileID: 117262702}
   m_Layer: 0
   m_Name: CornerLT
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,6 +388,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallTL
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692725, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
@@ -695,6 +705,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueCornerBumper
       objectReference: {fileID: 0}
+    - target: {fileID: 371349057351521063, guid: e36a5781b318fef4f9ee59a17b02fe1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 371349057351521064, guid: e36a5781b318fef4f9ee59a17b02fe1b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -818,6 +833,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueCornerBumper (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 371349057351521063, guid: e36a5781b318fef4f9ee59a17b02fe1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 371349057351521064, guid: e36a5781b318fef4f9ee59a17b02fe1b,
         type: 3}
@@ -962,6 +982,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SizeModBuff
       objectReference: {fileID: 0}
+    - target: {fileID: 3511067337236422154, guid: c0a575ba7b112084f9da6ecd473f4d53,
+        type: 3}
+      propertyPath: m_TagString
+      value: Buff
+      objectReference: {fileID: 0}
     - target: {fileID: 3511067337236422159, guid: c0a575ba7b112084f9da6ecd473f4d53,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1036,6 +1061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallLB
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692725, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
@@ -1297,7 +1327,7 @@ GameObject:
   - component: {fileID: 766942614}
   m_Layer: 0
   m_Name: DeathWallBottom
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1424,6 +1454,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallLT
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692725, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
@@ -1590,6 +1625,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpeedRamp
       objectReference: {fileID: 0}
+    - target: {fileID: 3312645757362446831, guid: e85459e7238e43b4cbcb58cadef774a1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85459e7238e43b4cbcb58cadef774a1, type: 3}
 --- !u!1001 &967558877
@@ -1603,6 +1643,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueCornerBumper (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 371349057351521063, guid: e36a5781b318fef4f9ee59a17b02fe1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 371349057351521064, guid: e36a5781b318fef4f9ee59a17b02fe1b,
         type: 3}
@@ -1698,6 +1743,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallBR
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692725, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
@@ -1795,6 +1845,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallTR
       objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692725, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1878,6 +1933,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueCornerBumper (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 371349057351521063, guid: e36a5781b318fef4f9ee59a17b02fe1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 371349057351521064, guid: e36a5781b318fef4f9ee59a17b02fe1b,
         type: 3}
@@ -2048,6 +2108,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6267848471718141541, guid: 8a134fdc0c3f7ef46b0c45b72ddef2b3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a134fdc0c3f7ef46b0c45b72ddef2b3, type: 3}
 --- !u!1 &1124884983
@@ -2064,7 +2129,7 @@ GameObject:
   - component: {fileID: 1124884987}
   m_Layer: 0
   m_Name: DeathWallTop
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2186,6 +2251,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueCornerBumper (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 371349057351521063, guid: e36a5781b318fef4f9ee59a17b02fe1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 371349057351521064, guid: e36a5781b318fef4f9ee59a17b02fe1b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2288,7 +2358,7 @@ GameObject:
   - component: {fileID: 1176380246}
   m_Layer: 0
   m_Name: CornerRT
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2437,6 +2507,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallRT
       objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692725, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2522,7 +2597,7 @@ GameObject:
   - component: {fileID: 1233197706}
   m_Layer: 0
   m_Name: CornerLT
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2751,6 +2826,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpeedRamp (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3312645757362446831, guid: e85459e7238e43b4cbcb58cadef774a1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85459e7238e43b4cbcb58cadef774a1, type: 3}
 --- !u!1 &1240194851 stripped
@@ -2770,6 +2850,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallBL
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692725, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
@@ -2862,7 +2947,7 @@ GameObject:
   - component: {fileID: 1285088825}
   m_Layer: 0
   m_Name: CornerRB
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3024,7 +3109,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295404544}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: cd04a74dbb5cc4c42aa993ba76c5adc6, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: a6c343381564acb44aab78081ed88a05, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 522162944}
@@ -3078,7 +3163,7 @@ GameObject:
   - component: {fileID: 1320068847}
   m_Layer: 0
   m_Name: DeathWallLeft
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3201,7 +3286,7 @@ GameObject:
   - component: {fileID: 1334061251}
   m_Layer: 0
   m_Name: CornerLB
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3425,6 +3510,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6267848471718141541, guid: 8a134fdc0c3f7ef46b0c45b72ddef2b3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a134fdc0c3f7ef46b0c45b72ddef2b3, type: 3}
 --- !u!4 &1469873598 stripped
@@ -3511,7 +3601,7 @@ GameObject:
   - component: {fileID: 1736127951}
   m_Layer: 0
   m_Name: CornerRT
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3665,6 +3755,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlueCornerBumper (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 371349057351521063, guid: e36a5781b318fef4f9ee59a17b02fe1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 371349057351521064, guid: e36a5781b318fef4f9ee59a17b02fe1b,
         type: 3}
@@ -3825,6 +3920,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bumper (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6267848471718141541, guid: 8a134fdc0c3f7ef46b0c45b72ddef2b3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a134fdc0c3f7ef46b0c45b72ddef2b3, type: 3}
 --- !u!1 &1800379538
@@ -3841,7 +3941,7 @@ GameObject:
   - component: {fileID: 1800379542}
   m_Layer: 0
   m_Name: DeathWallRight
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4049,6 +4149,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpeedRamp (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3312645757362446831, guid: e85459e7238e43b4cbcb58cadef774a1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85459e7238e43b4cbcb58cadef774a1, type: 3}
 --- !u!1 &1872733101
@@ -4106,7 +4211,7 @@ GameObject:
   - component: {fileID: 1895394379}
   m_Layer: 0
   m_Name: CornerRB
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4256,7 +4361,7 @@ GameObject:
   - component: {fileID: 1921989001}
   m_Layer: 0
   m_Name: CornerLB
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4404,6 +4509,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WallRB
+      objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692725, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
@@ -4563,6 +4673,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpeedRamp (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3312645757362446831, guid: e85459e7238e43b4cbcb58cadef774a1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e85459e7238e43b4cbcb58cadef774a1, type: 3}

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -27,7 +28,20 @@ public class GameControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            List<GameObject> a = GameObject.FindGameObjectsWithTag("Wall").ToList();
+            a.AddRange(GameObject.FindGameObjectsWithTag("Buff"));
+            a.AddRange(GameObject.FindGameObjectsWithTag("Obstacle"));
+            a.AddRange(GameObject.FindGameObjectsWithTag("Platform"));
+            a.AddRange(GameObject.FindGameObjectsWithTag("Ball"));
+            foreach(GameObject r in a) 
+            {
+                r.AddComponent<Rigidbody2D>().gravityScale = 1;
+                r.AddComponent<BoxCollider2D>();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.G)) videoPlayer.Play();
     }
 
     public void Winner(GameObject player)
