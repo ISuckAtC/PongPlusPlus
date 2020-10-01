@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class GameControl : MonoBehaviour
 {
-    public GameObject[] players;
+    public List<GameObject> players;
     public GameObject ballObject;
 
     public float ballStartOffset;
     public float startSpeed;
     public float startDelay;
+    public VideoPlayer videoPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +28,12 @@ public class GameControl : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Winner(GameObject player)
+    {
+        Debug.Log(player.name + " wins!");
+        player.GetComponent<PlatformBehavior>().deathBarrier.GetComponent<BoxCollider2D>().isTrigger = false;
+        //videoPlayer.Play();
     }
 }

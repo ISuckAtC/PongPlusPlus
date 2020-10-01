@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlatformBehavior : MonoBehaviour
 {
+    public GameObject deathBarrier;
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()

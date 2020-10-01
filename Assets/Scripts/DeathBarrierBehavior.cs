@@ -6,7 +6,7 @@ public class DeathBarrierBehavior : MonoBehaviour
 {
     public GameObject player;
 
-    Collider2D col;
+    BoxCollider2D col;
     SpriteRenderer sr;
 
     public Material full;
@@ -14,7 +14,7 @@ public class DeathBarrierBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        col = GetComponent<Collider2D>();
+        col = GetComponent<BoxCollider2D>();
         sr = GetComponent<SpriteRenderer>();
     }
 
@@ -31,7 +31,13 @@ public class DeathBarrierBehavior : MonoBehaviour
 
             col.isTrigger = false;
             collider.gameObject.layer = 8;
+            GameControl gc = GameObject.Find("GameControl").GetComponent<GameControl>();
+            gc.players.Remove(player);
             Destroy(player);
+            if (gc.players.Count == 1)
+            {
+                gc.Winner(gc.players[0]);
+            }
             // Forgot to push, uncomment when materials are in
             //sr.material = full;
         }
