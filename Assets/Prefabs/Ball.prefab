@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3657493458850510941}
   - component: {fileID: 3657493458850510940}
   - component: {fileID: 3657493458850510943}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -135,4 +135,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialVelocity: {x: 2, y: 0}
   CurrentVelocity: {x: 0, y: 0}
+  SpeedLimit: 15
   currentBuffs: 0

@@ -5,26 +5,26 @@ using UnityEngine;
 public class VerticalPlatformMovement : MonoBehaviour
 {
     // Public keycode properties allows you to set the keys in editor for easy testing
-    public KeyCode Up, Down;
+    public KeyCode Left, Right;
     public float Speed;
-
-    Rigidbody2D rb;
+    public float Boundary;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-    }
 
+    }
 
     void Update()
     {
-        if (Input.GetKey(Up)) 
+        if (Input.GetKey(Right)) 
         {
-            rb.velocity = new Vector2(0, Speed);
+            if (transform.position.y - Speed > -Boundary) transform.position = new Vector3(transform.position.x, transform.position.y - Speed, 0);
+            else transform.position = new Vector3(transform.position.x, -Boundary, 0);
         }
-        else if(Input.GetKey(Down))
+        if(Input.GetKey(Left))
         {
-            rb.velocity = new Vector2(0, -Speed);
-        } else rb.velocity = Vector2.zero;
+            if (transform.position.y + Speed < Boundary) transform.position = new Vector3(transform.position.x, transform.position.y + Speed, 0);
+            else transform.position = new Vector3(transform.position.x, Boundary, 0);
+        }
     }
 }

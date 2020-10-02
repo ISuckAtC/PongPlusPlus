@@ -7,24 +7,24 @@ public class HorizontalPlatformMovement : MonoBehaviour
     // Public keycode properties allows you to set the keys in editor for easy testing
     public KeyCode Left, Right;
     public float Speed;
-
-    Rigidbody2D rb;
+    public float Boundary;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-    }
 
+    }
 
     void Update()
     {
         if (Input.GetKey(Right)) 
         {
-            rb.velocity = new Vector2(Speed, 0);
+            if (transform.position.x + Speed < Boundary) transform.position = new Vector3(transform.position.x + Speed, transform.position.y, 0);
+            else transform.position = new Vector3(Boundary, transform.position.y, 0);
         }
-        else if(Input.GetKey(Left))
+        if(Input.GetKey(Left))
         {
-            rb.velocity = new Vector2(-Speed, 0);
-        } else rb.velocity = Vector2.zero;
+            if (transform.position.x - Speed > -Boundary) transform.position = new Vector3(transform.position.x - Speed, transform.position.y, 0);
+            else transform.position = new Vector3(-Boundary, transform.position.y, 0);
+        }
     }
 }

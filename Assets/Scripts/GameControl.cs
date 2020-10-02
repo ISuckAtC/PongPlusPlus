@@ -24,12 +24,13 @@ public class GameControl : MonoBehaviour
             ball.GetComponent<Rigidbody2D>().velocity = (new Vector2(player.transform.position.x - ball.transform.position.x, player.transform.position.y - ball.transform.position.y)).normalized * startSpeed;
             ball.GetComponent<BallBehavior>().StartCoroutine(ball.GetComponent<BallBehavior>().Freeze(startDelay));
         }
+        StartCoroutine(TopGear());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Alpha7))
         {
             List<GameObject> a = GameObject.FindGameObjectsWithTag("Wall").ToList();
             a.AddRange(GameObject.FindGameObjectsWithTag("Buff"));
@@ -42,7 +43,6 @@ public class GameControl : MonoBehaviour
                 r.AddComponent<BoxCollider2D>();
             }
         }
-        if (Input.GetKeyDown(KeyCode.G)) videoPlayer.Play();
         if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Prototype 2", LoadSceneMode.Single);
     }
 
@@ -51,5 +51,18 @@ public class GameControl : MonoBehaviour
         Debug.Log(player.name + " wins!");
         player.GetComponent<PlatformBehavior>().deathBarrier.GetComponent<BoxCollider2D>().isTrigger = false;
         //videoPlayer.Play();
+    }
+
+    public IEnumerator TopGear()
+    {
+        while(!Input.GetKey(KeyCode.T)) yield return new WaitForEndOfFrame();
+        while(!Input.GetKey(KeyCode.O)) yield return new WaitForEndOfFrame();
+        while(!Input.GetKey(KeyCode.P)) yield return new WaitForEndOfFrame();
+        while(!Input.GetKey(KeyCode.Space)) yield return new WaitForEndOfFrame();
+        while(!Input.GetKey(KeyCode.G)) yield return new WaitForEndOfFrame();
+        while(!Input.GetKey(KeyCode.E)) yield return new WaitForEndOfFrame();
+        while(!Input.GetKey(KeyCode.A)) yield return new WaitForEndOfFrame();
+        while(!Input.GetKey(KeyCode.R)) yield return new WaitForEndOfFrame();
+        videoPlayer.Play();
     }
 }

@@ -6,6 +6,7 @@ public class BallBehavior : MonoBehaviour
 {
     public Vector2 InitialVelocity;
     public Vector2 CurrentVelocity;
+    public float SpeedLimit;
     private Rigidbody2D rb;
     public int currentBuffs;
     // Start is called before the first frame update
@@ -21,6 +22,11 @@ public class BallBehavior : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A)) Debug.Log(name + " | " + rb.velocity);
         CurrentVelocity = rb.velocity;
+    }
+
+    void FixedUpdate()
+    {
+        if (rb.velocity.magnitude > SpeedLimit) rb.velocity = rb.velocity.normalized * SpeedLimit;
     }
 
     public IEnumerator SizeModBuff(float duration, float mod)
