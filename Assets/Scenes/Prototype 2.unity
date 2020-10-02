@@ -583,12 +583,42 @@ PrefabInstance:
     - target: {fileID: 6217373348994514991, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: Speed
-      value: 5
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373348994514991, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: Left
+      value: 111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373348994514991, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: Right
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373348994514991, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: Boundary
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6217373349581561240, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: Speed
-      value: 5
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373349581561240, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: Left
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373349581561240, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: Right
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373349581561240, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: Boundary
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6217373349581561243, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -1334,7 +1364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Left: 110
   Right: 109
-  Speed: 5
+  Speed: 0.3
   Boundary: 4
 --- !u!4 &599441898 stripped
 Transform:
@@ -3747,8 +3777,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Left: 122
   Right: 120
-  Speed: 5
-  Boundary: 0
+  Speed: 0.3
+  Boundary: 4
 --- !u!1 &1693507072
 GameObject:
   m_ObjectHideFlags: 0
