@@ -1030,6 +1030,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialVelocity: {x: 3, y: 0}
   CurrentVelocity: {x: 0, y: 0}
+  CurrentSpeed: 0
+  SpeedLimit: 0
   currentBuffs: 0
 --- !u!1 &826243853
 GameObject:
@@ -1202,7 +1204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -389, y: -279}
+  m_AnchoredPosition: {x: -904, y: 105.33}
   m_SizeDelta: {x: 428.912, y: 315.24182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899834008
@@ -1323,7 +1325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -414, y: 279.79}
+  m_AnchoredPosition: {x: -1217, y: 456}
   m_SizeDelta: {x: 395.86963, y: 104.58029}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &961533461
@@ -1870,6 +1872,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialVelocity: {x: 0, y: 3}
   CurrentVelocity: {x: 0, y: 0}
+  CurrentSpeed: 0
+  SpeedLimit: 0
   currentBuffs: 0
 --- !u!1 &1485914400
 GameObject:
@@ -2017,7 +2021,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -801.79, y: 229.92}
+  m_AnchoredPosition: {x: -792, y: 432}
   m_SizeDelta: {x: 316.4236, y: 204.31094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1559351159
@@ -2370,6 +2374,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialVelocity: {x: 0, y: -3}
   CurrentVelocity: {x: 0, y: 0}
+  CurrentSpeed: 0
+  SpeedLimit: 0
   currentBuffs: 0
 --- !u!1 &1614451817
 GameObject:
@@ -2658,8 +2664,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00021362, y: 0}
-  m_SizeDelta: {x: 395.8692, y: 92.23135}
+  m_AnchoredPosition: {x: -0.00021362305, y: 3.0872}
+  m_SizeDelta: {x: 395.8692, y: 98.40579}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1673610441
 MonoBehaviour:
@@ -3339,4 +3345,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialVelocity: {x: -3, y: 0}
   CurrentVelocity: {x: 0, y: 0}
+  CurrentSpeed: 0
+  SpeedLimit: 0
   currentBuffs: 0

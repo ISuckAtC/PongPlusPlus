@@ -4,32 +4,24 @@ using UnityEngine.UI;
 
 public class PlayerCardBehavior : MonoBehaviour
 {
-    int[] playerBallCount;
-    int[] playerKillCount;
-    public void BallCountUpdate(int amount, int player)
+    int ballCount;
+    int killCount;
+    public void BallCountUpdate(int amount)
     {
-        if (player < 0 || player > 3) throw new ArgumentOutOfRangeException("player", player, "player must be between 0 and 3");
-        playerBallCount[player] += amount;
+        ballCount += amount;
 
-        GameObject card = transform.GetChild(player).gameObject;
-
-        card.transform.Find("Balls").GetComponent<Text>().text = "Balls: " + playerBallCount[player];
+        transform.Find("Balls").GetComponent<Text>().text = "Balls: " + ballCount;
     }
 
-    public void KillCountUpdate(int amount, int player)
+    public void KillCountUpdate(int amount)
     {
-        if (player < 0 || player > 3) throw new ArgumentOutOfRangeException("player", player, "player must be between 0 and 3");
-        playerKillCount[player] += amount;
+        killCount += amount;
 
-        GameObject card = transform.GetChild(player).gameObject;
-
-        card.transform.Find("Kills").GetComponent<Text>().text = "Kills:" + playerKillCount[player];
+        transform.Find("Kills").GetComponent<Text>().text = "Kills:" + killCount;
     }
     void Start()
     {
-        playerBallCount = new int[] {0, 0, 0, 0};
 
-        playerKillCount = new int[] {0, 0, 0, 0};
     }
 
     // Update is called once per frame
@@ -37,12 +29,12 @@ public class PlayerCardBehavior : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
-            BallCountUpdate(1, 0);
+            BallCountUpdate(1);
         }
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            KillCountUpdate(1, 0);
+            KillCountUpdate(1);
         }
     }
 }
