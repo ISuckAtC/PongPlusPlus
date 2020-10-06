@@ -27,7 +27,7 @@ public class PlayerCardBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
+        /*if (Input.GetKeyDown(KeyCode.U))
         {
             BallCountUpdate(1);
         }
@@ -35,6 +35,6 @@ public class PlayerCardBehavior : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K))
         {
             KillCountUpdate(1);
-        }
+        }*/
     }
 }
