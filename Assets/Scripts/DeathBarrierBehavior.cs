@@ -31,15 +31,18 @@ public class DeathBarrierBehavior : MonoBehaviour
 
             col.isTrigger = false;
             collider.gameObject.layer = 8;
+            sr.material = full;
             GameControl gc = GameObject.Find("GameControl").GetComponent<GameControl>();
+            if(player.GetComponent<PlatformBehavior>().Horizontal) player.GetComponent<HorizontalPlatformMovement>().Speed = 0;
+            else player.GetComponent<VerticalPlatformMovement>().Speed = 0;
+            player.GetComponent<BoxCollider2D>().enabled = false;
             gc.players.Remove(player);
-            Destroy(player);
+            string[] anims = player.GetComponent<PlatformBehavior>().deathAnims;
+            player.GetComponent<Animator>().Play(anims[Random.Range(0, anims.Length)], 0);
             if (gc.players.Count == 1)
             {
                 gc.Winner(gc.players[0]);
             }
-            // Forgot to push, uncomment when materials are in
-            //sr.material = full;
         }
     }
 }

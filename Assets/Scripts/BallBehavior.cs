@@ -44,10 +44,10 @@ public class BallBehavior : MonoBehaviour
     {
         currentBuffs++;
         rb.velocity = mult ? rb.velocity * mod :
-        rb.velocity.normalized * (new Vector2(rb.velocity.x + (rb.velocity.x > 0 ? mod : -mod), rb.velocity.y + (rb.velocity.y > 0 ? mod : -mod))).magnitude;
+        rb.velocity.normalized * (rb.velocity.magnitude + mod);
         yield return new WaitForSeconds(duration);
         rb.velocity = mult ? rb.velocity / mod :
-        rb.velocity.normalized * (new Vector2(rb.velocity.x - (rb.velocity.x > 0 ? mod : -mod), rb.velocity.y - (rb.velocity.y > 0 ? mod : -mod))).magnitude;
+        rb.velocity.normalized * (rb.velocity.magnitude - mod);
         currentBuffs--;
     }
 

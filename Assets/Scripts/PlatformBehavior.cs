@@ -8,6 +8,7 @@ public class PlatformBehavior : MonoBehaviour
     public bool Horizontal;
     public float DI;
     SpriteRenderer sr;
+    public string[] deathAnims;
     // Start is called before the first frame update
     void Start()
     {

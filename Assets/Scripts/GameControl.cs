@@ -54,7 +54,9 @@ public class GameControl : MonoBehaviour
     public void Winner(GameObject player)
     {
         Debug.Log(player.name + " wins!");
-        player.GetComponent<PlatformBehavior>().deathBarrier.GetComponent<BoxCollider2D>().isTrigger = false;
+        GameObject db = player.GetComponent<PlatformBehavior>().deathBarrier;
+        db.GetComponent<BoxCollider2D>().isTrigger = false;
+        db.GetComponent<SpriteRenderer>().material = db.GetComponent<DeathBarrierBehavior>().full;
         //videoPlayer.Play();
     }
 
