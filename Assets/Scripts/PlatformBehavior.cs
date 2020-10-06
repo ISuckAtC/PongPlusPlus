@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlatformBehavior : MonoBehaviour
 {
     public GameObject deathBarrier;
+    public GameObject playerCard;
     public bool Horizontal;
     public float DI;
     SpriteRenderer sr;
+    public Color color;
     public string[] deathAnims;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,11 @@ public class PlatformBehavior : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ball") 
         {
-            collision.gameObject.GetComponent<SpriteRenderer>().color = sr.color;
+            BallBehavior ball = collision.gameObject.GetComponent<BallBehavior>();
+            collision.gameObject.GetComponent<SpriteRenderer>().color = color;
+            if (ball.lastPlayer != null) ball.lastPlayer.GetComponent<PlatformBehavior>().playerCard.GetComponent<PlayerCardBehavior>().BallCountUpdate(-1);
+            playerCard.GetComponent<PlayerCardBehavior>().BallCountUpdate(1);
+            ball.lastPlayer = gameObject;
 
             Vector2 diff = new Vector2(Horizontal ? collision.transform.position.x - transform.position.x : 0, Horizontal ? 0 : collision.transform.position.y - transform.position.y);
             diff *= DI;

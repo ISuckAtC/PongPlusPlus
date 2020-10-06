@@ -37,6 +37,8 @@ public class DeathBarrierBehavior : MonoBehaviour
             else player.GetComponent<VerticalPlatformMovement>().Speed = 0;
             player.GetComponent<BoxCollider2D>().enabled = false;
             gc.players.Remove(player);
+            collider.gameObject.GetComponent<BallBehavior>().lastPlayer.GetComponent<PlatformBehavior>().playerCard.GetComponent<PlayerCardBehavior>().KillCountUpdate(1);
+            collider.gameObject.GetComponent<BallBehavior>().lastPlayer.GetComponent<PlatformBehavior>().playerCard.GetComponent<PlayerCardBehavior>().BallCountUpdate(-1);
             string[] anims = player.GetComponent<PlatformBehavior>().deathAnims;
             player.GetComponent<Animator>().Play(anims[Random.Range(0, anims.Length)], 0);
             if (gc.players.Count == 1)

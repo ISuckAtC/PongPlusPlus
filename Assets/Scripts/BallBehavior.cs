@@ -10,11 +10,13 @@ public class BallBehavior : MonoBehaviour
     public float SpeedLimit;
     private Rigidbody2D rb;
     public int currentBuffs;
+    public GameObject lastPlayer;
     // Start is called before the first frame update
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = InitialVelocity;
+        lastPlayer = null;
         currentBuffs = 0;
     }
 
