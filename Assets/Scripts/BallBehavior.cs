@@ -6,6 +6,7 @@ public class BallBehavior : MonoBehaviour
 {
     public Vector2 InitialVelocity;
     public Vector2 CurrentVelocity;
+    public float CurrentSpeed;
     public float SpeedLimit;
     private Rigidbody2D rb;
     public int currentBuffs;
@@ -22,6 +23,7 @@ public class BallBehavior : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A)) Debug.Log(name + " | " + rb.velocity);
         CurrentVelocity = rb.velocity;
+        CurrentSpeed = rb.velocity.magnitude;
     }
 
     void FixedUpdate()
@@ -49,12 +51,14 @@ public class BallBehavior : MonoBehaviour
         currentBuffs--;
     }
 
-    public IEnumerator Freeze(float duration)
+    public IEnumerator Freeze(float duration, Transform parent = null)
     {
+        if (parent) transform.parent = parent;
         Vector2 v = rb.velocity;
         rb.constraints = RigidbodyConstraints2D.FreezePosition;
         yield return new WaitForSeconds(duration);
         rb.constraints = RigidbodyConstraints2D.None;
         rb.velocity = v;
+        if (parent) transform.parent = null;
     }
 }

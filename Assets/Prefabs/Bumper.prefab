@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ec65e95eac201f47be6a442be975594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedUp: 3
-  SpeedUpDuration: 1
+  SpeedUp: 1.5
+  SpeedUpDuration: 0.2
   bump: {fileID: 7400000, guid: 27d39157913d757488b0fedf17acc4ab, type: 2}
 --- !u!95 &840138391038422783
 Animator:

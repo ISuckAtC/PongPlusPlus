@@ -11,18 +11,23 @@ public class GameControl : MonoBehaviour
     public GameObject ballObject;
 
     public float ballStartOffset;
+    public float ballStartRandomRange;
     public float startSpeed;
     public float startDelay;
     public VideoPlayer videoPlayer;
     // Start is called before the first frame update
     void Start()
     {
+        Random.InitState(System.DateTime.Now.Millisecond);
         foreach(GameObject player in players)
         {
             Vector2 pos = new Vector2(player.transform.position.x * ballStartOffset, player.transform.position.y * ballStartOffset);
             GameObject ball = Instantiate(ballObject, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
-            ball.GetComponent<Rigidbody2D>().velocity = (new Vector2(player.transform.position.x - ball.transform.position.x, player.transform.position.y - ball.transform.position.y)).normalized * startSpeed;
-            ball.GetComponent<BallBehavior>().StartCoroutine(ball.GetComponent<BallBehavior>().Freeze(startDelay));
+            Vector2 initDir = new Vector2(player.transform.position.x - ball.transform.position.x, player.transform.position.y - ball.transform.position.y);
+            if (player.GetComponent<PlatformBehavior>().Horizontal) initDir.x += Random.Range(-ballStartRandomRange, ballStartRandomRange);
+            else initDir.y += Random.Range(-ballStartRandomRange, ballStartRandomRange);
+            ball.GetComponent<Rigidbody2D>().velocity = initDir.normalized * startSpeed;
+            ball.GetComponent<BallBehavior>().StartCoroutine(ball.GetComponent<BallBehavior>().Freeze(startDelay, player.transform));
         }
         StartCoroutine(TopGear());
     }
