@@ -676,6 +676,11 @@ PrefabInstance:
       propertyPath: color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6217373348994514990, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: AI
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6217373349581561234, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.x
@@ -1019,6 +1024,21 @@ PrefabInstance:
       propertyPath: color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6217373349789318515, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: AI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373349789318515, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: AISpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373349789318515, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: AIBoundary
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6217373349789318518, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.x
@@ -1344,6 +1364,7 @@ MonoBehaviour:
   - {fileID: 1240194851}
   - {fileID: 1559265297}
   - {fileID: 677484694}
+  balls: []
   ballObject: {fileID: 3657493458850510913, guid: dbcc03ef81b5e4e46ae27c557a8920a9,
     type: 3}
   ballStartOffset: 0.9

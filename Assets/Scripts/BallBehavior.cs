@@ -26,6 +26,12 @@ public class BallBehavior : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A)) Debug.Log(name + " | " + rb.velocity);
         CurrentVelocity = rb.velocity;
         CurrentSpeed = rb.velocity.magnitude;
+        if (transform.position.x > 6 || transform.position.x < -6 || transform.position.y > 6 || transform.position.y < -6) 
+        {
+            GameObject.Find("GameControl").GetComponent<GameControl>().balls.Remove(gameObject);
+            
+            Destroy(gameObject);
+        }
     }
 
     void FixedUpdate()

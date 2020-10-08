@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameControl : MonoBehaviour
 {
     public List<GameObject> players;
+    public List<GameObject> balls;
     public GameObject ballObject;
 
     public float ballStartOffset;
@@ -28,6 +29,7 @@ public class GameControl : MonoBehaviour
             else initDir.y += Random.Range(-ballStartRandomRange, ballStartRandomRange);
             ball.GetComponent<Rigidbody2D>().velocity = initDir.normalized * startSpeed;
             ball.GetComponent<BallBehavior>().StartCoroutine(ball.GetComponent<BallBehavior>().Freeze(startDelay, player.transform));
+            balls.Add(ball);
         }
         StartCoroutine(TopGear());
     }
