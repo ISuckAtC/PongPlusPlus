@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype 2.unity
     guid: a3372d3300ca075428e0d47c61613a4d
+  - enabled: 1
+    path: Assets/Scenes/Prototype 2 Darja.unity
+    guid: 00a9bfe3890d79846855b6758fa07418
   m_configObjects: {}
