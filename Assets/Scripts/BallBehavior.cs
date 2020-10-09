@@ -51,7 +51,7 @@ public class BallBehavior : MonoBehaviour
     public IEnumerator SpeedModBuff(float duration, float mod, bool mult)
     {
         currentBuffs++;
-        rb.velocity = mult ? rb.velocity * mod :
+        rb.velocity = mult ? rb.velocity * mod : 
         rb.velocity.normalized * (rb.velocity.magnitude + mod);
         yield return new WaitForSeconds(duration);
         rb.velocity = mult ? rb.velocity / mod :
