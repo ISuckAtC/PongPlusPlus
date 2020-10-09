@@ -16,6 +16,7 @@ public class GameControl : MonoBehaviour
     public float startSpeed;
     public float startDelay;
     public VideoPlayer videoPlayer;
+    public Animator startAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class GameControl : MonoBehaviour
             balls.Add(ball);
         }
         StartCoroutine(TopGear());
+        startAnim.Play("Start3");
     }
 
     // Update is called once per frame
