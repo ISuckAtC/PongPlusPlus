@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype 2 Henrik.unity
     guid: 1d3c6aed2c1b24c42bfc156e19134b36
+  - enabled: 1
+    path: Assets/Scenes/Prototype 3.unity
+    guid: 053d64f76d52d5b41bf1193e6b7992ac
   m_configObjects: {}
