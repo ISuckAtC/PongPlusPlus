@@ -14,7 +14,7 @@ public class PlayerSelectMenu : MonoBehaviour
         SceneManager.LoadScene("Prototype 3");
     }
 
-    public GameObject Player1, Player2, Player3, Player4, Player2Button, Player3Button, Player4Button;
+    public GameObject Player1, Player2, Player3, Player4, Player2Button, Player3Button, Player4Button, BackMap, BackMenu, BackPlayer;
     
     public void OnPlayer2Click()
     {
@@ -49,6 +49,17 @@ public class PlayerSelectMenu : MonoBehaviour
         Player4.SetActive(true);
     }
 
+    public void OnBackPlayerButtonClick()
+    {
+        Player1.SetActive(false);
+        Player2.SetActive(false);
+        Player3.SetActive(false);
+        Player4.SetActive(false);
+
+        Player2Button.SetActive(true);
+        Player3Button.SetActive(true);
+        Player4Button.SetActive(true);
+    }
 
     // Start is called before the first frame update
     void Start()
