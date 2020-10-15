@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuBackButton : MonoBehaviour
+public class PlayerSelectMenu : MonoBehaviour
 {
-
- public void BackButton()
+    public void BackButton()
     {           //Loads another scene
         SceneManager.LoadScene("Prototype 2 Darja");
     }
-
+    public void PlayButton()
+    {
+        SceneManager.LoadScene("Prototype 3");
+    }
     // Start is called before the first frame update
     void Start()
     {
