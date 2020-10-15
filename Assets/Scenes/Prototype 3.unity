@@ -497,7 +497,7 @@ PrefabInstance:
     - target: {fileID: 6217373348994514990, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: AI
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6217373348994514990, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -508,6 +508,11 @@ PrefabInstance:
         type: 3}
       propertyPath: AIBoundary
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373348994514990, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: Health
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6217373349581561234, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -608,6 +613,11 @@ PrefabInstance:
         type: 3}
       propertyPath: AIBoundary
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373349581561243, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: Health
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6217373349581561244, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -739,6 +749,11 @@ PrefabInstance:
         type: 3}
       propertyPath: AIBoundary
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373349592573387, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: Health
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6217373349592573390, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -885,7 +900,7 @@ PrefabInstance:
     - target: {fileID: 6217373349789318515, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: AI
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6217373349789318515, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -896,6 +911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: AIBoundary
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373349789318515, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: Health
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6217373349789318518, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -1095,7 +1115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &351521596
 Animator:
   serializedVersion: 3
@@ -1324,11 +1344,11 @@ MonoBehaviour:
   ballStartOffset: 0.9
   ballStartRandomRange: 0.15
   startSpeed: 3
-  startDelay: 5
-  PlatformBoundary: 0
-  PlatformBoundaryStart: 0
+  startDelay: 3
+  PlatformBoundary: 4
+  PlatformBoundaryStart: 2
   videoPlayer: {fileID: 1295404545}
-  startAnim: {fileID: 0}
+  startAnim: {fileID: 351521596}
 --- !u!4 &402156579
 Transform:
   m_ObjectHideFlags: 0
@@ -2074,7 +2094,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2167,9 +2187,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1559265297}
+  Destroyed: 0
   full: {fileID: 2100000, guid: 7a04a4d7e3dc0b3408b339cdd3cbd797, type: 2}
   faded: {fileID: 2100000, guid: 9d836f525835a2c418e11b1a7b303439, type: 2}
-  dead: {fileID: 0}
+  dead: {fileID: 2100000, guid: 2e19c8c63de7b0f4f96352bb989497e9, type: 2}
 --- !u!4 &867443407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
@@ -3010,7 +3031,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3039,9 +3060,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 585611494}
+  Destroyed: 0
   full: {fileID: 2100000, guid: 7a04a4d7e3dc0b3408b339cdd3cbd797, type: 2}
   faded: {fileID: 2100000, guid: 9d836f525835a2c418e11b1a7b303439, type: 2}
-  dead: {fileID: 0}
+  dead: {fileID: 2100000, guid: 2e19c8c63de7b0f4f96352bb989497e9, type: 2}
 --- !u!1001 &1142379664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3658,7 +3680,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3751,9 +3773,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 677484694}
+  Destroyed: 0
   full: {fileID: 2100000, guid: 7a04a4d7e3dc0b3408b339cdd3cbd797, type: 2}
   faded: {fileID: 2100000, guid: 9d836f525835a2c418e11b1a7b303439, type: 2}
-  dead: {fileID: 0}
+  dead: {fileID: 2100000, guid: 2e19c8c63de7b0f4f96352bb989497e9, type: 2}
 --- !u!1 &1361406067
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,7 +4442,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4512,9 +4535,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1240194851}
+  Destroyed: 0
   full: {fileID: 2100000, guid: 7a04a4d7e3dc0b3408b339cdd3cbd797, type: 2}
   faded: {fileID: 2100000, guid: 9d836f525835a2c418e11b1a7b303439, type: 2}
-  dead: {fileID: 0}
+  dead: {fileID: 2100000, guid: 2e19c8c63de7b0f4f96352bb989497e9, type: 2}
 --- !u!4 &1854702771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
