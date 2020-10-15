@@ -1314,6 +1314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 402156579}
   - component: {fileID: 402156578}
+  - component: {fileID: 402156580}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -1341,14 +1342,16 @@ MonoBehaviour:
   balls: []
   ballObject: {fileID: 3657493458850510913, guid: dbcc03ef81b5e4e46ae27c557a8920a9,
     type: 3}
+  Canvas: {fileID: 0}
   ballStartOffset: 0.9
   ballStartRandomRange: 0.15
   startSpeed: 3
   startDelay: 3
-  PlatformBoundary: 4
-  PlatformBoundaryStart: 2
+  endDelay: 0
+  PlatformBoundary: 0
+  PlatformBoundaryStart: 0
   videoPlayer: {fileID: 1295404545}
-  startAnim: {fileID: 351521596}
+  startAnim: {fileID: 0}
 --- !u!4 &402156579
 Transform:
   m_ObjectHideFlags: 0
@@ -1363,6 +1366,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &402156580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402156577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdf570a13623c2f4aa992606cc1e1e94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MatchesToWin: 5
 --- !u!1001 &408309150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2190,7 +2206,7 @@ MonoBehaviour:
   Destroyed: 0
   full: {fileID: 2100000, guid: 7a04a4d7e3dc0b3408b339cdd3cbd797, type: 2}
   faded: {fileID: 2100000, guid: 9d836f525835a2c418e11b1a7b303439, type: 2}
-  dead: {fileID: 2100000, guid: 2e19c8c63de7b0f4f96352bb989497e9, type: 2}
+  dead: {fileID: 0}
 --- !u!4 &867443407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
@@ -3063,7 +3079,7 @@ MonoBehaviour:
   Destroyed: 0
   full: {fileID: 2100000, guid: 7a04a4d7e3dc0b3408b339cdd3cbd797, type: 2}
   faded: {fileID: 2100000, guid: 9d836f525835a2c418e11b1a7b303439, type: 2}
-  dead: {fileID: 2100000, guid: 2e19c8c63de7b0f4f96352bb989497e9, type: 2}
+  dead: {fileID: 0}
 --- !u!1001 &1142379664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3776,7 +3792,7 @@ MonoBehaviour:
   Destroyed: 0
   full: {fileID: 2100000, guid: 7a04a4d7e3dc0b3408b339cdd3cbd797, type: 2}
   faded: {fileID: 2100000, guid: 9d836f525835a2c418e11b1a7b303439, type: 2}
-  dead: {fileID: 2100000, guid: 2e19c8c63de7b0f4f96352bb989497e9, type: 2}
+  dead: {fileID: 0}
 --- !u!1 &1361406067
 GameObject:
   m_ObjectHideFlags: 0
@@ -4538,7 +4554,7 @@ MonoBehaviour:
   Destroyed: 0
   full: {fileID: 2100000, guid: 7a04a4d7e3dc0b3408b339cdd3cbd797, type: 2}
   faded: {fileID: 2100000, guid: 9d836f525835a2c418e11b1a7b303439, type: 2}
-  dead: {fileID: 2100000, guid: 2e19c8c63de7b0f4f96352bb989497e9, type: 2}
+  dead: {fileID: 0}
 --- !u!4 &1854702771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
