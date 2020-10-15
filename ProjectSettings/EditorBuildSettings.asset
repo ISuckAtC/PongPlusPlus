@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Prototype 2 Darja.unity
     guid: 00a9bfe3890d79846855b6758fa07418
   - enabled: 1
-    path: Assets/Scenes/Menu_Screen.unity
+    path: Assets/Scenes/Menu_PlayerSelection.unity
     guid: 6a54d4fa00633ba46be35dcf95f4650d
   - enabled: 1
     path: Assets/Scenes/Prototype 2 Henrik.unity
