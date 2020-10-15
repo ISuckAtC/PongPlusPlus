@@ -1325,6 +1325,8 @@ MonoBehaviour:
   ballStartRandomRange: 0.15
   startSpeed: 3
   startDelay: 5
+  PlatformBoundary: 0
+  PlatformBoundaryStart: 0
   videoPlayer: {fileID: 1295404545}
   startAnim: {fileID: 0}
 --- !u!4 &402156579
@@ -2167,6 +2169,7 @@ MonoBehaviour:
   player: {fileID: 1559265297}
   full: {fileID: 2100000, guid: 7a04a4d7e3dc0b3408b339cdd3cbd797, type: 2}
   faded: {fileID: 2100000, guid: 9d836f525835a2c418e11b1a7b303439, type: 2}
+  dead: {fileID: 0}
 --- !u!4 &867443407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
@@ -3038,6 +3041,7 @@ MonoBehaviour:
   player: {fileID: 585611494}
   full: {fileID: 2100000, guid: 7a04a4d7e3dc0b3408b339cdd3cbd797, type: 2}
   faded: {fileID: 2100000, guid: 9d836f525835a2c418e11b1a7b303439, type: 2}
+  dead: {fileID: 0}
 --- !u!1001 &1142379664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3749,6 +3753,7 @@ MonoBehaviour:
   player: {fileID: 677484694}
   full: {fileID: 2100000, guid: 7a04a4d7e3dc0b3408b339cdd3cbd797, type: 2}
   faded: {fileID: 2100000, guid: 9d836f525835a2c418e11b1a7b303439, type: 2}
+  dead: {fileID: 0}
 --- !u!1 &1361406067
 GameObject:
   m_ObjectHideFlags: 0
@@ -4509,6 +4514,7 @@ MonoBehaviour:
   player: {fileID: 1240194851}
   full: {fileID: 2100000, guid: 7a04a4d7e3dc0b3408b339cdd3cbd797, type: 2}
   faded: {fileID: 2100000, guid: 9d836f525835a2c418e11b1a7b303439, type: 2}
+  dead: {fileID: 0}
 --- !u!4 &1854702771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
