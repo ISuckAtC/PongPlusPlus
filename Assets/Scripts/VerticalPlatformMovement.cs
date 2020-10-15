@@ -2,12 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-public class VerticalPlatformMovement : MonoBehaviour
+public class VerticalPlatformMovement : BasePlatformMovement
 {
     // Public keycode properties allows you to set the keys in editor for easy testing
     public KeyCode Left, Right;
-    public float Speed;
-    public float Boundary;
 
     void Start()
     {

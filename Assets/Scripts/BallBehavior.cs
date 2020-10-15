@@ -8,6 +8,8 @@ public class BallBehavior : MonoBehaviour
     public Vector2 CurrentVelocity;
     public float CurrentSpeed;
     public float SpeedLimit;
+    public float SlowLimit;
+    public bool IgnoreLimits;
     private Rigidbody2D rb;
     public int currentBuffs;
     public GameObject lastPlayer;
@@ -36,7 +38,8 @@ public class BallBehavior : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (rb.velocity.magnitude > SpeedLimit) rb.velocity = rb.velocity.normalized * SpeedLimit;
+        if (rb.velocity.magnitude > SpeedLimit && !IgnoreLimits) rb.velocity = rb.velocity.normalized * SpeedLimit;
+        if (rb.velocity.magnitude < SlowLimit && !IgnoreLimits) rb.velocity = rb.velocity.normalized * SlowLimit;
     }
 
     public IEnumerator SizeModBuff(float duration, float mod)

@@ -31,4 +31,12 @@ public class SpeedRampBehavior : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x + (dir.x * SpeedUp), rb.velocity.y + (dir.y * SpeedUp));
         }
     }
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.tag == "Ball") collider.GetComponent<BallBehavior>().IgnoreLimits = true;
+    }
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.tag == "Ball") collider.GetComponent<BallBehavior>().IgnoreLimits = false;
+    }
 }

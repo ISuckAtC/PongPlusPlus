@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DestroyScript : StateMachineBehaviour
 {
+    public bool ActuallyDestroy;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -19,8 +20,9 @@ public class DestroyScript : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("destroying animation object");
-        Destroy(animator.gameObject);
+        Debug.Log("destroying animation object " + animator.gameObject.name);
+        if (ActuallyDestroy) Destroy(animator.gameObject);
+        else animator.gameObject.SetActive(false);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

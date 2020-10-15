@@ -15,6 +15,8 @@ public class GameControl : MonoBehaviour
     public float ballStartRandomRange;
     public float startSpeed;
     public float startDelay;
+    public float PlatformBoundary;
+    public float PlatformBoundaryStart;
     public VideoPlayer videoPlayer;
     public Animator startAnim;
     // Start is called before the first frame update
@@ -31,8 +33,10 @@ public class GameControl : MonoBehaviour
             ball.GetComponent<Rigidbody2D>().velocity = initDir.normalized * startSpeed;
             ball.GetComponent<BallBehavior>().StartCoroutine(ball.GetComponent<BallBehavior>().Freeze(startDelay, player.transform));
             balls.Add(ball);
+            player.GetComponent<BasePlatformMovement>().Boundary = PlatformBoundaryStart;
         }
-        StartCoroutine(TopGear());
+        StartCoroutine(WaitWord("TOP GEAR", () => {videoPlayer.Play();}));
+        StartCoroutine(LateStart());
         startAnim.Play("Start3");
     }
 
@@ -52,7 +56,7 @@ public class GameControl : MonoBehaviour
                 r.AddComponent<BoxCollider2D>();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Prototype 2", LoadSceneMode.Single);
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Prototype 2 Henrik", LoadSceneMode.Single);
     }
 
     public void Winner(GameObject player)
@@ -63,17 +67,15 @@ public class GameControl : MonoBehaviour
         db.GetComponent<SpriteRenderer>().material = db.GetComponent<DeathBarrierBehavior>().full;
         //videoPlayer.Play();
     }
-
-    public IEnumerator TopGear()
+    public IEnumerator LateStart()
     {
-        while(!Input.GetKey(KeyCode.T)) yield return new WaitForEndOfFrame();
-        while(!Input.GetKey(KeyCode.O)) yield return new WaitForEndOfFrame();
-        while(!Input.GetKey(KeyCode.P)) yield return new WaitForEndOfFrame();
-        while(!Input.GetKey(KeyCode.Space)) yield return new WaitForEndOfFrame();
-        while(!Input.GetKey(KeyCode.G)) yield return new WaitForEndOfFrame();
-        while(!Input.GetKey(KeyCode.E)) yield return new WaitForEndOfFrame();
-        while(!Input.GetKey(KeyCode.A)) yield return new WaitForEndOfFrame();
-        while(!Input.GetKey(KeyCode.R)) yield return new WaitForEndOfFrame();
-        videoPlayer.Play();
+        yield return new WaitForSeconds(startDelay);
+        foreach(GameObject player in players) player.GetComponent<BasePlatformMovement>().Boundary = PlatformBoundary;
+    }
+
+    public IEnumerator WaitWord(string word, System.Action callback)
+    {
+        for(int i = 0; i < word.Length; ++i) while(!Input.GetKey(word[i].ToString())) yield return new WaitForEndOfFrame();
+        callback.Invoke();
     }
 }

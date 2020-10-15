@@ -7,6 +7,7 @@ public class PlatformBehavior : MonoBehaviour
 {
     public GameObject deathBarrier;
     public GameObject playerCard;
+    public int Health;
     public bool Horizontal;
     public bool AI;
     public float DI;

@@ -137,5 +137,7 @@ MonoBehaviour:
   CurrentVelocity: {x: 0, y: 0}
   CurrentSpeed: 0
   SpeedLimit: 15
+  SlowLimit: 2
+  IgnoreLimits: 0
   currentBuffs: 0
   lastPlayer: {fileID: 0}

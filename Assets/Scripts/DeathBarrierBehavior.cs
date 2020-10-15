@@ -11,6 +11,7 @@ public class DeathBarrierBehavior : MonoBehaviour
 
     public Material full;
     public Material faded;
+    public Material dead;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,15 +24,22 @@ public class DeathBarrierBehavior : MonoBehaviour
     {
         
     }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (--player.GetComponent<PlatformBehavior>().Health <= 0) return;
+        player.GetComponent<PlatformBehavior>().Health--;
+        sr.material = faded;
+        col.isTrigger = true;
+    }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "Ball")
         {
-
+            Debug.Log("Killing player " + player.name);
             col.isTrigger = false;
             collider.gameObject.layer = 8;
-            sr.material = full;
+            sr.material = dead;
             GameControl gc = GameObject.Find("GameControl").GetComponent<GameControl>();
             if(player.GetComponent<PlatformBehavior>().Horizontal) player.GetComponent<HorizontalPlatformMovement>().Speed = 0;
             else player.GetComponent<VerticalPlatformMovement>().Speed = 0;
