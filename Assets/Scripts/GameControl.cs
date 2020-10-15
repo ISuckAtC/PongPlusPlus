@@ -35,7 +35,6 @@ public class GameControl : MonoBehaviour
             balls.Add(ball);
             player.GetComponent<BasePlatformMovement>().Boundary = PlatformBoundaryStart;
         }
-        StartCoroutine(WaitWord("TOP GEAR", () => {videoPlayer.Play();}));
         StartCoroutine(LateStart());
         startAnim.Play("Start3");
     }
@@ -65,17 +64,12 @@ public class GameControl : MonoBehaviour
         GameObject db = player.GetComponent<PlatformBehavior>().deathBarrier;
         db.GetComponent<BoxCollider2D>().isTrigger = false;
         db.GetComponent<SpriteRenderer>().material = db.GetComponent<DeathBarrierBehavior>().full;
+        player.GetComponent<DeathBarrierBehavior>().Destroyed = true;
         //videoPlayer.Play();
     }
     public IEnumerator LateStart()
     {
         yield return new WaitForSeconds(startDelay);
         foreach(GameObject player in players) player.GetComponent<BasePlatformMovement>().Boundary = PlatformBoundary;
-    }
-
-    public IEnumerator WaitWord(string word, System.Action callback)
-    {
-        for(int i = 0; i < word.Length; ++i) while(!Input.GetKey(word[i].ToString())) yield return new WaitForEndOfFrame();
-        callback.Invoke();
     }
 }

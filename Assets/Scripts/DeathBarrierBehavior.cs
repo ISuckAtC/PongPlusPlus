@@ -8,6 +8,7 @@ public class DeathBarrierBehavior : MonoBehaviour
 
     BoxCollider2D col;
     SpriteRenderer sr;
+    [HideInInspector] public bool Destroyed;
 
     public Material full;
     public Material faded;
@@ -26,10 +27,14 @@ public class DeathBarrierBehavior : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (--player.GetComponent<PlatformBehavior>().Health <= 0) return;
-        player.GetComponent<PlatformBehavior>().Health--;
+        if (Destroyed) return;
+        if (--player.GetComponent<PlatformBehavior>().Health > 0) 
+        {
+            return;
+        }
         sr.material = faded;
         col.isTrigger = true;
+        Destroyed = true;
     }
 
     void OnTriggerEnter2D(Collider2D collider)

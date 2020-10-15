@@ -1014,7 +1014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathBarrier: {fileID: 1386492106}
-  playerCard: {fileID: 0}
+  playerCard: {fileID: 1434700508388486840}
   Health: 3
   Horizontal: 1
   AI: 1
@@ -1187,10 +1187,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 380667522}
+  - {fileID: 1171567963}
+  - {fileID: 1945326578}
+  - {fileID: 1346053373}
   balls: []
   ballObject: {fileID: 3657493458850510913, guid: dbcc03ef81b5e4e46ae27c557a8920a9,
     type: 3}
@@ -1198,10 +1198,10 @@ MonoBehaviour:
   ballStartRandomRange: 0.15
   startSpeed: 3
   startDelay: 5
-  PlatformBoundary: 0
-  PlatformBoundaryStart: 0
+  PlatformBoundary: 4
+  PlatformBoundaryStart: 2
   videoPlayer: {fileID: 1295404545}
-  startAnim: {fileID: 0}
+  startAnim: {fileID: 351521596}
 --- !u!4 &402156579
 Transform:
   m_ObjectHideFlags: 0
@@ -4146,6 +4146,12 @@ Transform:
   m_Father: {fileID: 398001620}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1139893561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4051450060700744888, guid: 8b7e863585ab0dd4491d93d4c930a515,
+    type: 3}
+  m_PrefabInstance: {fileID: 1434700508388486836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1171567963
 GameObject:
   m_ObjectHideFlags: 0
@@ -4215,7 +4221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathBarrier: {fileID: 1654515032}
-  playerCard: {fileID: 0}
+  playerCard: {fileID: 1139893561}
   Health: 3
   Horizontal: 0
   AI: 0
@@ -4723,7 +4729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathBarrier: {fileID: 837012848}
-  playerCard: {fileID: 0}
+  playerCard: {fileID: 1434700508388486839}
   Health: 3
   Horizontal: 0
   AI: 0
@@ -6614,7 +6620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathBarrier: {fileID: 1581483370}
-  playerCard: {fileID: 0}
+  playerCard: {fileID: 1434700508388486838}
   Health: 3
   Horizontal: 1
   AI: 0
@@ -6952,3 +6958,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b7e863585ab0dd4491d93d4c930a515, type: 3}
+--- !u!1 &1434700508388486838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4051450059473641562, guid: 8b7e863585ab0dd4491d93d4c930a515,
+    type: 3}
+  m_PrefabInstance: {fileID: 1434700508388486836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1434700508388486839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4051450060988486803, guid: 8b7e863585ab0dd4491d93d4c930a515,
+    type: 3}
+  m_PrefabInstance: {fileID: 1434700508388486836}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1434700508388486840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4051450059416347045, guid: 8b7e863585ab0dd4491d93d4c930a515,
+    type: 3}
+  m_PrefabInstance: {fileID: 1434700508388486836}
+  m_PrefabAsset: {fileID: 0}
