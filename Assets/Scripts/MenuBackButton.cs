@@ -7,8 +7,8 @@ public class MenuBackButton : MonoBehaviour
 {
 
  public void BackButton()
-    {
-        SceneManager.LoadScene("Prototype 2 Darja", LoadSceneMode.Single);
+    {           //Loads another scene
+        SceneManager.LoadScene("Prototype 2 Darja");
     }
 
     // Start is called before the first frame update
