@@ -13,9 +13,12 @@ public class BallBehavior : MonoBehaviour
     private Rigidbody2D rb;
     public int currentBuffs;
     public GameObject lastPlayer;
+
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = InitialVelocity;
         lastPlayer = null;
@@ -71,5 +74,10 @@ public class BallBehavior : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.None;
         rb.velocity = v;
         if (parent) transform.parent = null;
+    }
+
+    public void OnCollisionEnter2D(Collision2D col)
+    {
+        audioSource.Play();
     }
 }

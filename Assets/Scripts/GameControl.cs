@@ -7,24 +7,30 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
+    GameData LocalData;
     public List<GameObject> players;
     public List<GameObject> balls;
     public GameObject ballObject;
+    public GameObject Canvas;
 
     public float ballStartOffset;
     public float ballStartRandomRange;
     public float startSpeed;
     public float startDelay;
+    public float endDelay;
     public float PlatformBoundary;
     public float PlatformBoundaryStart;
     public VideoPlayer videoPlayer;
     public Animator startAnim;
+    bool Started = false;
     // Start is called before the first frame update
     void Start()
     {
+        LocalData = GetComponent<GameData>();
         Random.InitState(System.DateTime.Now.Millisecond);
         foreach(GameObject player in players)
         {
+            if (GameData.PlayerWins.Count < players.Count) GameData.PlayerWins.Add(player.name, 0);
             Vector2 pos = new Vector2(player.transform.position.x * ballStartOffset, player.transform.position.y * ballStartOffset);
             GameObject ball = Instantiate(ballObject, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
             Vector2 initDir = new Vector2(player.transform.position.x - ball.transform.position.x, player.transform.position.y - ball.transform.position.y);
@@ -35,8 +41,8 @@ public class GameControl : MonoBehaviour
             balls.Add(ball);
             player.GetComponent<BasePlatformMovement>().Boundary = PlatformBoundaryStart;
         }
+        foreach(KeyValuePair<string, int> pair in GameData.PlayerWins) Debug.Log(pair.Key + ": " + pair.Value);
         StartCoroutine(LateStart());
-        startAnim.Play("Start3");
     }
 
     // Update is called once per frame
@@ -61,11 +67,23 @@ public class GameControl : MonoBehaviour
     public void Winner(GameObject player)
     {
         Debug.Log(player.name + " wins!");
+        player.GetComponent<PlatformBehavior>().AISpeed = 0;
+        player.GetComponent<BasePlatformMovement>().Speed = 0;
         GameObject db = player.GetComponent<PlatformBehavior>().deathBarrier;
         db.GetComponent<BoxCollider2D>().isTrigger = false;
         db.GetComponent<SpriteRenderer>().material = db.GetComponent<DeathBarrierBehavior>().full;
-        player.GetComponent<DeathBarrierBehavior>().Destroyed = true;
-        //videoPlayer.Play();
+        db.GetComponent<DeathBarrierBehavior>().Destroyed = true;
+        GameData.PlayerWins[player.name]++;
+        GameData.MatchCount++;
+        GameObject winScreen = Instantiate(player.GetComponent<PlatformBehavior>().WinScreen, new Vector3(960, 540, -10), Quaternion.identity);
+        winScreen.transform.parent = Canvas.transform;
+        StartCoroutine(End(GameData.PlayerWins[player.name]));
+    }
+    public IEnumerator End(int wins)
+    {
+        yield return new WaitForSeconds(endDelay);
+        if (wins >= LocalData.MatchesToWin) Debug.Log("End");
+        else SceneManager.LoadScene("Prototype 3 Henrik");
     }
     public IEnumerator LateStart()
     {

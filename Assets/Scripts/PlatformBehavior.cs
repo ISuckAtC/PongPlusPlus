@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlatformBehavior : MonoBehaviour
 {
+    public GameObject WinScreen;
     public GameObject deathBarrier;
     public GameObject playerCard;
     public int Health;
