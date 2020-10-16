@@ -10,8 +10,10 @@ public class PlayerSelectMenu : MonoBehaviour
     {           //Loads another scene
         SceneManager.LoadScene("Prototype 2 Darja");
     }
+    
     public void PlayButton()
     {
+        GameData.MatchesToWin = 2;
         SceneManager.LoadScene("Prototype 3 Henrik");
     }
 

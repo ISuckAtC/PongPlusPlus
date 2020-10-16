@@ -32,7 +32,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Prototype 3 Darja_Henrik.unity
     guid: 053d64f76d52d5b41bf1193e6b7992ac
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Prototype 3 Henrik.unity
     guid: aa3bca42674412442b002f819cc8860c
   m_configObjects: {}

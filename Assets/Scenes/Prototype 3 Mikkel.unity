@@ -1305,7 +1305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf570a13623c2f4aa992606cc1e1e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MatchesToWin: 5
 --- !u!1001 &408309150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5423,7 +5422,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: 'Wins: 0'
 --- !u!224 &3157217813006680323
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5831,7 +5830,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: 'Wins: 0'
 --- !u!224 &3157217813181193047
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6182,7 +6181,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: 'Wins: 0'
 --- !u!224 &3157217813839518197
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6473,7 +6472,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: 0'
+  m_Text: 'Wins: 0'
 --- !u!224 &3157217813911625996
 RectTransform:
   m_ObjectHideFlags: 0
