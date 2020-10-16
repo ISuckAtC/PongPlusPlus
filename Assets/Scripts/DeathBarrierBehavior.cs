@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DeathBarrierBehavior : MonoBehaviour
@@ -55,7 +56,7 @@ public class DeathBarrierBehavior : MonoBehaviour
             string[] anims = player.GetComponent<PlatformBehavior>().deathAnims;
             player.GetComponent<Animator>().Play(anims[Random.Range(0, anims.Length)], 0);
             player.GetComponent<AudioSource>().Play();
-            if (gc.players.Count == 1)
+            if (gc.players.Where(x => x.activeSelf).Count() == 1)
             {
                 gc.Winner(gc.players[0]);
             }
