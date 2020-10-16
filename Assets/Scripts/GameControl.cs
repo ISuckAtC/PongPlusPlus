@@ -25,6 +25,7 @@ public class GameControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("START");
         Random.InitState(System.DateTime.Now.Millisecond);
         for(int i = 0; i < players.Count; ++i)
         {
@@ -40,7 +41,7 @@ public class GameControl : MonoBehaviour
                 }
                 break;
             }
-            if (GameData.PlayerWins.Count < players.Count) GameData.PlayerWins.Add(players[i].name, 0);
+            if (GameData.PlayerWins.Count < GameData.AIs.Count()) GameData.PlayerWins.Add(players[i].name, 0);
             if (GameData.AIs[i])
             {
                 players[i].GetComponent<PlatformBehavior>().AI = true;

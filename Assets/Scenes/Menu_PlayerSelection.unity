@@ -1256,7 +1256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &981124770
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2050,6 +2050,7 @@ MonoBehaviour:
   BackMenu: {fileID: 2098798916}
   BackPlayer: {fileID: 1201239137}
   MatchSelectButton: {fileID: 239553941}
+  PlaySelectButton: {fileID: 981124769}
 --- !u!1 &1529316165
 GameObject:
   m_ObjectHideFlags: 0

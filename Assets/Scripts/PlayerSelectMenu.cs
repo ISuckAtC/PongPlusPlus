@@ -19,7 +19,7 @@ public class PlayerSelectMenu : MonoBehaviour
         SceneManager.LoadScene("Prototype 3 Henrik");
     }
 
-    public GameObject Player1, Player2, Player3, Player4, Player2Button, Player3Button, Player4Button, BackMap, BackMenu, BackPlayer, MatchSelectButton;
+    public GameObject Player1, Player2, Player3, Player4, Player2Button, Player3Button, Player4Button, BackMap, BackMenu, BackPlayer, MatchSelectButton, PlaySelectButton;
     
     public void OnPlayer2Click()
     {
@@ -34,6 +34,7 @@ public class PlayerSelectMenu : MonoBehaviour
         BackPlayer.SetActive(true);
         BackMenu.SetActive(false);
         MatchSelectButton.SetActive(true);
+        PlaySelectButton.SetActive(true);
     }
 
     public void OnPlayer3Click()
@@ -50,6 +51,7 @@ public class PlayerSelectMenu : MonoBehaviour
         BackPlayer.SetActive(true);
         BackMenu.SetActive(false);
         MatchSelectButton.SetActive(true);
+        PlaySelectButton.SetActive(true);
     }
 
     public void OnPlayer4Click()
@@ -67,6 +69,7 @@ public class PlayerSelectMenu : MonoBehaviour
         BackPlayer.SetActive(true);
         BackMenu.SetActive(false);
         MatchSelectButton.SetActive(true);
+        PlaySelectButton.SetActive(true);
     }
 
     public void OnBackPlayerButtonClick()
@@ -83,6 +86,7 @@ public class PlayerSelectMenu : MonoBehaviour
         MatchSelectButton.SetActive(false);
         BackPlayer.SetActive(false);
         BackMenu.SetActive(true);
+        PlaySelectButton.SetActive(false);
     }
 
     public void OnbackMenuButtonClick()
