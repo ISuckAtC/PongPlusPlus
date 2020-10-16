@@ -14,6 +14,7 @@ public class HorizontalPlatformMovement : BasePlatformMovement
 
     void Update()
     {
+        if (GetComponent<PlatformBehavior>().AI) return;
         if (Input.GetKey(Right)) 
         {
             if (transform.position.x + Speed < Boundary) transform.position = new Vector3(transform.position.x + Speed, transform.position.y, 0);
