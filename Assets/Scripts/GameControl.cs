@@ -30,7 +30,13 @@ public class GameControl : MonoBehaviour
         {
             if (i == GameData.AIs.Length)
             {
-                for (; i < players.Count; ++i) players[i].SetActive(false);
+                for (; i < players.Count; ++i) 
+                {
+                    GameObject db = players[i].GetComponent<PlatformBehavior>().deathBarrier;
+                    db.GetComponent<DeathBarrierBehavior>().Destroyed = true;
+                    db.GetComponent<SpriteRenderer>().material = db.GetComponent<DeathBarrierBehavior>().dead;
+                    players[i].SetActive(false);
+                }
                 break;
             }
             if (GameData.PlayerWins.Count < players.Count) GameData.PlayerWins.Add(players[i].name, 0);
@@ -69,7 +75,6 @@ public class GameControl : MonoBehaviour
                 r.AddComponent<BoxCollider2D>();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Prototype 2 Henrik", LoadSceneMode.Single);
     }
 
     public void Winner(GameObject player)
@@ -81,17 +86,21 @@ public class GameControl : MonoBehaviour
         db.GetComponent<BoxCollider2D>().isTrigger = false;
         db.GetComponent<SpriteRenderer>().material = db.GetComponent<DeathBarrierBehavior>().full;
         db.GetComponent<DeathBarrierBehavior>().Destroyed = true;
-        GameData.PlayerWins[player.name]++;
         GameData.MatchCount++;
         GameObject winScreen = Instantiate(player.GetComponent<PlatformBehavior>().WinScreen, new Vector3(960, 540, -10), Quaternion.identity);
         winScreen.transform.parent = Canvas.transform;
-        StartCoroutine(End(GameData.PlayerWins[player.name]));
+        winScreen.GetComponent<Animator>().Play("Win", 15);
+        if (++GameData.PlayerWins[player.name] >= GameData.MatchesToWin) 
+        {
+            GameObject winFinal = Instantiate(player.GetComponent<PlatformBehavior>().WinScreenFinal, new Vector3(960, 540, -10), Quaternion.identity);
+            winFinal.transform.parent = Canvas.transform;
+        } else StartCoroutine(NextRound());
+        
     }
-    public IEnumerator End(int wins)
+    public IEnumerator NextRound()
     {
         yield return new WaitForSeconds(endDelay);
-        if (wins >= GameData.MatchesToWin) Debug.Log("End");
-        else SceneManager.LoadScene("Prototype 3 Henrik");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public IEnumerator LateStart()
     {
