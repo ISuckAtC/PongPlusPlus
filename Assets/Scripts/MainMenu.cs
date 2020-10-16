@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     //Switches scene from main menu to player select menu
     public void PlayMenu()
     {
-        SceneManager.LoadScene("Menu_Screen", LoadSceneMode.Single);
+        SceneManager.LoadScene("Menu_PlayerSelection", LoadSceneMode.Single);
     }
     
 
