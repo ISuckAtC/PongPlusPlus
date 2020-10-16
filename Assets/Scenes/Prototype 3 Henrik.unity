@@ -293,6 +293,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 164469740}
     m_Modifications:
+    - target: {fileID: 585611496, guid: 2e4822813ad11f54591455404ee07780, type: 3}
+      propertyPath: Speed
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559265299, guid: 2e4822813ad11f54591455404ee07780, type: 3}
+      propertyPath: Speed
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 6217373348982211800, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -502,7 +510,7 @@ PrefabInstance:
     - target: {fileID: 6217373348994514990, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: AISpeed
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6217373348994514990, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -526,6 +534,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5444388270437816787, guid: bcc380857f981144ab79e9933247bd37,
         type: 3}
+    - target: {fileID: 6217373348994514991, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: Speed
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 6217373349581561234, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.x
@@ -565,6 +578,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6217373349581561240, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: Speed
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 6217373349581561243, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -619,7 +637,7 @@ PrefabInstance:
     - target: {fileID: 6217373349581561243, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: AISpeed
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6217373349581561243, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -767,7 +785,7 @@ PrefabInstance:
     - target: {fileID: 6217373349592573387, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: AISpeed
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6217373349592573387, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -941,7 +959,7 @@ PrefabInstance:
     - target: {fileID: 6217373349789318515, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: AISpeed
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6217373349789318515, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
