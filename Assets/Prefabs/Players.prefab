@@ -27,10 +27,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6217373349789318506}
-  - {fileID: 6217373348994514988}
-  - {fileID: 6217373349592573385}
   - {fileID: 6217373349581561244}
+  - {fileID: 6217373348994514988}
+  - {fileID: 6217373349789318506}
+  - {fileID: 6217373349592573385}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -156,9 +156,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664be83828f192046975aba565cc7621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinScreen: {fileID: 0}
   deathBarrier: {fileID: 0}
+  playerCard: {fileID: 0}
+  Health: 0
   Horizontal: 0
+  AI: 0
   DI: 3
+  AISpeed: 0
+  AIBoundary: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  deathAnims: []
 --- !u!114 &6217373348994514991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,10 +179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ce555531616a34d89708187baf6185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Left: 111
-  Right: 108
   Speed: 0.05
   Boundary: 4
+  Left: 111
+  Right: 108
 --- !u!1 &6217373349581561235
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +215,7 @@ Transform:
   m_LocalScale: {x: 1, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 6217373348982211800}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6217373349581561245
 SpriteRenderer:
@@ -297,9 +305,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664be83828f192046975aba565cc7621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinScreen: {fileID: 0}
   deathBarrier: {fileID: 0}
+  playerCard: {fileID: 0}
+  Health: 0
   Horizontal: 0
+  AI: 0
   DI: 3
+  AISpeed: 0
+  AIBoundary: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  deathAnims: []
 --- !u!114 &6217373349581561240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,10 +328,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ce555531616a34d89708187baf6185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Left: 119
-  Right: 115
   Speed: 0.05
   Boundary: 4
+  Left: 119
+  Right: 115
 --- !u!1 &6217373349592573379
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +364,7 @@ Transform:
   m_LocalScale: {x: 6, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6217373348982211800}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6217373349592573390
 SpriteRenderer:
@@ -438,9 +454,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664be83828f192046975aba565cc7621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinScreen: {fileID: 0}
   deathBarrier: {fileID: 0}
+  playerCard: {fileID: 0}
+  Health: 0
   Horizontal: 1
+  AI: 0
   DI: 3
+  AISpeed: 0
+  AIBoundary: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  deathAnims: []
 --- !u!114 &1559265299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,10 +477,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd69ffea51cef7458d17553e0f6cd75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Left: 122
-  Right: 120
   Speed: 0.05
   Boundary: 4
+  Left: 122
+  Right: 120
 --- !u!1 &6217373349789318507
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +513,7 @@ Transform:
   m_LocalScale: {x: 6, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6217373348982211800}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6217373349789318513
 SpriteRenderer:
@@ -579,9 +603,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664be83828f192046975aba565cc7621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinScreen: {fileID: 0}
   deathBarrier: {fileID: 0}
+  playerCard: {fileID: 0}
+  Health: 0
   Horizontal: 1
+  AI: 0
   DI: 3
+  AISpeed: 0
+  AIBoundary: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  deathAnims: []
 --- !u!114 &585611496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd69ffea51cef7458d17553e0f6cd75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Left: 110
-  Right: 109
   Speed: 0.05
   Boundary: 4
+  Left: 110
+  Right: 109

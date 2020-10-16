@@ -26,18 +26,28 @@ public class GameControl : MonoBehaviour
     void Start()
     {
         Random.InitState(System.DateTime.Now.Millisecond);
-        foreach(GameObject player in players)
+        for(int i = 0; i < players.Count; ++i)
         {
-            if (GameData.PlayerWins.Count < players.Count) GameData.PlayerWins.Add(player.name, 0);
-            Vector2 pos = new Vector2(player.transform.position.x * ballStartOffset, player.transform.position.y * ballStartOffset);
+            if (i == GameData.AIs.Length)
+            {
+                for (; i < players.Count; ++i) players[i].SetActive(false);
+                break;
+            }
+            if (GameData.PlayerWins.Count < players.Count) GameData.PlayerWins.Add(players[i].name, 0);
+            if (GameData.AIs[i])
+            {
+                players[i].GetComponent<PlatformBehavior>().AI = true;
+                players[i].GetComponent<BasePlatformMovement>().Speed = 0;
+            }
+            Vector2 pos = new Vector2(players[i].transform.position.x * ballStartOffset, players[i].transform.position.y * ballStartOffset);
             GameObject ball = Instantiate(ballObject, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
-            Vector2 initDir = new Vector2(player.transform.position.x - ball.transform.position.x, player.transform.position.y - ball.transform.position.y);
-            if (player.GetComponent<PlatformBehavior>().Horizontal) initDir.x += Random.Range(-ballStartRandomRange, ballStartRandomRange);
+            Vector2 initDir = new Vector2(players[i].transform.position.x - ball.transform.position.x, players[i].transform.position.y - ball.transform.position.y);
+            if (players[i].GetComponent<PlatformBehavior>().Horizontal) initDir.x += Random.Range(-ballStartRandomRange, ballStartRandomRange);
             else initDir.y += Random.Range(-ballStartRandomRange, ballStartRandomRange);
             ball.GetComponent<Rigidbody2D>().velocity = initDir.normalized * startSpeed;
-            ball.GetComponent<BallBehavior>().StartCoroutine(ball.GetComponent<BallBehavior>().Freeze(startDelay, player.transform));
+            ball.GetComponent<BallBehavior>().StartCoroutine(ball.GetComponent<BallBehavior>().Freeze(startDelay, players[i].transform));
             balls.Add(ball);
-            player.GetComponent<BasePlatformMovement>().Boundary = PlatformBoundaryStart;
+            players[i].GetComponent<BasePlatformMovement>().Boundary = PlatformBoundaryStart;
         }
         foreach(KeyValuePair<string, int> pair in GameData.PlayerWins) Debug.Log(pair.Key + ": " + pair.Value);
         StartCoroutine(LateStart());

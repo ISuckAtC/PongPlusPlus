@@ -1257,10 +1257,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players:
-  - {fileID: 585611494}
-  - {fileID: 1240194851}
-  - {fileID: 1559265297}
   - {fileID: 677484694}
+  - {fileID: 1240194851}
+  - {fileID: 585611494}
+  - {fileID: 1559265297}
   balls: []
   ballObject: {fileID: 3657493458850510913, guid: dbcc03ef81b5e4e46ae27c557a8920a9,
     type: 3}
@@ -1300,7 +1300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf570a13623c2f4aa992606cc1e1e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MatchesToWin: 5
 --- !u!1001 &408309150
 PrefabInstance:
   m_ObjectHideFlags: 0
