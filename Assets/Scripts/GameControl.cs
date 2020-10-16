@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
-    GameData LocalData;
     public List<GameObject> players;
     public List<GameObject> balls;
     public GameObject ballObject;
@@ -26,7 +25,6 @@ public class GameControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LocalData = GetComponent<GameData>();
         Random.InitState(System.DateTime.Now.Millisecond);
         foreach(GameObject player in players)
         {
@@ -82,7 +80,7 @@ public class GameControl : MonoBehaviour
     public IEnumerator End(int wins)
     {
         yield return new WaitForSeconds(endDelay);
-        if (wins >= LocalData.MatchesToWin) Debug.Log("End");
+        if (wins >= GameData.MatchesToWin) Debug.Log("End");
         else SceneManager.LoadScene("Prototype 3 Henrik");
     }
     public IEnumerator LateStart()

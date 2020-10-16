@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class GameData : MonoBehaviour
 {
-    public int MatchesToWin;
+    static public int PlayerCount;
+    static public bool[] AIs;
+    static public int MatchesToWin;
     static public int MatchCount;
     static public Dictionary<string, int> PlayerWins;
     // Start is called before the first frame update
