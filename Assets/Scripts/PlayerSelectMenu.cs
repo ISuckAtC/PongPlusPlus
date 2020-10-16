@@ -12,7 +12,7 @@ public class PlayerSelectMenu : MonoBehaviour
     }
     public void PlayButton()
     {
-        SceneManager.LoadScene("Prototype 3");
+        SceneManager.LoadScene("Prototype 3 Henrik");
     }
 
     public GameObject Player1, Player2, Player3, Player4, Player2Button, Player3Button, Player4Button, BackMap, BackMenu, BackPlayer;
