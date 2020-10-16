@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerSelectMenu : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class PlayerSelectMenu : MonoBehaviour
     
     public void OnPlayer2Click()
     {
+        GameData.AIs = new bool[2];
         Player2Button.SetActive(false);
         Player3Button.SetActive(false);
         Player4Button.SetActive(false);
@@ -28,6 +30,7 @@ public class PlayerSelectMenu : MonoBehaviour
 
     public void OnPlayer3Click()
     {
+        GameData.AIs = new bool[3];
         Player2Button.SetActive(false);
         Player3Button.SetActive(false);
         Player4Button.SetActive(false);
@@ -39,6 +42,7 @@ public class PlayerSelectMenu : MonoBehaviour
 
     public void OnPlayer4Click()
     {
+        GameData.AIs = new bool[4];
         Player2Button.SetActive(false);
         Player3Button.SetActive(false);
         Player4Button.SetActive(false);
@@ -59,6 +63,24 @@ public class PlayerSelectMenu : MonoBehaviour
         Player2Button.SetActive(true);
         Player3Button.SetActive(true);
         Player4Button.SetActive(true);
+    }
+
+    public void SetBot(int p)
+    {
+        GameObject player = GameObject.Find("Players").transform.GetChild(p).gameObject;
+        Debug.Log(player.name);
+        if (GameData.AIs[p]) 
+        {
+            // Player is already AI, set sprite to normal and change to non AI
+            player.GetComponentInChildren<Text>().text = "Player"; //replace null with spritename
+            GameData.AIs[p] = false;
+        }
+        else
+        {
+            // Player is not AI, set sprite to AI and change to AI
+            player.GetComponentInChildren<Text>().text = "Bot";
+            GameData.AIs[p] = true;
+        }
     }
 
     // Start is called before the first frame update
