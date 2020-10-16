@@ -6,6 +6,7 @@ public class PlayerCardBehavior : MonoBehaviour
 {
     int ballCount;
     int killCount;
+    int ScoreCount;
     public void BallCountUpdate(int amount)
     {
         ballCount += amount;
@@ -18,6 +19,13 @@ public class PlayerCardBehavior : MonoBehaviour
         killCount += amount;
 
         transform.Find("Kills").GetComponent<Text>().text = "Kills:" + killCount;
+    }
+
+    public void ScoreCountUpdate(int amount)
+    {
+        ScoreCount += amount;
+
+        transform.Find("Score").GetComponent<Text>().text = "Score:" + ScoreCount;
     }
     void Start()
     {
