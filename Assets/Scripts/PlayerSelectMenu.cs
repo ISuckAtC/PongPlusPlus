@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerSelectMenu : MonoBehaviour
 {
+    public int MatchLimit;
+    public int MatchCount;
     public void BackButton()
     {           //Loads another scene
         SceneManager.LoadScene("Prototype 2 Darja");
@@ -13,7 +15,7 @@ public class PlayerSelectMenu : MonoBehaviour
     
     public void PlayButton()
     {
-        GameData.MatchesToWin = 2;
+        GameData.MatchesToWin = MatchCount;
         SceneManager.LoadScene("Prototype 3 Henrik");
     }
 
@@ -83,6 +85,13 @@ public class PlayerSelectMenu : MonoBehaviour
             player.GetComponentInChildren<Text>().text = "Bot";
             GameData.AIs[p] = true;
         }
+    }
+
+    public void OnMatchCountClick()
+    {
+        if (MatchCount == MatchLimit) MatchCount = 1;
+        else MatchCount++;
+        transform.GetComponentInChildren<Text>().text = "First to " + MatchCount + " wins";
     }
 
     // Start is called before the first frame update

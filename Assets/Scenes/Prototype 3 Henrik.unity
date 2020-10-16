@@ -520,6 +520,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6268971957980347475, guid: 28d871092edb75a439f64f207c845afa,
         type: 3}
+    - target: {fileID: 6217373348994514990, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: WinScreenFinal
+      value: 
+      objectReference: {fileID: 5444388270437816787, guid: bcc380857f981144ab79e9933247bd37,
+        type: 3}
     - target: {fileID: 6217373349581561234, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
       propertyPath: m_SpriteTilingProperty.border.x
@@ -630,6 +636,12 @@ PrefabInstance:
       propertyPath: WinScreen
       value: 
       objectReference: {fileID: 6268971957980347475, guid: 5674017cb208cc840bfb21433a90a13e,
+        type: 3}
+    - target: {fileID: 6217373349581561243, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: WinScreenFinal
+      value: 
+      objectReference: {fileID: 8736672769053254130, guid: 9b4d0f7d1bb0bf04580e4d446f15abc2,
         type: 3}
     - target: {fileID: 6217373349581561244, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -772,6 +784,12 @@ PrefabInstance:
       propertyPath: WinScreen
       value: 
       objectReference: {fileID: 6268971957980347475, guid: 1bc16fdef7610f045980920e2619f08d,
+        type: 3}
+    - target: {fileID: 6217373349592573387, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: WinScreenFinal
+      value: 
+      objectReference: {fileID: 5004540700453548969, guid: e24b88332bc15fe40a105151b3837bad,
         type: 3}
     - target: {fileID: 6217373349592573390, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}
@@ -940,6 +958,12 @@ PrefabInstance:
       propertyPath: WinScreen
       value: 
       objectReference: {fileID: 6268971957980347475, guid: 8584e62e7a45ace419b94aea5e4ca374,
+        type: 3}
+    - target: {fileID: 6217373349789318515, guid: 2e4822813ad11f54591455404ee07780,
+        type: 3}
+      propertyPath: WinScreenFinal
+      value: 
+      objectReference: {fileID: 8420500689815964312, guid: 8f1a375d827052547b1e10ddaa27c685,
         type: 3}
     - target: {fileID: 6217373349789318518, guid: 2e4822813ad11f54591455404ee07780,
         type: 3}

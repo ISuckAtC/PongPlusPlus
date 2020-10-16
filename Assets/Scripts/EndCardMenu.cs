@@ -15,6 +15,6 @@ public class EndCardMenu : MonoBehaviour
     {
         GameData.PlayerWins = null;
         GameData.MatchCount = 0;
-        SceneManager.LoadScene("MENU SCENE HERE");
+        SceneManager.LoadScene("Prototype 2 Darja");
     }
 }
