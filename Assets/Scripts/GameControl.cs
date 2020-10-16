@@ -33,6 +33,7 @@ public class GameControl : MonoBehaviour
                 for (; i < players.Count; ++i) 
                 {
                     GameObject db = players[i].GetComponent<PlatformBehavior>().deathBarrier;
+                    Debug.Log(db.name + "'s player is inactive, deactivating.");
                     db.GetComponent<DeathBarrierBehavior>().Destroyed = true;
                     db.GetComponent<SpriteRenderer>().material = db.GetComponent<DeathBarrierBehavior>().dead;
                     players[i].SetActive(false);

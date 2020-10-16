@@ -8,7 +8,7 @@ public class DeathBarrierBehavior : MonoBehaviour
 
     BoxCollider2D col;
     SpriteRenderer sr;
-    [HideInInspector] public bool Destroyed;
+    public bool Destroyed;
 
     public Material full;
     public Material faded;
