@@ -30,6 +30,9 @@ public class PlayerSelectMenu : MonoBehaviour
 
         Player1.SetActive(true);
         Player2.SetActive(true);
+
+        BackPlayer.SetActive(true);
+        BackMenu.SetActive(false);
     }
 
     public void OnPlayer3Click()
@@ -42,6 +45,9 @@ public class PlayerSelectMenu : MonoBehaviour
         Player1.SetActive(true);
         Player2.SetActive(true);
         Player3.SetActive(true);
+
+        BackPlayer.SetActive(true);
+        BackMenu.SetActive(false);
     }
 
     public void OnPlayer4Click()
@@ -55,6 +61,9 @@ public class PlayerSelectMenu : MonoBehaviour
         Player2.SetActive(true);
         Player3.SetActive(true);
         Player4.SetActive(true);
+
+        BackPlayer.SetActive(true);
+        BackMenu.SetActive(false);
     }
 
     public void OnBackPlayerButtonClick()
@@ -67,6 +76,11 @@ public class PlayerSelectMenu : MonoBehaviour
         Player2Button.SetActive(true);
         Player3Button.SetActive(true);
         Player4Button.SetActive(true);
+    }
+
+    public void OnbackMenuButtonClick()
+    {
+        SceneManager.LoadScene("Prototype 2 Darja");
     }
 
     public void SetBot(int p)
