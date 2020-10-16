@@ -19,7 +19,7 @@ public class PlayerSelectMenu : MonoBehaviour
         SceneManager.LoadScene("Prototype 3 Henrik");
     }
 
-    public GameObject Player1, Player2, Player3, Player4, Player2Button, Player3Button, Player4Button, BackMap, BackMenu, BackPlayer;
+    public GameObject Player1, Player2, Player3, Player4, Player2Button, Player3Button, Player4Button, BackMap, BackMenu, BackPlayer, MatchSelectButton;
     
     public void OnPlayer2Click()
     {
@@ -33,6 +33,7 @@ public class PlayerSelectMenu : MonoBehaviour
 
         BackPlayer.SetActive(true);
         BackMenu.SetActive(false);
+        MatchSelectButton.SetActive(true);
     }
 
     public void OnPlayer3Click()
@@ -48,6 +49,7 @@ public class PlayerSelectMenu : MonoBehaviour
 
         BackPlayer.SetActive(true);
         BackMenu.SetActive(false);
+        MatchSelectButton.SetActive(true);
     }
 
     public void OnPlayer4Click()
@@ -64,6 +66,7 @@ public class PlayerSelectMenu : MonoBehaviour
 
         BackPlayer.SetActive(true);
         BackMenu.SetActive(false);
+        MatchSelectButton.SetActive(true);
     }
 
     public void OnBackPlayerButtonClick()
@@ -76,6 +79,10 @@ public class PlayerSelectMenu : MonoBehaviour
         Player2Button.SetActive(true);
         Player3Button.SetActive(true);
         Player4Button.SetActive(true);
+
+        MatchSelectButton.SetActive(false);
+        BackPlayer.SetActive(false);
+        BackMenu.SetActive(true);
     }
 
     public void OnbackMenuButtonClick()
@@ -105,7 +112,7 @@ public class PlayerSelectMenu : MonoBehaviour
     {
         if (MatchCount == MatchLimit) MatchCount = 1;
         else MatchCount++;
-        transform.GetComponentInChildren<Text>().text = "First to " + MatchCount + " wins";
+        MatchSelectButton.transform.GetComponentInChildren<Text>().text = "First to " + MatchCount + " wins";
     }
 
     // Start is called before the first frame update
