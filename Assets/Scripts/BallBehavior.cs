@@ -76,6 +76,13 @@ public class BallBehavior : MonoBehaviour
         if (parent) transform.parent = null;
     }
 
+    public IEnumerator Ghost(float duration, int layerIndex, int layerNext)
+    {
+        gameObject.layer = layerIndex;
+        yield return new WaitForSeconds(duration);
+        gameObject.layer = layerNext;
+    }
+
     public void OnCollisionEnter2D(Collision2D col)
     {
         audioSource.Play();
