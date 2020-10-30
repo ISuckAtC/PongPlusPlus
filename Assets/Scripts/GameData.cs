@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameData : MonoBehaviour
 {
+    static public string StartMap;
     static public bool[] AIs;
     static public int MatchesToWin;
     static public int MatchCount;
