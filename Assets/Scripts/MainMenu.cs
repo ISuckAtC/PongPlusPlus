@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public string PlayScene;
     //Exit button should exit game
     public void ExitGame()
     {
@@ -13,7 +14,7 @@ public class MainMenu : MonoBehaviour
     //Switches scene from main menu to player select menu
     public void PlayMenu()
     {
-        SceneManager.LoadScene("Menu_PlayerSelection", LoadSceneMode.Single);
+        SceneManager.LoadScene(PlayScene, LoadSceneMode.Single);
     }
     
 

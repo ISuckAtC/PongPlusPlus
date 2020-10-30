@@ -10,13 +10,13 @@ public class PlayerSelectMenu : MonoBehaviour
     public int MatchCount;
     public void BackButton()
     {           //Loads another scene
-        SceneManager.LoadScene("Prototype 2 Darja");
+        SceneManager.LoadScene("Menu_MapSelection");
     }
     
     public void PlayButton()
     {
         GameData.MatchesToWin = MatchCount;
-        SceneManager.LoadScene("Prototype 3 Henrik");
+        SceneManager.LoadScene(GameData.StartMap);
     }
 
     public GameObject Player1, Player2, Player3, Player4, Player2Button, Player3Button, Player4Button, BackMap, BackMenu, BackPlayer, MatchSelectButton, PlaySelectButton;
@@ -91,7 +91,7 @@ public class PlayerSelectMenu : MonoBehaviour
 
     public void OnbackMenuButtonClick()
     {
-        SceneManager.LoadScene("Prototype 2 Darja");
+        SceneManager.LoadScene("Menu_MapSelection");
     }
 
     public void SetBot(int p)

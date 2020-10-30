@@ -40,9 +40,8 @@ public class MapSelection : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void BackButton()
+    {           //Loads another scene
+        SceneManager.LoadScene("Prototype 4 Menu");
     }
 }
