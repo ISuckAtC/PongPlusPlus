@@ -4,6 +4,7 @@ public class BallSpeedBuff : MonoBehaviour
 {
     public float SpeedMod;
     public float Duration;
+    public string Anim;
     Animator anim;
 
     void Start()
@@ -17,7 +18,7 @@ public class BallSpeedBuff : MonoBehaviour
             BallBehavior bb = collider.GetComponent<BallBehavior>();
             bb.StartCoroutine(bb.SpeedModBuff(Duration, SpeedMod, true));
             GetComponent<CircleCollider2D>().enabled = false;
-            anim.Play("SpeedUpTaken");
+            anim.Play(Anim);
             //Destroy(gameObject);
         }
     }
