@@ -12,14 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu_PlayerSelection.unity
     guid: 6a54d4fa00633ba46be35dcf95f4650d
   - enabled: 1
+    path: Assets/Scenes/Prototype 4 Menu.unity
+    guid: 43cf99cf7f6b4764eac087a3b5006f6b
+  - enabled: 1
     path: Assets/Scenes/Prototype 4 Darja.unity
     guid: bd5379d0a3cb96f4c8565c63cbb6da10
   - enabled: 1
     path: Assets/Scenes/Prototype 4 Map01.unity
     guid: 717ff74c1ca268f489b12753a25fd9cb
-  - enabled: 1
-    path: Assets/Scenes/Prototype 4 Menu.unity
-    guid: 43cf99cf7f6b4764eac087a3b5006f6b
   - enabled: 0
     path: Assets/Scenes/Menu_MapSelection.unity
     guid: 2ff6394bebbd82042be7543d76aaf84a
