@@ -14,6 +14,7 @@ public struct Map
 }
 public class MapSelection : MonoBehaviour
 {
+    public string PlayerSelectScene;
     public int Rows;
     public int Columns;
     public Map[] Maps;
@@ -37,6 +38,7 @@ public class MapSelection : MonoBehaviour
             button.name = Maps[(y * Columns) + x].Name;
             button.GetComponent<Image>().sprite = Maps[(y * Columns) + x].MapPreview;
             button.GetComponent<Button>().onClick.AddListener(button.GetComponent<MapClick>().Click);
+            button.GetComponent<MapClick>().PlayerSelectScene = PlayerSelectScene;
         }
     }
 

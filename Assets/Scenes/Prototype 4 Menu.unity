@@ -1343,7 +1343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7031324b149454e8f30e3caed7e6e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayScene: Menu_MapSelection
+  PlayScene: Prototype 4 MapSelect
 --- !u!1 &909865682
 GameObject:
   m_ObjectHideFlags: 0

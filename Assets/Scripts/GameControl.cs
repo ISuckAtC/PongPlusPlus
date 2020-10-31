@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameControl : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class GameControl : MonoBehaviour
                     Debug.Log(db.name + "'s player is inactive, deactivating.");
                     db.GetComponent<DeathBarrierBehavior>().Destroyed = true;
                     db.GetComponent<SpriteRenderer>().material = db.GetComponent<DeathBarrierBehavior>().dead;
+                    players[i].GetComponent<PlatformBehavior>().playerCard.SetActive(false);
                     players[i].SetActive(false);
                 }
                 break;
@@ -56,6 +58,7 @@ public class GameControl : MonoBehaviour
             ball.GetComponent<BallBehavior>().StartCoroutine(ball.GetComponent<BallBehavior>().Freeze(startDelay, players[i].transform));
             balls.Add(ball);
             players[i].GetComponent<BasePlatformMovement>().Boundary = PlatformBoundaryStart;
+            players[i].GetComponent<PlatformBehavior>().playerCard.transform.Find("Win").GetComponent<Text>().text = "Wins: " + GameData.PlayerWins[players[i].name];
         }
         foreach(KeyValuePair<string, int> pair in GameData.PlayerWins) Debug.Log(pair.Key + ": " + pair.Value);
         StartCoroutine(LateStart());
@@ -92,7 +95,8 @@ public class GameControl : MonoBehaviour
         GameObject winScreen = Instantiate(player.GetComponent<PlatformBehavior>().WinScreen, new Vector3(960, 540, -10), Quaternion.identity);
         winScreen.transform.parent = Canvas.transform;
         winScreen.GetComponent<Animator>().Play("Win", 15);
-        if (++GameData.PlayerWins[player.name] >= GameData.MatchesToWin) 
+        player.GetComponent<PlatformBehavior>().playerCard.transform.Find("Win").GetComponent<Text>().text = "Wins: " + ++GameData.PlayerWins[player.name];
+        if (GameData.PlayerWins[player.name] >= GameData.MatchesToWin) 
         {
             GameObject winFinal = Instantiate(player.GetComponent<PlatformBehavior>().WinScreenFinal, new Vector3(960, 540, -10), Quaternion.identity);
             winFinal.transform.parent = Canvas.transform;

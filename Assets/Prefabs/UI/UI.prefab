@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 4380933886117896580}
   - component: {fileID: 4380933886117896581}
   m_Layer: 5
-  m_Name: Player 4
+  m_Name: Player 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player 4
+  m_Text: Player 1
 --- !u!1 &4380933886121051500
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,7 +717,7 @@ GameObject:
   - component: {fileID: 4380933886926931903}
   - component: {fileID: 4380933886926931896}
   m_Layer: 5
-  m_Name: Player 3
+  m_Name: Player 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -782,7 +782,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player 3
+  m_Text: Player 4
 --- !u!1 &4380933886941494855
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +797,7 @@ GameObject:
   - component: {fileID: 4380933886941494852}
   - component: {fileID: 4380933886941494853}
   m_Layer: 5
-  m_Name: Player Name 4
+  m_Name: Player Name 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1088,7 +1088,7 @@ GameObject:
   - component: {fileID: 4380933887312988803}
   - component: {fileID: 4380933887312988812}
   m_Layer: 5
-  m_Name: Player Name 3
+  m_Name: Player Name 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1301,7 +1301,7 @@ GameObject:
   - component: {fileID: 4380933887372905335}
   - component: {fileID: 4380933887372905332}
   m_Layer: 5
-  m_Name: Player Name 1
+  m_Name: Player Name 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1720,7 +1720,7 @@ GameObject:
   - component: {fileID: 4380933888053549178}
   - component: {fileID: 4380933888053549179}
   m_Layer: 5
-  m_Name: Player 1
+  m_Name: Player 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1785,7 +1785,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player 1
+  m_Text: Player 3
 --- !u!1 &4380933888100700112
 GameObject:
   m_ObjectHideFlags: 0

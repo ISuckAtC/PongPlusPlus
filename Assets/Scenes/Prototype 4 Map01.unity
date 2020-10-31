@@ -677,7 +677,7 @@ MonoBehaviour:
   balls: []
   ballObject: {fileID: 3657493458850510913, guid: dbcc03ef81b5e4e46ae27c557a8920a9,
     type: 3}
-  Canvas: {fileID: 0}
+  Canvas: {fileID: 1044750804}
   ballStartOffset: 0.9
   ballStartRandomRange: 0.15
   startSpeed: 3
@@ -2011,6 +2011,12 @@ GameObject:
 --- !u!1 &1044750803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4380933887372905329, guid: 8b7e863585ab0dd4491d93d4c930a515,
+    type: 3}
+  m_PrefabInstance: {fileID: 1044750799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1044750804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4380933886105781560, guid: 8b7e863585ab0dd4491d93d4c930a515,
     type: 3}
   m_PrefabInstance: {fileID: 1044750799}
   m_PrefabAsset: {fileID: 0}

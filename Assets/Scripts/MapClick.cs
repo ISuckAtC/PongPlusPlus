@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class MapClick : MonoBehaviour
 {
+    public string PlayerSelectScene;
     public void Click()
     {
         GameData.StartMap = gameObject.name;
-        SceneManager.LoadScene("Menu_PlayerSelection", LoadSceneMode.Single);
+        SceneManager.LoadScene(PlayerSelectScene, LoadSceneMode.Single);
     }
 }
