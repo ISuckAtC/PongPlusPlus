@@ -168,7 +168,7 @@ MonoBehaviour:
   Horizontal: 0
   AI: 0
   DI: 3
-  AISpeed: 0.03
+  AISpeed: 3
   AIBoundary: 4
   color: {r: 0.21568629, g: 1, b: 0, a: 1}
   deathAnims:
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ce555531616a34d89708187baf6185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.07
+  Speed: 7
   Boundary: 4
   Left: 111
   Right: 108
@@ -440,7 +440,7 @@ MonoBehaviour:
   Horizontal: 0
   AI: 1
   DI: 3
-  AISpeed: 0.03
+  AISpeed: 3
   AIBoundary: 4
   color: {r: 0.9686275, g: 1, b: 0, a: 1}
   deathAnims:
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ce555531616a34d89708187baf6185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.07
+  Speed: 7
   Boundary: 4
   Left: 119
   Right: 115
@@ -712,7 +712,7 @@ MonoBehaviour:
   Horizontal: 1
   AI: 0
   DI: 3
-  AISpeed: 0.03
+  AISpeed: 3
   AIBoundary: 4
   color: {r: 0.76470596, g: 0.32156864, b: 0.83921576, a: 1}
   deathAnims:
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd69ffea51cef7458d17553e0f6cd75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.07
+  Speed: 7
   Boundary: 4
   Left: 122
   Right: 120
@@ -984,7 +984,7 @@ MonoBehaviour:
   Horizontal: 1
   AI: 1
   DI: 3
-  AISpeed: 0.03
+  AISpeed: 3
   AIBoundary: 4
   color: {r: 1, g: 0.40784317, b: 0, a: 1}
   deathAnims:
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd69ffea51cef7458d17553e0f6cd75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.07
+  Speed: 7
   Boundary: 4
   Left: 110
   Right: 109

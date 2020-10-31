@@ -17,12 +17,12 @@ public class VerticalPlatformMovement : BasePlatformMovement
         if (GetComponent<PlatformBehavior>().AI) return;
         if (Input.GetKey(Right)) 
         {
-            if (transform.position.y - Speed > -Boundary) transform.position = new Vector3(transform.position.x, transform.position.y - Speed, 0);
+            if (transform.position.y - (Speed * Time.deltaTime) > -Boundary) transform.position = new Vector3(transform.position.x, transform.position.y - (Speed * Time.deltaTime), 0);
             else transform.position = new Vector3(transform.position.x, -Boundary, 0);
         }
         if(Input.GetKey(Left))
         {
-            if (transform.position.y + Speed < Boundary) transform.position = new Vector3(transform.position.x, transform.position.y + Speed, 0);
+            if (transform.position.y + (Speed * Time.deltaTime) < Boundary) transform.position = new Vector3(transform.position.x, transform.position.y + (Speed * Time.deltaTime), 0);
             else transform.position = new Vector3(transform.position.x, Boundary, 0);
         }
     }

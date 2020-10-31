@@ -43,12 +43,12 @@ public class PlatformBehavior : MonoBehaviour
                 GameObject closest = sortedList.Last();
                 if (closest.transform.position.x > transform.position.x)
                 {
-                    if (transform.position.x + AISpeed < AIBoundary) transform.position = new Vector3(transform.position.x + AISpeed, transform.position.y, 0);
+                    if (transform.position.x + (AISpeed * Time.deltaTime) < AIBoundary) transform.position = new Vector3(transform.position.x + (AISpeed * Time.deltaTime), transform.position.y, 0);
                     else transform.position = new Vector3(AIBoundary, transform.position.y, 0);
                 }
                 else
                 {
-                    if (transform.position.x - AISpeed > -AIBoundary) transform.position = new Vector3(transform.position.x - AISpeed, transform.position.y, 0);
+                    if (transform.position.x - (AISpeed * Time.deltaTime) > -AIBoundary) transform.position = new Vector3(transform.position.x - (AISpeed * Time.deltaTime), transform.position.y, 0);
                     else transform.position = new Vector3(-AIBoundary, transform.position.y, 0);
                 }
             }
@@ -59,12 +59,12 @@ public class PlatformBehavior : MonoBehaviour
                 GameObject closest = sortedList.First();
                 if (closest.transform.position.x > transform.position.x)
                 {
-                    if (transform.position.x + AISpeed < AIBoundary) transform.position = new Vector3(transform.position.x + AISpeed, transform.position.y, 0);
+                    if (transform.position.x + (AISpeed * Time.deltaTime) < AIBoundary) transform.position = new Vector3(transform.position.x + (AISpeed * Time.deltaTime), transform.position.y, 0);
                     else transform.position = new Vector3(AIBoundary, transform.position.y, 0);
                 }
                 else
                 {
-                    if (transform.position.x - AISpeed > -AIBoundary) transform.position = new Vector3(transform.position.x - AISpeed, transform.position.y, 0);
+                    if (transform.position.x - (AISpeed * Time.deltaTime) > -AIBoundary) transform.position = new Vector3(transform.position.x - (AISpeed * Time.deltaTime), transform.position.y, 0);
                     else transform.position = new Vector3(-AIBoundary, transform.position.y, 0);
                 }
             }
@@ -78,12 +78,12 @@ public class PlatformBehavior : MonoBehaviour
                 GameObject closest = sortedList.Last();
                 if (closest.transform.position.y > transform.position.y)
                 {
-                    if (transform.position.y + AISpeed < AIBoundary) transform.position = new Vector3(transform.position.x, transform.position.y + AISpeed, 0);
+                    if (transform.position.y + (AISpeed * Time.deltaTime) < AIBoundary) transform.position = new Vector3(transform.position.x, transform.position.y + (AISpeed * Time.deltaTime), 0);
                     else transform.position = new Vector3(transform.position.x, AIBoundary, 0);
                 }
                 else
                 {
-                    if (transform.position.y - AISpeed > -AIBoundary) transform.position = new Vector3(transform.position.x, transform.position.y - AISpeed, 0);
+                    if (transform.position.y - (AISpeed * Time.deltaTime) > -AIBoundary) transform.position = new Vector3(transform.position.x, transform.position.y - (AISpeed * Time.deltaTime), 0);
                     else transform.position = new Vector3(transform.position.x, -AIBoundary, 0);
                 }
             }
@@ -94,12 +94,12 @@ public class PlatformBehavior : MonoBehaviour
                 GameObject closest = sortedList.First();
                 if (closest.transform.position.y > transform.position.y)
                 {
-                    if (transform.position.y + AISpeed < AIBoundary) transform.position = new Vector3(transform.position.x, transform.position.y + AISpeed, 0);
+                    if (transform.position.y + (AISpeed * Time.deltaTime) < AIBoundary) transform.position = new Vector3(transform.position.x, transform.position.y + (AISpeed * Time.deltaTime), 0);
                     else transform.position = new Vector3(transform.position.x, AIBoundary, 0);
                 }
                 else
                 {
-                    if (transform.position.y - AISpeed > -AIBoundary) transform.position = new Vector3(transform.position.x, transform.position.y - AISpeed, 0);
+                    if (transform.position.y - (AISpeed * Time.deltaTime) > -AIBoundary) transform.position = new Vector3(transform.position.x, transform.position.y - (AISpeed * Time.deltaTime), 0);
                     else transform.position = new Vector3(transform.position.x, -AIBoundary, 0);
                 }
             }
