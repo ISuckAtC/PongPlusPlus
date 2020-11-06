@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SizeMod: 2
   Duration: 10
+  Animation: SizeUpTaken
 --- !u!58 &3511067337236422158
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class BallSizeBuff : MonoBehaviour
 {
     public float SizeMod;
     public float Duration;
+    public string Animation;
     Animator anim;
 
     void Start()
@@ -20,7 +21,7 @@ public class BallSizeBuff : MonoBehaviour
             BallBehavior bb = collider.GetComponent<BallBehavior>();
             bb.StartCoroutine(bb.SizeModBuff(Duration, SizeMod));
             GetComponent<CircleCollider2D>().enabled = false;
-            anim.Play("SizeUpTaken");
+            anim.Play(Animation);
             //Destroy(gameObject);
         }
     }

@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype 4 Map01.unity
     guid: 717ff74c1ca268f489b12753a25fd9cb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menu_MapSelection.unity
     guid: 2ff6394bebbd82042be7543d76aaf84a
   - enabled: 1
@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map SpeedUp 0.unity
     guid: 329296ec2efafb148a5a8246b6c1b9a8
+  - enabled: 1
+    path: Assets/Scenes/Map SizeDown 0.unity
+    guid: 4f33377af7b82294f9e94da578a80af0
   m_configObjects: {}
