@@ -15,6 +15,7 @@ public struct Map
 public class MapSelection : MonoBehaviour
 {
     public string PlayerSelectScene;
+    public string MainMenuScene;
     public int Rows;
     public int Columns;
     public Map[] Maps;
@@ -44,6 +45,6 @@ public class MapSelection : MonoBehaviour
 
     public void BackButton()
     {           //Loads another scene
-        SceneManager.LoadScene("Prototype 4 Menu");
+        SceneManager.LoadScene(MainMenuScene);
     }
 }

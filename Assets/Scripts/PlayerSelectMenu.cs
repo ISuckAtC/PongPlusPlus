@@ -8,10 +8,7 @@ public class PlayerSelectMenu : MonoBehaviour
 {
     public int MatchLimit;
     public int MatchCount;
-    public void BackButton()
-    {           //Loads another scene
-        SceneManager.LoadScene("Menu_MapSelection");
-    }
+    public string MapSelectScene;
     
     public void PlayButton()
     {
@@ -91,7 +88,7 @@ public class PlayerSelectMenu : MonoBehaviour
 
     public void OnbackMenuButtonClick()
     {
-        SceneManager.LoadScene("Menu_MapSelection");
+        SceneManager.LoadScene(MapSelectScene);
     }
 
     public void SetBot(int p)
