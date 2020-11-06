@@ -124,4 +124,12 @@ public class PlatformBehavior : MonoBehaviour
             rbo.velocity = (new Vector2(rbo.velocity.x + diff.x, rbo.velocity.y + diff.y)).normalized * rbo.velocity.magnitude;
         }
     }
+
+    public IEnumerator SizeBuff(float sizeMod, float duration)
+    {
+        Vector3 oldScale = transform.localScale;
+        transform.localScale = new Vector3(transform.localScale.x * sizeMod, transform.localScale.y, transform.localScale.z);
+        yield return new WaitForSeconds(duration);
+        transform.localScale = oldScale;
+    }
 }
