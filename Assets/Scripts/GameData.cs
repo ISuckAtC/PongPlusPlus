@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameData : MonoBehaviour
 {
+    public bool Assign;
+    public float AssignEndDelay;
     public bool Debug;
     static public string StartMap;
     public bool[] DebugAIs;
@@ -12,9 +14,14 @@ public class GameData : MonoBehaviour
     static public int MatchCount;
     static public Dictionary<string, int> PlayerWins;
     static public bool FriendlyFire;
+    static public float EndDelay;
     // Start is called before the first frame update
     void Awake()
     {
+        if (Assign)
+        {
+            EndDelay = AssignEndDelay;
+        }
         if (Debug)
         {
             MatchesToWin = 1;

@@ -27,6 +27,10 @@ public class GameControl : MonoBehaviour
     void Start()
     {
         Debug.Log("START");
+        if (!GetComponent<GameData>().Debug)
+        {
+            endDelay = GameData.EndDelay;
+        }
         Random.InitState(System.DateTime.Now.Millisecond);
         for(int i = 0; i < players.Count; ++i)
         {
