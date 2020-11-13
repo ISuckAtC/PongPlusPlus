@@ -694,6 +694,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 229320924}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &244792906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244792907}
+  m_Layer: 0
+  m_Name: BallSpawnerR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &244792907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244792906}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 974215091}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &294813055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1227,12 +1257,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd25d4dfa5ae63049b237d7cca6cfb89, type: 3}
---- !u!95 &796880937 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7734133514151820332, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
-    type: 3}
-  m_PrefabInstance: {fileID: 796880936}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &798475827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,6 +1358,7 @@ Transform:
   - {fileID: 798475828}
   - {fileID: 115201167}
   - {fileID: 832879213}
+  - {fileID: 974215091}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1456,6 +1481,40 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 917130707}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &974215090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 974215091}
+  m_Layer: 0
+  m_Name: BallSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &974215091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974215090}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2095906613}
+  - {fileID: 1867248747}
+  - {fileID: 244792907}
+  - {fileID: 1852891534}
+  m_Father: {fileID: 875455848}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1146278634
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2028,6 +2087,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf570a13623c2f4aa992606cc1e1e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Assign: 0
+  AssignEndDelay: 0
   Debug: 0
   DebugAIs: 00000000
 --- !u!114 &1446431266
@@ -2058,8 +2119,11 @@ MonoBehaviour:
   endDelay: 10
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
-  videoPlayer: {fileID: 0}
-  startAnim: {fileID: 796880937}
+  BallSpawns:
+  - {fileID: 2095906613}
+  - {fileID: 1867248747}
+  - {fileID: 244792907}
+  - {fileID: 1852891534}
 --- !u!4 &1446431267
 Transform:
   m_ObjectHideFlags: 0
@@ -2658,6 +2722,66 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1821654567}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1852891533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1852891534}
+  m_Layer: 0
+  m_Name: BallSpawnerL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1852891534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852891533}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 974215091}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1867248746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867248747}
+  m_Layer: 0
+  m_Name: BallSpawnerBot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1867248747
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867248746}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 974215091}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2054808340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2849,3 +2973,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2059758494}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2095906612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2095906613}
+  m_Layer: 0
+  m_Name: BallSpawnerTop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2095906613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095906612}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 974215091}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
