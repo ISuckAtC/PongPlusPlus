@@ -26,8 +26,10 @@ public class BallSplitBuff : Buff
             for(int i = 1; i > -((SplitNum + 1) / 2) && i - 1 < (SplitNum / 2); i = i > 0 ? i * -1 : (i * -1) + 1)
             {
                 GameObject b = Instantiate(collider.gameObject, collider.transform.position, collider.transform.localRotation);
-                b.GetComponent<BallBehavior>().lastPlayer = bb.lastPlayer;
-                b.GetComponent<BallBehavior>().StartCoroutine(b.GetComponent<BallBehavior>().Ghost(0.5f, 12, 11));
+                BallBehavior bbcopy = b.GetComponent<BallBehavior>();
+                bbcopy.lastPlayer = bb.lastPlayer;
+                bbcopy.lastPlayer.GetComponent<PlatformBehavior>().playerCard.GetComponent<PlayerCardBehavior>().KillCountUpdate(1);
+                bbcopy.StartCoroutine(b.GetComponent<BallBehavior>().Ghost(0.5f, 12, 11));
                 b.GetComponent<Rigidbody2D>().velocity = RotateVector(b.GetComponent<Rigidbody2D>().velocity, (Degrees * -i) * (Mathf.PI / 180));
             }
             anim.Play("SplitTaken");
