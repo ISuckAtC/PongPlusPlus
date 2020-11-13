@@ -32,7 +32,7 @@ public class MapSelection : MonoBehaviour
             if ((y * Columns) + x >= Maps.Length) break;
             GameObject button = Instantiate(MapButton, new Vector3(
                 PadLeft + (x * ((Screen.width - (PadLeft * 2)) / Columns)), 
-                PadBottom + (y * ((Screen.height - (PadBottom * 2)) / Rows)),
+                PadBottom + (y * (Screen.height / Rows)),
                 0), 
                 Quaternion.identity);
             button.transform.SetParent(GameObject.Find("Canvas").transform);

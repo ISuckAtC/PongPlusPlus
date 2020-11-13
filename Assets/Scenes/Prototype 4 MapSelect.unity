@@ -593,7 +593,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSelectScene: Prototype 4 PlayerSelect
   MainMenuScene: Prototype 4 Menu
-  Rows: 3
+  Rows: 2
   Columns: 4
   Maps:
   - Name: Prototype 4 Map01

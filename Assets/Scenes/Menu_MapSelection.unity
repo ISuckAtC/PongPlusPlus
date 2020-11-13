@@ -591,7 +591,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de14fcb5336d16749945e8dcdb6f1407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rows: 3
+  PlayerSelectScene: 
+  MainMenuScene: 
+  Rows: 2
   Columns: 4
   Maps:
   - Name: Prototype 4 Map01
