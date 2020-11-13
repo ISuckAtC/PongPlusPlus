@@ -31,6 +31,7 @@ public class BallSplitBuff : Buff
                 bbcopy.lastPlayer.GetComponent<PlatformBehavior>().playerCard.GetComponent<PlayerCardBehavior>().KillCountUpdate(1);
                 bbcopy.StartCoroutine(b.GetComponent<BallBehavior>().Ghost(0.5f, 12, 11));
                 b.GetComponent<Rigidbody2D>().velocity = RotateVector(b.GetComponent<Rigidbody2D>().velocity, (Degrees * -i) * (Mathf.PI / 180));
+                GameObject.Find("GameControl").GetComponent<GameControl>().balls.Add(b);
             }
             anim.Play("SplitTaken");
             //Destroy(gameObject);

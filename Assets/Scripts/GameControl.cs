@@ -16,6 +16,7 @@ public class GameControl : MonoBehaviour
     public float ballStartOffset;
     public float ballStartRandomRange;
     public float startSpeed;
+    public float SpeedUpOnKill;
     public float startDelay;
     public float endDelay;
     public float PlatformBoundary;

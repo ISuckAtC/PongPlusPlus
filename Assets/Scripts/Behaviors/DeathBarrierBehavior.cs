@@ -73,6 +73,7 @@ public class DeathBarrierBehavior : MonoBehaviour
             string[] anims = player.GetComponent<PlatformBehavior>().deathAnims;
             player.GetComponent<Animator>().Play(anims[Random.Range(0, anims.Length)], 0);
             player.GetComponent<AudioSource>().Play();
+            foreach(GameObject ball in gc.balls) ball.GetComponent<Rigidbody2D>().velocity *= gc.SpeedUpOnKill;
             if (gc.players.Where(x => x.activeSelf).Count() == 1)
             {
                 gc.Winner(gc.players[0]);
