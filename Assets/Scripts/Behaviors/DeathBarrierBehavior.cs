@@ -14,6 +14,7 @@ public class DeathBarrierBehavior : MonoBehaviour
     public Material full;
     public Material faded;
     public Material dead;
+    public Sprite[] Cracks;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +31,13 @@ public class DeathBarrierBehavior : MonoBehaviour
     {
         if (!GameData.FriendlyFire && collision.gameObject.GetComponent<BallBehavior>().lastPlayer == player) return;
         if (Destroyed) return;
-        if (--player.GetComponent<PlatformBehavior>().Health > 0) 
+        PlatformBehavior pb = player.GetComponent<PlatformBehavior>();
+        if (--pb.Health > 0) 
         {
+            if (pb.Health < Cracks.Length) sr.sprite = Cracks[Cracks.Length - pb.Health];
             return;
         }
+        sr.sprite = Cracks[0];
         sr.material = faded;
         col.isTrigger = true;
         Destroyed = true;
