@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 7
   Boundary: 4
+  playerNumber: 2
   Left: 111
   Right: 108
 --- !u!82 &1240194858
@@ -461,6 +462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 7
   Boundary: 4
+  playerNumber: 1
   Left: 119
   Right: 115
 --- !u!82 &677484701
@@ -733,6 +735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 7
   Boundary: 4
+  playerNumber: 4
   Left: 122
   Right: 120
 --- !u!82 &1559265304
@@ -1005,6 +1008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 7
   Boundary: 4
+  playerNumber: 3
   Left: 110
   Right: 109
 --- !u!82 &585611501

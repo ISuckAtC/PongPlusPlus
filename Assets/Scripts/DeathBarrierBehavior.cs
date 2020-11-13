@@ -28,6 +28,7 @@ public class DeathBarrierBehavior : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!GameData.FriendlyFire && collision.gameObject.GetComponent<BallBehavior>().lastPlayer == player) return;
         if (Destroyed) return;
         if (--player.GetComponent<PlatformBehavior>().Health > 0) 
         {
