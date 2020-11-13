@@ -19,11 +19,16 @@ public class PlatformBehavior : MonoBehaviour
     GameControl gc;
     public Color color;
     public string[] deathAnims;
+    public float BoredCountRate;
+    public int BoredToSpawn;
+    private int BoredCount;
     // Start is called before the first frame update
     void Start()
     {
+        BoredCount = 0;
         sr = GetComponent<SpriteRenderer>();
         gc = GameObject.Find("GameControl").GetComponent<GameControl>();
+        InvokeRepeating("Bored", 0, BoredCountRate);
     }
 
     // Update is called once per frame
@@ -110,6 +115,7 @@ public class PlatformBehavior : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ball")
         {
+            BoredCount = 0;
             BallBehavior ball = collision.gameObject.GetComponent<BallBehavior>();
             collision.gameObject.GetComponent<SpriteRenderer>().color = color;
             if (ball.lastPlayer != null) ball.lastPlayer.GetComponent<PlatformBehavior>().playerCard.GetComponent<PlayerCardBehavior>().BallCountUpdate(-1);
@@ -131,5 +137,14 @@ public class PlatformBehavior : MonoBehaviour
         transform.localScale = new Vector3(transform.localScale.x * sizeMod, transform.localScale.y, transform.localScale.z);
         yield return new WaitForSeconds(duration);
         transform.localScale = oldScale;
+    }
+
+    public void Bored()
+    {
+        if (++BoredCount >= BoredToSpawn)
+        {
+            BoredCount = 0;
+            GameObject.Find("GameControl").GetComponent<GameControl>().SpawnBall();
+        }
     }
 }

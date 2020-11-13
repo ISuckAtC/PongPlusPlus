@@ -20,9 +20,7 @@ public class GameControl : MonoBehaviour
     public float endDelay;
     public float PlatformBoundary;
     public float PlatformBoundaryStart;
-    public VideoPlayer videoPlayer;
-    public Animator startAnim;
-    bool Started = false;
+    public Transform[] BallSpawns;
     // Start is called before the first frame update
     void Start()
     {
@@ -106,6 +104,15 @@ public class GameControl : MonoBehaviour
             winFinal.transform.parent = Canvas.transform;
         } else StartCoroutine(NextRound());
         
+    }
+    public void SpawnBall()
+    {
+        if (BallSpawns.Length > 0)
+        {
+            GameObject ball = Instantiate(ballObject, BallSpawns[Random.Range(0, BallSpawns.Length)].position, Quaternion.identity);
+            ball.GetComponent<Rigidbody2D>().velocity = (new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f))).normalized * startSpeed;
+            balls.Add(ball);
+        }
     }
     public IEnumerator NextRound()
     {

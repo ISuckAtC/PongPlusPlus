@@ -54,6 +54,7 @@ public class DeathBarrierBehavior : MonoBehaviour
             gc.players.Remove(player);
             collider.gameObject.GetComponent<BallBehavior>().lastPlayer.GetComponent<PlatformBehavior>().playerCard.GetComponent<PlayerCardBehavior>().KillCountUpdate(1);
             collider.gameObject.GetComponent<BallBehavior>().lastPlayer.GetComponent<PlatformBehavior>().playerCard.GetComponent<PlayerCardBehavior>().BallCountUpdate(-1);
+            player.GetComponent<PlatformBehavior>().CancelInvoke("Bored");
             string[] anims = player.GetComponent<PlatformBehavior>().deathAnims;
             player.GetComponent<Animator>().Play(anims[Random.Range(0, anims.Length)], 0);
             player.GetComponent<AudioSource>().Play();

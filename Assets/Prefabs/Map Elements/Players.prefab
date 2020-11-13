@@ -175,6 +175,8 @@ MonoBehaviour:
   - DeathGreen1
   - DeathGreen2
   - DeathGreen3
+  BoredCountRate: 1
+  BoredToSpawn: 15
 --- !u!114 &6217373348994514991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +450,8 @@ MonoBehaviour:
   - DeathYellow1
   - DeathYellow2
   - DeathYellow3
+  BoredCountRate: 1
+  BoredToSpawn: 15
 --- !u!114 &6217373349581561240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,6 +725,8 @@ MonoBehaviour:
   - DeathPurple1
   - DeathPurple2
   - DeathPurple3
+  BoredCountRate: 1
+  BoredToSpawn: 15
 --- !u!114 &1559265299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -994,6 +1000,8 @@ MonoBehaviour:
   - DeathOrange1
   - DeathOrange2
   - DeathOrange3
+  BoredCountRate: 1
+  BoredToSpawn: 15
 --- !u!114 &585611496
 MonoBehaviour:
   m_ObjectHideFlags: 0
