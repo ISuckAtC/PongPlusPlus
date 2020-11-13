@@ -62,10 +62,13 @@ public class DeathBarrierBehavior : MonoBehaviour
             player.GetComponent<BoxCollider2D>().enabled = false;
             gc.players.Remove(player);
             BallBehavior bb = collider.gameObject.GetComponent<BallBehavior>();
-            PlatformBehavior pb = bb.lastPlayer.GetComponent<PlatformBehavior>();
-            PlayerCardBehavior pcb = pb.playerCard.GetComponent<PlayerCardBehavior>();
-            pcb.KillCountUpdate(1);
-            pcb.BallCountUpdate(-1);
+            if (!bb.lastPlayer)
+            {
+                PlatformBehavior pb = bb.lastPlayer.GetComponent<PlatformBehavior>();
+                PlayerCardBehavior pcb = pb.playerCard.GetComponent<PlayerCardBehavior>();
+                pcb.KillCountUpdate(1);
+                pcb.BallCountUpdate(-1);
+            }
             player.GetComponent<PlatformBehavior>().CancelInvoke("Bored");
             string[] anims = player.GetComponent<PlatformBehavior>().deathAnims;
             player.GetComponent<Animator>().Play(anims[Random.Range(0, anims.Length)], 0);
