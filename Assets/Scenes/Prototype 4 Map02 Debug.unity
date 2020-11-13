@@ -1331,7 +1331,7 @@ PrefabInstance:
     - target: {fileID: 7734133514151820323, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7734133514151820334, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
         type: 3}
@@ -1390,12 +1390,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd25d4dfa5ae63049b237d7cca6cfb89, type: 3}
---- !u!95 &766923940 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7734133514151820332, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
-    type: 3}
-  m_PrefabInstance: {fileID: 766923939}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &831987719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2366,6 +2360,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf570a13623c2f4aa992606cc1e1e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Assign: 0
+  AssignEndDelay: 0
   Debug: 1
   DebugAIs: 01010101
 --- !u!114 &1443329156
@@ -2392,12 +2388,12 @@ MonoBehaviour:
   ballStartOffset: 0.9
   ballStartRandomRange: 0.15
   startSpeed: 3
+  SpeedUpOnKill: 1.1
   startDelay: 3
   endDelay: 10
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
-  videoPlayer: {fileID: 0}
-  startAnim: {fileID: 766923940}
+  BallSpawns: []
 --- !u!4 &1443329157
 Transform:
   m_ObjectHideFlags: 0

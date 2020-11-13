@@ -2570,6 +2570,7 @@ MonoBehaviour:
   ballStartOffset: 0.9
   ballStartRandomRange: 0.15
   startSpeed: 3
+  SpeedUpOnKill: 1.1
   startDelay: 3
   endDelay: 10
   PlatformBoundary: 4
