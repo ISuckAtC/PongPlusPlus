@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarrierUpBuff : MonoBehaviour
+public class BarrierUpBuff : Buff
 {
     public int ShieldAmount;
     public string Anim;
@@ -11,6 +11,7 @@ public class BarrierUpBuff : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        DefaultSprite = GetComponent<SpriteRenderer>().sprite;
     }
     void OnTriggerEnter2D(Collider2D collider)
     {

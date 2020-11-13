@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallSizeBuff : MonoBehaviour
+public class BallSizeBuff : Buff
 {
     public float SizeMod;
     public float Duration;
@@ -12,6 +12,7 @@ public class BallSizeBuff : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        DefaultSprite = GetComponent<SpriteRenderer>().sprite;
     }
 
     void OnTriggerEnter2D(Collider2D collider)

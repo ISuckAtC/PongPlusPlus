@@ -117,4 +117,10 @@ public class GameControl : MonoBehaviour
         yield return new WaitForSeconds(startDelay);
         foreach(GameObject player in players) player.GetComponent<BasePlatformMovement>().Boundary = PlatformBoundary;
     }
+    public IEnumerator RespawnBuff(GameObject obj, float respawnTime)
+    {
+        yield return new WaitForSeconds(respawnTime);
+        obj.SetActive(true);
+        obj.GetComponent<CircleCollider2D>().enabled = true;
+    }
 }

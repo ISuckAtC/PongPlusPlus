@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformSizeBuff : MonoBehaviour
+public class PlatformSizeBuff : Buff
 {
     public float SizeMod;
     public float Duration;
@@ -12,8 +12,9 @@ public class PlatformSizeBuff : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        DefaultSprite = GetComponent<SpriteRenderer>().sprite;
     }
-    void OnTriggerEnter2D(Collider2D collider)
+    public void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "Ball")
         {

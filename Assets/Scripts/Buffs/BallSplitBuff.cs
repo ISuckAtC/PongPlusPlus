@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-public class BallSplitBuff : MonoBehaviour
+public class BallSplitBuff : Buff
 {
     public float SplitAngle;
     public float SplitNum;
@@ -14,6 +14,7 @@ public class BallSplitBuff : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        DefaultSprite = GetComponent<SpriteRenderer>().sprite;
     }
     void OnTriggerEnter2D(Collider2D collider)
     {

@@ -20,6 +20,14 @@ public class DestroyScript : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        Buff buff;
+        if (animator.TryGetComponent<Buff>(out buff) && buff.Respawn)
+        {
+            GameControl gc = GameObject.Find("GameControl").GetComponent<GameControl>();
+            gc.StartCoroutine(gc.RespawnBuff(buff.gameObject, buff.RespawnTime));
+            buff.GetComponent<SpriteRenderer>().sprite = buff.DefaultSprite;
+            ActuallyDestroy = false;
+        }
         Debug.Log("destroying animation object " + animator.gameObject.name);
         if (ActuallyDestroy) Destroy(animator.gameObject);
         else animator.gameObject.SetActive(false);

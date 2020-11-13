@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class BallSpeedBuff : MonoBehaviour
+public class BallSpeedBuff : Buff
 {
     public float SpeedMod;
     public float Duration;
@@ -10,6 +10,7 @@ public class BallSpeedBuff : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        DefaultSprite = GetComponent<SpriteRenderer>().sprite;
     }
     void OnTriggerEnter2D(Collider2D collider)
     {
