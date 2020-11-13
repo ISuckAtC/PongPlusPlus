@@ -342,6 +342,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf570a13623c2f4aa992606cc1e1e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Assign: 0
+  AssignEndDelay: 0
+  Debug: 0
+  DebugAIs: 
 --- !u!1 &522162942
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +448,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 164469740}
     m_Modifications:
+    - target: {fileID: 1824380523698204202, guid: 5f576dd0f4fde0b45a2ecabcf6639aaf,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1559265297}
     - target: {fileID: 1824380524658585020, guid: 5f576dd0f4fde0b45a2ecabcf6639aaf,
         type: 3}
       propertyPath: m_Name
@@ -504,6 +513,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1824380524816576298, guid: 5f576dd0f4fde0b45a2ecabcf6639aaf,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1240194851}
+    - target: {fileID: 1824380525215142471, guid: 5f576dd0f4fde0b45a2ecabcf6639aaf,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 585611494}
+    - target: {fileID: 1824380525292557651, guid: 5f576dd0f4fde0b45a2ecabcf6639aaf,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 677484694}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f576dd0f4fde0b45a2ecabcf6639aaf, type: 3}
 --- !u!4 &682111110 stripped
