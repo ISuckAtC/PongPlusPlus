@@ -131,6 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d463bcd099dd1584c84b00ecaf4028e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultSprite: {fileID: 0}
+  Respawn: 1
+  RespawnTime: 20
   SplitAngle: 0
   SplitNum: 1
-  Degrees: 30
+  Degrees: 20

@@ -96,6 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e10c691f11fef44bbf87cc784db3ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultSprite: {fileID: 0}
+  Respawn: 1
+  RespawnTime: 20
   SpeedMod: 2
   Duration: 15
   Anim: SpeedUpTaken
