@@ -605,7 +605,7 @@ MonoBehaviour:
   - Name: Map SizeDown 0
     MapPreview: {fileID: 21300000, guid: 91cc905fee36db84d851d8edac885eb1, type: 3}
   - Name: Map Split 0
-    MapPreview: {fileID: 21300000, guid: 91cc905fee36db84d851d8edac885eb1, type: 3}
+    MapPreview: {fileID: 21300000, guid: fa0b56a939dd87648bc08f2aef4bb04f, type: 3}
   MapButton: {fileID: 1408303820931672883, guid: da231b24cfb6c644b8f2f217fd55c0a2,
     type: 3}
 --- !u!1 &1909008328

@@ -1782,6 +1782,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 4380933887687733403, guid: 8b7e863585ab0dd4491d93d4c930a515,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4380933888053549157, guid: 8b7e863585ab0dd4491d93d4c930a515,
         type: 3}
       propertyPath: m_Name
@@ -2420,7 +2425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Assign: 0
   AssignEndDelay: 0
-  Debug: 1
+  Debug: 0
   DebugAIs: 00000000
 --- !u!114 &1964115054
 MonoBehaviour:
