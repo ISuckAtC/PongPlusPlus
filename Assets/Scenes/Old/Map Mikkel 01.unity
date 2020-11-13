@@ -658,7 +658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Assign: 0
   AssignEndDelay: 0
-  Debug: 1
+  Debug: 0
   DebugAIs: 01010101
 --- !u!1001 &483184235
 PrefabInstance:
@@ -2878,7 +2878,7 @@ PrefabInstance:
     - target: {fileID: 7734133514151820323, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7734133514151820334, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
         type: 3}

@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Prototype 4 PlayerSelect.unity
     guid: 3c4a6c2853f65c245868bf2fde39145c
   - enabled: 1
+    path: Assets/Scenes/Old/Map Mikkel 01.unity
+    guid: fe928635c1bc80d49b01fb4d236bdeb1
+  - enabled: 1
     path: Assets/Scenes/Map SpeedUp 0.unity
     guid: 329296ec2efafb148a5a8246b6c1b9a8
   - enabled: 1
