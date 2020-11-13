@@ -62,7 +62,7 @@ public class DeathBarrierBehavior : MonoBehaviour
             player.GetComponent<BoxCollider2D>().enabled = false;
             gc.players.Remove(player);
             BallBehavior bb = collider.gameObject.GetComponent<BallBehavior>();
-            if (!bb.lastPlayer)
+            if (bb.lastPlayer != null)
             {
                 PlatformBehavior pb = bb.lastPlayer.GetComponent<PlatformBehavior>();
                 PlayerCardBehavior pcb = pb.playerCard.GetComponent<PlayerCardBehavior>();

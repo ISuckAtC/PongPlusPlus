@@ -27,8 +27,11 @@ public class BallSplitBuff : Buff
             {
                 GameObject b = Instantiate(collider.gameObject, collider.transform.position, collider.transform.localRotation);
                 BallBehavior bbcopy = b.GetComponent<BallBehavior>();
-                bbcopy.lastPlayer = bb.lastPlayer;
-                bbcopy.lastPlayer.GetComponent<PlatformBehavior>().playerCard.GetComponent<PlayerCardBehavior>().KillCountUpdate(1);
+                if (bb.lastPlayer != null)
+                {
+                    bbcopy.lastPlayer = bb.lastPlayer;
+                    bbcopy.lastPlayer.GetComponent<PlatformBehavior>().playerCard.GetComponent<PlayerCardBehavior>().KillCountUpdate(1);
+                } else bbcopy.lastPlayer = null;
                 bbcopy.StartCoroutine(b.GetComponent<BallBehavior>().Ghost(0.5f, 12, 11));
                 b.GetComponent<Rigidbody2D>().velocity = RotateVector(b.GetComponent<Rigidbody2D>().velocity, (Degrees * -i) * (Mathf.PI / 180));
                 GameObject.Find("GameControl").GetComponent<GameControl>().balls.Add(b);
