@@ -43,11 +43,16 @@ public class DeathBarrierBehavior : MonoBehaviour
     {
         if (collider.tag == "Ball")
         {
+            GameControl gc = GameObject.Find("GameControl").GetComponent<GameControl>();
+            if (!GameData.FriendlyFire && collider.gameObject.GetComponent<BallBehavior>().lastPlayer == player)
+            {
+                gc.SpawnBall();
+                return;
+            }
             Debug.Log("Killing player " + player.name);
             col.isTrigger = false;
             collider.gameObject.layer = 8;
             sr.material = dead;
-            GameControl gc = GameObject.Find("GameControl").GetComponent<GameControl>();
             if(player.GetComponent<PlatformBehavior>().Horizontal) player.GetComponent<HorizontalPlatformMovement>().Speed = 0;
             else player.GetComponent<VerticalPlatformMovement>().Speed = 0;
             player.GetComponent<BoxCollider2D>().enabled = false;
