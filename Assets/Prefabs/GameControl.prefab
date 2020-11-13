@@ -56,12 +56,12 @@ MonoBehaviour:
   ballStartOffset: 0.9
   ballStartRandomRange: 0.15
   startSpeed: 3
+  SpeedUpOnKill: 1.1
   startDelay: 3
   endDelay: 10
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
-  videoPlayer: {fileID: 0}
-  startAnim: {fileID: 0}
+  BallSpawns: []
 --- !u!114 &1000914287955585280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,3 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdf570a13623c2f4aa992606cc1e1e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Assign: 0
+  AssignEndDelay: 0
+  Debug: 0
+  DebugAIs: 
