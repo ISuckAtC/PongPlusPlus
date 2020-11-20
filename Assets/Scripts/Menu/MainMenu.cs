@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
+    public EventSystem es;
     public string PlayScene;
+    public GameObject SettingsInSelected;
+    public GameObject SettingsOutSelected;
+    public GameObject InfoInSelected;
+    public GameObject InfoOutSelected;
     //Exit button should exit game
     public void ExitGame()
     {
@@ -16,7 +22,22 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(PlayScene, LoadSceneMode.Single);
     }
-    
+    public void EnterSettings()
+    {
+        es.SetSelectedGameObject(SettingsInSelected);
+    }
+    public void ExitSettings()
+    {
+        es.SetSelectedGameObject(SettingsOutSelected);
+    }
+    public void EnterInfo()
+    {
+        es.SetSelectedGameObject(InfoInSelected);
+    }
+    public void ExitInfo()
+    {
+        es.SetSelectedGameObject(InfoOutSelected);
+    }
 
     // Start is called before the first frame update
     void Start()
