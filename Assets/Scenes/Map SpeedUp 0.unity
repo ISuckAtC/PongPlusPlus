@@ -2088,9 +2088,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Assign: 0
+  AssignStartDelay: 0
   AssignEndDelay: 0
+  AssignSpawnBallsOnBored: 0
+  AssignGhostWallsOnBored: 0
   Debug: 0
-  DebugAIs: 00000000
+  DebugAIs: 
 --- !u!114 &1446431266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2118,6 +2121,7 @@ MonoBehaviour:
   SpeedUpOnKill: 1.1
   startDelay: 3
   endDelay: 10
+  WallDisableDuration: 0
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
   BallSpawns:
