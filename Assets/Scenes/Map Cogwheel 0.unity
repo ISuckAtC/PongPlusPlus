@@ -973,8 +973,8 @@ MonoBehaviour:
   AssignEndDelay: 0
   AssignSpawnBallsOnBored: 0
   AssignGhostWallsOnBored: 0
-  Debug: 1
-  DebugAIs: 01010101
+  Debug: 0
+  DebugAIs: 00000000
 --- !u!114 &786580316
 MonoBehaviour:
   m_ObjectHideFlags: 0
