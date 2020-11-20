@@ -10,6 +10,9 @@ public class GameData : MonoBehaviour
     public float AssignEndDelay;
     public bool AssignSpawnBallsOnBored;
     public bool AssignGhostWallsOnBored;
+    public string AssignMainMenuScene;
+    public string AssignMapMenuScene;
+    public string AssignPlayerMenuScene;
 
 
 
@@ -25,6 +28,9 @@ public class GameData : MonoBehaviour
     static public float EndDelay;
     static public bool SpawnBallsOnBored;
     static public bool GhostWallsOnBored;
+    static public string MainMenuScene;
+    static public string MapMenuScene;
+    static public string PlayerMenuScene;
     // Start is called before the first frame update
     void Awake()
     {
@@ -34,6 +40,9 @@ public class GameData : MonoBehaviour
             EndDelay = AssignEndDelay;
             SpawnBallsOnBored = AssignSpawnBallsOnBored;
             GhostWallsOnBored = AssignGhostWallsOnBored;
+            MainMenuScene = AssignMainMenuScene;
+            MapMenuScene = AssignMapMenuScene;
+            PlayerMenuScene = AssignPlayerMenuScene;
         }
         if (Debug)
         {
