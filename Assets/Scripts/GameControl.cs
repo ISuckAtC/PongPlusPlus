@@ -19,6 +19,7 @@ public class GameControl : MonoBehaviour
     public float SpeedUpOnKill;
     public float startDelay;
     public float endDelay;
+    public float WallDisableDuration;
     public float PlatformBoundary;
     public float PlatformBoundaryStart;
     public Transform[] BallSpawns;
@@ -29,6 +30,7 @@ public class GameControl : MonoBehaviour
         if (!GetComponent<GameData>().Debug)
         {
             endDelay = GameData.EndDelay;
+            startDelay = GameData.StartDelay;
         }
         Random.InitState(System.DateTime.Now.Millisecond);
         for(int i = 0; i < players.Count; ++i)
@@ -114,6 +116,19 @@ public class GameControl : MonoBehaviour
             ball.GetComponent<Rigidbody2D>().velocity = (new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f))).normalized * startSpeed;
             balls.Add(ball);
         }
+    }
+    public void GhostWallsStart()
+    {
+        StopCoroutine(GhostWalls());
+        StartCoroutine(GhostWalls());
+    }
+    public IEnumerator GhostWalls()
+    {
+        GameObject walls = GameObject.Find("Walls");
+        if (walls == null) yield break;
+        walls.SetActive(false);
+        yield return new WaitForSeconds(WallDisableDuration);
+        walls.SetActive(true);
     }
     public IEnumerator NextRound()
     {

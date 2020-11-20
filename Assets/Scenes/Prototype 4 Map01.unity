@@ -722,6 +722,7 @@ MonoBehaviour:
   SpeedUpOnKill: 1.1
   startDelay: 3
   endDelay: 10
+  WallDisableDuration: 3
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
   BallSpawns:
@@ -754,7 +755,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Assign: 0
+  AssignStartDelay: 0
   AssignEndDelay: 0
+  AssignSpawnBallsOnBored: 0
+  AssignGhostWallsOnBored: 0
   Debug: 0
   DebugAIs: 01010101
 --- !u!1001 &408309150

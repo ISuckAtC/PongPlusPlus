@@ -1383,7 +1383,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Assign: 1
+  AssignStartDelay: 3
   AssignEndDelay: 5
+  AssignSpawnBallsOnBored: 0
+  AssignGhostWallsOnBored: 1
   Debug: 0
   DebugAIs: 
 --- !u!1 &853597772
