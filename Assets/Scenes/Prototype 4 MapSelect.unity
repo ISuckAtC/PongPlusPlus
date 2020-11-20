@@ -610,8 +610,11 @@ MonoBehaviour:
     MapPreview: {fileID: 21300000, guid: c67082bd28c09df49b396f130788beea, type: 3}
   - Name: Map Cogwheel 0
     MapPreview: {fileID: 21300000, guid: 60873de2483bb9d44be492b9e04c8fde, type: 3}
+  - Name: Map01Marija
+    MapPreview: {fileID: 21300000, guid: 60873de2483bb9d44be492b9e04c8fde, type: 3}
   MapButton: {fileID: 1408303820931672883, guid: da231b24cfb6c644b8f2f217fd55c0a2,
     type: 3}
+  es: {fileID: 0}
 --- !u!1 &1909008328
 GameObject:
   m_ObjectHideFlags: 0
