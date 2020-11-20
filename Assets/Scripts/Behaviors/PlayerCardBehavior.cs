@@ -10,7 +10,7 @@ public class PlayerCardBehavior : MonoBehaviour
     {
         ballCount += amount;
 
-        transform.Find("Balls").GetComponent<Text>().text = "Balls: " + ballCount;
+        //transform.Find("Balls").GetComponent<Text>().text = "Balls: " + ballCount;
     }
 
     public void KillCountUpdate(int amount)
