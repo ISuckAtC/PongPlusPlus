@@ -211,11 +211,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7611679761538732485}
+    - target: {fileID: 829193042744863122, guid: b1e3c923f5036db4ebbb04f8b71fe648,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayAgain
+      objectReference: {fileID: 0}
     - target: {fileID: 1123356021799751883, guid: b1e3c923f5036db4ebbb04f8b71fe648,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7611679761538732485}
+    - target: {fileID: 1123356021799751883, guid: b1e3c923f5036db4ebbb04f8b71fe648,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 1142313479360401387, guid: b1e3c923f5036db4ebbb04f8b71fe648,
         type: 3}
       propertyPath: m_Name
