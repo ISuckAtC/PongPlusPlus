@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 [System.Serializable]
 public struct Map 
@@ -20,6 +21,7 @@ public class MapSelection : MonoBehaviour
     public int Columns;
     public Map[] Maps;
     public GameObject MapButton;
+    public EventSystem es;
 
 
     // Start is called before the first frame update
@@ -35,12 +37,13 @@ public class MapSelection : MonoBehaviour
                 PadBottom + (y * (Screen.height / Rows)),
                 0), 
                 Quaternion.identity);
-            button.transform.SetParent(GameObject.Find("Canvas").transform);
+            button.transform.SetParent(GameObject.Find("Maps").transform);
             button.name = Maps[(y * Columns) + x].Name;
             button.GetComponent<Image>().sprite = Maps[(y * Columns) + x].MapPreview;
             button.GetComponent<Button>().onClick.AddListener(button.GetComponent<MapClick>().Click);
             button.GetComponent<MapClick>().PlayerSelectScene = PlayerSelectScene;
         }
+        es.SetSelectedGameObject(GameObject.Find("Maps").transform.GetChild(0).gameObject);
     }
 
     public void BackButton()
