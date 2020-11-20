@@ -105,6 +105,7 @@ public class GameControl : MonoBehaviour
         {
             GameObject winFinal = Instantiate(player.GetComponent<PlatformBehavior>().WinScreenFinal, new Vector3(960, 540, -10), Quaternion.identity);
             winFinal.transform.parent = Canvas.transform;
+            winFinal.transform.SetAsFirstSibling();
         } else StartCoroutine(NextRound());
         
     }
