@@ -919,7 +919,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b6cc41b1b4a2a7442bfbd3c8430bcc7b,
+      objectReference: {fileID: 21300000, guid: f5d4dcef2ecc3164b97f3aec34eafd64,
         type: 3}
     - target: {fileID: 3312645757362446827, guid: e85459e7238e43b4cbcb58cadef774a1,
         type: 3}
@@ -1869,7 +1869,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b6cc41b1b4a2a7442bfbd3c8430bcc7b,
+      objectReference: {fileID: 21300000, guid: f5d4dcef2ecc3164b97f3aec34eafd64,
         type: 3}
     - target: {fileID: 3312645757362446827, guid: e85459e7238e43b4cbcb58cadef774a1,
         type: 3}
@@ -2327,7 +2327,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b6cc41b1b4a2a7442bfbd3c8430bcc7b,
+      objectReference: {fileID: 21300000, guid: f5d4dcef2ecc3164b97f3aec34eafd64,
         type: 3}
     - target: {fileID: 3312645757362446827, guid: e85459e7238e43b4cbcb58cadef774a1,
         type: 3}
@@ -2724,9 +2724,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Assign: 0
+  AssignStartDelay: 0
   AssignEndDelay: 0
+  AssignSpawnBallsOnBored: 0
+  AssignGhostWallsOnBored: 0
   Debug: 0
-  DebugAIs: 
+  DebugAIs: 00000000
 --- !u!114 &1443329156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2754,6 +2757,7 @@ MonoBehaviour:
   SpeedUpOnKill: 1.1
   startDelay: 3
   endDelay: 10
+  WallDisableDuration: 0
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
   BallSpawns:
@@ -2932,7 +2936,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0c7cfae062c333f44a073e31aac90650,
+      objectReference: {fileID: 21300000, guid: 8a47af0118d2d22439d52d73dc09fc8c,
         type: 3}
     - target: {fileID: 5884434536024938677, guid: 96fbb3d1147747748a7bb406ff53ae84,
         type: 3}
@@ -3229,7 +3233,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b6cc41b1b4a2a7442bfbd3c8430bcc7b,
+      objectReference: {fileID: 21300000, guid: f5d4dcef2ecc3164b97f3aec34eafd64,
         type: 3}
     - target: {fileID: 3312645757362446827, guid: e85459e7238e43b4cbcb58cadef774a1,
         type: 3}

@@ -600,7 +600,7 @@ PrefabInstance:
     - target: {fileID: 7734133514151820323, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7734133514151820334, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
         type: 3}
@@ -744,7 +744,7 @@ PrefabInstance:
     - target: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692730, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
@@ -867,6 +867,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 4380933887687733403, guid: 8b7e863585ab0dd4491d93d4c930a515,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4380933888053549157, guid: 8b7e863585ab0dd4491d93d4c930a515,
         type: 3}
       propertyPath: m_Name
@@ -964,7 +969,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Assign: 0
+  AssignStartDelay: 0
   AssignEndDelay: 0
+  AssignSpawnBallsOnBored: 0
+  AssignGhostWallsOnBored: 0
   Debug: 1
   DebugAIs: 01010101
 --- !u!114 &786580316
@@ -994,6 +1002,7 @@ MonoBehaviour:
   SpeedUpOnKill: 1.5
   startDelay: 3
   endDelay: 10
+  WallDisableDuration: 0
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
   BallSpawns:
@@ -1260,7 +1269,7 @@ PrefabInstance:
     - target: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692730, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
@@ -1366,7 +1375,7 @@ PrefabInstance:
     - target: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692730, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
@@ -1833,7 +1842,7 @@ PrefabInstance:
     - target: {fileID: 4476443807338692728, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692730, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
