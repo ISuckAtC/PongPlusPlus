@@ -23,10 +23,14 @@ public class GameControl : MonoBehaviour
     public float PlatformBoundary;
     public float PlatformBoundaryStart;
     public Transform[] BallSpawns;
+
+    private Text FPSCounter;
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("START");
+        if (!GameData.DisplayFPS) GameObject.Find("FPS").SetActive(false);
+        else FPSCounter = GameObject.Find("FPS").GetComponent<Text>();
         if (!GetComponent<GameData>().Debug)
         {
             endDelay = GameData.EndDelay;
@@ -84,6 +88,10 @@ public class GameControl : MonoBehaviour
                 r.AddComponent<Rigidbody2D>().gravityScale = 1;
                 r.AddComponent<BoxCollider2D>();
             }
+        }
+        if (GameData.DisplayFPS)
+        {
+            FPSCounter.text = (1f / Time.deltaTime).ToString();
         }
     }
 
