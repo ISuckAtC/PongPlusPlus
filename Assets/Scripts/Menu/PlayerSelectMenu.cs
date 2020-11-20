@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PlayerSelectMenu : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class PlayerSelectMenu : MonoBehaviour
     public int MatchCount;
     public string MapSelectScene;
     
+    public EventSystem es;
+
+
     public void PlayButton()
     {
         GameData.MatchesToWin = MatchCount;
@@ -32,6 +36,8 @@ public class PlayerSelectMenu : MonoBehaviour
         BackMenu.SetActive(false);
         MatchSelectButton.SetActive(true);
         PlaySelectButton.SetActive(true);
+
+        es.SetSelectedGameObject(Player1);
     }
 
     public void OnPlayer3Click()
@@ -49,6 +55,8 @@ public class PlayerSelectMenu : MonoBehaviour
         BackMenu.SetActive(false);
         MatchSelectButton.SetActive(true);
         PlaySelectButton.SetActive(true);
+        
+        es.SetSelectedGameObject(Player1);
     }
 
     public void OnPlayer4Click()
@@ -67,6 +75,8 @@ public class PlayerSelectMenu : MonoBehaviour
         BackMenu.SetActive(false);
         MatchSelectButton.SetActive(true);
         PlaySelectButton.SetActive(true);
+
+        es.SetSelectedGameObject(Player1);
     }
 
     public void OnBackPlayerButtonClick()
@@ -84,6 +94,8 @@ public class PlayerSelectMenu : MonoBehaviour
         BackPlayer.SetActive(false);
         BackMenu.SetActive(true);
         PlaySelectButton.SetActive(false);
+
+        es.SetSelectedGameObject(Player2Button);
     }
 
     public void OnbackMenuButtonClick()
