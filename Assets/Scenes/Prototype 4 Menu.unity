@@ -1420,7 +1420,7 @@ MonoBehaviour:
   AssignEndDelay: 5
   AssignSpawnBallsOnBored: 0
   AssignGhostWallsOnBored: 1
-  AssignDisplayFPS: 1
+  AssignDisplayFPS: 0
   AssignMainMenuScene: 
   AssignMapMenuScene: 
   AssignPlayerMenuScene: 
