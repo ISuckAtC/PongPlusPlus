@@ -1421,9 +1421,9 @@ MonoBehaviour:
   AssignSpawnBallsOnBored: 0
   AssignGhostWallsOnBored: 1
   AssignDisplayFPS: 0
-  AssignMainMenuScene: 
-  AssignMapMenuScene: 
-  AssignPlayerMenuScene: 
+  AssignMainMenuScene: Prototype 4 Menu
+  AssignMapMenuScene: Prototype 4 MapSelect
+  AssignPlayerMenuScene: Prototype 4 PlayerSelect
   Debug: 0
   DebugAIs: 
 --- !u!1 &853597772
