@@ -2092,6 +2092,10 @@ MonoBehaviour:
   AssignEndDelay: 0
   AssignSpawnBallsOnBored: 0
   AssignGhostWallsOnBored: 0
+  AssignDisplayFPS: 0
+  AssignMainMenuScene: 
+  AssignMapMenuScene: 
+  AssignPlayerMenuScene: 
   Debug: 0
   DebugAIs: 
 --- !u!114 &1446431266
@@ -2118,10 +2122,10 @@ MonoBehaviour:
   ballStartOffset: 0.9
   ballStartRandomRange: 0.15
   startSpeed: 3
-  SpeedUpOnKill: 1.1
+  SpeedUpOnKill: 1.5
   startDelay: 3
   endDelay: 10
-  WallDisableDuration: 0
+  WallDisableDuration: 2
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
   BallSpawns:

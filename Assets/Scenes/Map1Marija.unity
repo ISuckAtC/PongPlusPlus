@@ -719,6 +719,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.08564349
       objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692731, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f9155d2f904274446a0dc82b9cc67b09,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3e46d306de6f514da67b63085ae9550, type: 3}
 --- !u!4 &342632878 stripped
@@ -772,7 +778,7 @@ MonoBehaviour:
   SpeedUpOnKill: 1.5
   startDelay: 3
   endDelay: 10
-  WallDisableDuration: 0
+  WallDisableDuration: 2
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
   BallSpawns: []
@@ -1352,6 +1358,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.027825182
       objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692731, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f9155d2f904274446a0dc82b9cc67b09,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3e46d306de6f514da67b63085ae9550, type: 3}
 --- !u!1001 &841967493
@@ -1431,6 +1443,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.09026323
       objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692731, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f9155d2f904274446a0dc82b9cc67b09,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3e46d306de6f514da67b63085ae9550, type: 3}
 --- !u!4 &887472061 stripped
@@ -2423,6 +2441,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.08656738
       objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692731, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f9155d2f904274446a0dc82b9cc67b09,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3e46d306de6f514da67b63085ae9550, type: 3}
 --- !u!1001 &7734133514999470932
