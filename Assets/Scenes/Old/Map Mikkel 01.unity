@@ -250,6 +250,7 @@ Transform:
   - {fileID: 1540728083}
   - {fileID: 1811487957}
   - {fileID: 262479301}
+  - {fileID: 916712087}
   - {fileID: 1921617850}
   - {fileID: 886956750}
   - {fileID: 1849614606}
@@ -261,7 +262,6 @@ Transform:
   - {fileID: 320076912}
   - {fileID: 331044781}
   - {fileID: 1548797221}
-  - {fileID: 916712087}
   m_Father: {fileID: 164469740}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -716,7 +716,7 @@ MonoBehaviour:
   ballStartOffset: 0.9
   ballStartRandomRange: 0.15
   startSpeed: 3
-  SpeedUpOnKill: 1.4
+  SpeedUpOnKill: 1.3
   startDelay: 3
   endDelay: 10
   WallDisableDuration: 3
@@ -1567,7 +1567,7 @@ Transform:
   - {fileID: 1501949475}
   - {fileID: 854494746}
   m_Father: {fileID: 127006446}
-  m_RootOrder: 17
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &941906063
 PrefabInstance:

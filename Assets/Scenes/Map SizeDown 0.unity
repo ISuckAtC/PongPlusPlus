@@ -2801,7 +2801,7 @@ MonoBehaviour:
   ballStartOffset: 0.9
   ballStartRandomRange: 0.14
   startSpeed: 3
-  SpeedUpOnKill: 1.5
+  SpeedUpOnKill: 1.3
   startDelay: 3
   endDelay: 10
   WallDisableDuration: 3
