@@ -2804,7 +2804,7 @@ MonoBehaviour:
   SpeedUpOnKill: 1.5
   startDelay: 3
   endDelay: 10
-  WallDisableDuration: 2
+  WallDisableDuration: 3
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
   BallSpawns:

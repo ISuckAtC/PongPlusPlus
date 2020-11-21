@@ -310,12 +310,13 @@ MonoBehaviour:
   ballStartOffset: 0.9
   ballStartRandomRange: 0.15
   startSpeed: 3
+  SpeedUpOnKill: 1.5
   startDelay: 3
   endDelay: 10
+  WallDisableDuration: 3
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
-  videoPlayer: {fileID: 0}
-  startAnim: {fileID: 1384834936}
+  BallSpawns: []
 --- !u!4 &402156579
 Transform:
   m_ObjectHideFlags: 0
@@ -343,7 +344,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Assign: 0
+  AssignStartDelay: 0
   AssignEndDelay: 0
+  AssignSpawnBallsOnBored: 0
+  AssignGhostWallsOnBored: 0
+  AssignDisplayFPS: 0
+  AssignMainMenuScene: 
+  AssignMapMenuScene: 
+  AssignPlayerMenuScene: 
   Debug: 0
   DebugAIs: 
 --- !u!1 &522162942
@@ -785,12 +793,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1384834936 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7734133514151820332, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
-    type: 3}
-  m_PrefabInstance: {fileID: 7734133514999470932}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1559265297 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6217373349592573379, guid: 2e4822813ad11f54591455404ee07780,
