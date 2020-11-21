@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map Cogwheel 0.unity
     guid: b0b881c969f0a414480722d4deb1e5c5
+  - enabled: 1
+    path: Assets/Scenes/Map1Marija.unity
+    guid: b4f994200b4d34f8586ec40f3771e058
   m_configObjects: {}
