@@ -2799,7 +2799,7 @@ MonoBehaviour:
     type: 3}
   Canvas: {fileID: 2136890669}
   ballStartOffset: 0.9
-  ballStartRandomRange: 0.15
+  ballStartRandomRange: 0.14
   startSpeed: 3
   SpeedUpOnKill: 1.5
   startDelay: 3
