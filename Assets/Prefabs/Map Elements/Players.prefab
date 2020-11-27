@@ -163,7 +163,10 @@ MonoBehaviour:
   WinScreenFinal: {fileID: 5444388270437816787, guid: bcc380857f981144ab79e9933247bd37,
     type: 3}
   deathBarrier: {fileID: 0}
+  PostDeathControl: 0
+  PostDeathControlDelay: 0
   playerCard: {fileID: 0}
+  BoredBallSpawn: {fileID: 0}
   Health: 3
   Horizontal: 0
   AI: 0
@@ -189,11 +192,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ce555531616a34d89708187baf6185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 2
   Speed: 7
   Boundary: 4
-  playerNumber: 2
-  Left: 111
-  Right: 108
+  Positive: 111
+  Negative: 108
+  Axis: 
 --- !u!82 &1240194858
 AudioSource:
   m_ObjectHideFlags: 0
@@ -438,7 +442,10 @@ MonoBehaviour:
   WinScreenFinal: {fileID: 8736672769053254130, guid: 9b4d0f7d1bb0bf04580e4d446f15abc2,
     type: 3}
   deathBarrier: {fileID: 0}
+  PostDeathControl: 0
+  PostDeathControlDelay: 0
   playerCard: {fileID: 0}
+  BoredBallSpawn: {fileID: 0}
   Health: 3
   Horizontal: 0
   AI: 1
@@ -464,11 +471,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ce555531616a34d89708187baf6185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 1
   Speed: 7
   Boundary: 4
-  playerNumber: 1
-  Left: 119
-  Right: 115
+  Positive: 119
+  Negative: 115
+  Axis: 
 --- !u!82 &677484701
 AudioSource:
   m_ObjectHideFlags: 0
@@ -713,7 +721,10 @@ MonoBehaviour:
   WinScreenFinal: {fileID: 5004540700453548969, guid: e24b88332bc15fe40a105151b3837bad,
     type: 3}
   deathBarrier: {fileID: 0}
+  PostDeathControl: 0
+  PostDeathControlDelay: 0
   playerCard: {fileID: 0}
+  BoredBallSpawn: {fileID: 0}
   Health: 3
   Horizontal: 1
   AI: 0
@@ -739,11 +750,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd69ffea51cef7458d17553e0f6cd75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 4
   Speed: 7
   Boundary: 4
-  playerNumber: 4
-  Left: 122
-  Right: 120
+  Positive: 110
+  Negative: 109
+  Axis: 
 --- !u!82 &1559265304
 AudioSource:
   m_ObjectHideFlags: 0
@@ -988,7 +1000,10 @@ MonoBehaviour:
   WinScreenFinal: {fileID: 8420500689815964312, guid: 8f1a375d827052547b1e10ddaa27c685,
     type: 3}
   deathBarrier: {fileID: 0}
+  PostDeathControl: 0
+  PostDeathControlDelay: 0
   playerCard: {fileID: 0}
+  BoredBallSpawn: {fileID: 0}
   Health: 3
   Horizontal: 1
   AI: 1
@@ -1014,11 +1029,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd69ffea51cef7458d17553e0f6cd75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 3
   Speed: 7
   Boundary: 4
-  playerNumber: 3
-  Left: 110
-  Right: 109
+  Positive: 122
+  Negative: 120
+  Axis: 
 --- !u!82 &585611501
 AudioSource:
   m_ObjectHideFlags: 0
