@@ -15,8 +15,15 @@ public class Flap : MonoBehaviour
     {
         transform.Rotate(new Vector3 (0, 0, HowMuchRotate));
     }
-    public void AssignPlayer(BasePlatformMovement platmove)
+    public void AssignPlayer(BasePlatformMovement platmove, bool positive)
     {
-        platmove.FirePositive += ToMoveFlap;
+        if (positive)
+        {
+            platmove.FirePositive += ToMoveFlap;
+        }
+        else
+        {
+            platmove.FireNegative += ToMoveFlap;
+        }
     }
 }
