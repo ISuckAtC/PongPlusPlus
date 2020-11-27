@@ -71,6 +71,7 @@ public class DeathBarrierBehavior : MonoBehaviour
                 pcb.BallCountUpdate(-1);
             }
             player.GetComponent<PlatformBehavior>().CancelInvoke("Bored");
+            
             string[] anims = player.GetComponent<PlatformBehavior>().deathAnims;
             player.GetComponent<Animator>().Play(anims[Random.Range(0, anims.Length)], 0);
             player.GetComponent<AudioSource>().Play();
