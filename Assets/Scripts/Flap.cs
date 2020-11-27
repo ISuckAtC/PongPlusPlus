@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Flap : MonoBehaviour
 {
-    public Transform TopPivot, BotPivot, LeftPivot, RightPivot;
     public float HowMuchRotate;
     public float MaxRotate;
     public bool ClockWise;
