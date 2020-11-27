@@ -7,22 +7,37 @@ public class Flap : MonoBehaviour
 {
     public float HowMuchRotate;
     public float MaxRotate;
+    float StartRotation;
     public bool ClockWise;
     public bool taken; //If currently used by player
-
-    public void ToMoveFlap(object sender, EventArgs e)
+    KeyCode ActivaionKey;
+    bool Positive;
+    string Axis;
+    
+    void Start()
     {
-        transform.Rotate(new Vector3 (0, 0, HowMuchRotate));
+        StartRotation = transform.rotation.eulerAngles.z;
+    }
+    void Update()
+    {
+        float currentRotation = transform.rotation.eulerAngles.z;
+        float rotation = HowMuchRotate * (ClockWise ? 1 : -1) * Time.deltaTime;
+        if (Input.GetKey(ActivaionKey) || (Positive ? Input.GetAxis(Axis) > 0 : Input.GetAxis(Axis) < 0)) //cheking if activation key is pressed or if axes is  positive or negative 
+        {
+            if (ClockWise ? currentRotation + rotation <= MaxRotate : currentRotation - rotation >= -MaxRotate) //ckek if the rotation within the bounds
+            {
+                transform.Rotate(new Vector3 (0, 0, ClockWise ? rotation : -rotation)); //perfor the actual rotation
+            }
+        } 
+        else if (ClockWise ? currentRotation - rotation >= StartRotation : currentRotation + rotation <= StartRotation) //chek if within the bounds
+        {
+            transform.Rotate (new Vector3 (0, 0, ClockWise ? -rotation : rotation)); //perform the actual rotation
+        }
     }
     public void AssignPlayer(BasePlatformMovement platmove, bool positive)
     {
-        if (positive)
-        {
-            platmove.FirePositive += ToMoveFlap;
-        }
-        else
-        {
-            platmove.FireNegative += ToMoveFlap;
-        }
+        Positive = positive;
+        Axis = platmove.Axis;
+        ActivaionKey = positive ? platmove.Positive : platmove.Negative;
     }
 }

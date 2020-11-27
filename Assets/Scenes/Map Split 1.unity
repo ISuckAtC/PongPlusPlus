@@ -915,7 +915,7 @@ PrefabInstance:
     - target: {fileID: 7734133514151820323, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7734133514151820334, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
         type: 3}
@@ -2588,6 +2588,7 @@ MonoBehaviour:
   - {fileID: 1268607191}
   - {fileID: 550944497}
   - {fileID: 1960136967}
+  Flaps: []
 --- !u!4 &1964115055
 Transform:
   m_ObjectHideFlags: 0
