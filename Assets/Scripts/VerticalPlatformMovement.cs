@@ -19,6 +19,8 @@ public class VerticalPlatformMovement : BasePlatformMovement
         float joyAxis = Input.GetAxis("Joy" + playerNumber + "Vertical");
         if (joyAxis != 0)
         {
+            if (joyAxis > 0) base.OnFirePositive(EventArgs.Empty);
+            else base.OnFireNegative(EventArgs.Empty);
             if (transform.position.y + (Speed * joyAxis * Time.deltaTime) > -Boundary && transform.position.y + (Speed * joyAxis * Time.deltaTime) < Boundary)
                 transform.position = new Vector3(transform.position.x, transform.position.y + (Speed * joyAxis * Time.deltaTime), 0);
             else transform.position = new Vector3(transform.position.x, joyAxis * Boundary, 0);
