@@ -9,6 +9,7 @@ public class PlatformBehavior : MonoBehaviour
     public GameObject WinScreenFinal;
     public GameObject deathBarrier;
     public GameObject playerCard;
+    public Transform BoredBallSpawn;
     public int Health;
     public bool Horizontal;
     public bool AI;
@@ -144,7 +145,7 @@ public class PlatformBehavior : MonoBehaviour
         if (++BoredCount >= BoredToSpawn)
         {
             BoredCount = 0;
-            if (GameData.SpawnBallsOnBored) GameObject.Find("GameControl").GetComponent<GameControl>().SpawnBall();
+            if (GameData.SpawnBallsOnBored) GameObject.Find("GameControl").GetComponent<GameControl>().SpawnBallForPlayer(gameObject);
             if (GameData.GhostWallsOnBored) GameObject.Find("GameControl").GetComponent<GameControl>().GhostWallsStart();
         }
     }

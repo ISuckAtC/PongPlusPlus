@@ -1553,6 +1553,11 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 22.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4476443807338692730, guid: c3e46d306de6f514da67b63085ae9550,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4476443807338692731, guid: c3e46d306de6f514da67b63085ae9550,
         type: 3}
       propertyPath: m_Sprite
@@ -2798,6 +2803,8 @@ MonoBehaviour:
   ballObject: {fileID: 3657493458850510913, guid: dbcc03ef81b5e4e46ae27c557a8920a9,
     type: 3}
   Canvas: {fileID: 2136890669}
+  MatTransparent: {fileID: 0}
+  MatDefault: {fileID: 0}
   ballStartOffset: 0.9
   ballStartRandomRange: 0.14
   startSpeed: 3

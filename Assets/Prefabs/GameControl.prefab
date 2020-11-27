@@ -53,12 +53,15 @@ MonoBehaviour:
   ballObject: {fileID: 3657493458850510913, guid: dbcc03ef81b5e4e46ae27c557a8920a9,
     type: 3}
   Canvas: {fileID: 0}
+  MatTransparent: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  MatDefault: {fileID: 2100000, guid: 580d05da721d5d74dbda6f258604f079, type: 2}
   ballStartOffset: 0.9
   ballStartRandomRange: 0.15
   startSpeed: 3
   SpeedUpOnKill: 1.1
   startDelay: 3
   endDelay: 10
+  WallDisableDuration: 0
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
   BallSpawns: []
@@ -75,6 +78,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Assign: 0
+  AssignStartDelay: 0
   AssignEndDelay: 0
+  AssignSpawnBallsOnBored: 0
+  AssignGhostWallsOnBored: 0
+  AssignDisplayFPS: 0
+  AssignMainMenuScene: 
+  AssignMapMenuScene: 
+  AssignPlayerMenuScene: 
   Debug: 0
   DebugAIs: 

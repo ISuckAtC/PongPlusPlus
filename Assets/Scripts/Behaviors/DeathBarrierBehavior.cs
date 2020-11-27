@@ -48,6 +48,7 @@ public class DeathBarrierBehavior : MonoBehaviour
         if (collider.tag == "Ball")
         {
             GameControl gc = GameObject.Find("GameControl").GetComponent<GameControl>();
+            PlatformBehavior platform = player.GetComponent<PlatformBehavior>();
             if (!GameData.FriendlyFire && collider.gameObject.GetComponent<BallBehavior>().lastPlayer == player)
             {
                 gc.SpawnBall();

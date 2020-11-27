@@ -12,6 +12,8 @@ public class GameControl : MonoBehaviour
     public List<GameObject> balls;
     public GameObject ballObject;
     public GameObject Canvas;
+    Material MatTransparent;
+    Material MatDefault;
 
     public float ballStartOffset;
     public float ballStartRandomRange;
@@ -29,6 +31,8 @@ public class GameControl : MonoBehaviour
     void Start()
     {
         Debug.Log("START");
+        MatTransparent = Resources.Load<Material>("Transparent");
+        MatDefault = Resources.Load<Material>("Default");
         if (!GameData.DisplayFPS) GameObject.Find("FPS").SetActive(false);
         else FPSCounter = GameObject.Find("FPS").GetComponent<Text>();
         if (!GetComponent<GameData>().Debug)
@@ -126,6 +130,13 @@ public class GameControl : MonoBehaviour
             balls.Add(ball);
         }
     }
+    public void SpawnBallForPlayer(GameObject player)
+    {
+        PlatformBehavior pb = player.GetComponent<PlatformBehavior>();
+        GameObject ball = Instantiate(ballObject, pb.BoredBallSpawn.position, Quaternion.identity);
+        ball.GetComponent<Rigidbody2D>().velocity = (player.transform.position - pb.BoredBallSpawn.position).normalized * startSpeed;
+        balls.Add(ball);
+    }
     public void GhostWallsStart()
     {
         StopCoroutine(GhostWalls());
@@ -135,9 +146,13 @@ public class GameControl : MonoBehaviour
     {
         GameObject walls = GameObject.Find("Walls");
         if (walls == null) yield break;
-        walls.SetActive(false);
+        Collider2D[] colliders = walls.GetComponentsInChildren<Collider2D>(true);
+        SpriteRenderer[] spriteRenderers = walls.GetComponentsInChildren<SpriteRenderer>(true);
+        foreach(Collider2D c in colliders) c.enabled = false;
+        foreach(SpriteRenderer sr in spriteRenderers) sr.material = MatTransparent;
         yield return new WaitForSeconds(WallDisableDuration);
-        walls.SetActive(true);
+        foreach(Collider2D c in colliders) c.enabled = true;
+        foreach(SpriteRenderer sr in spriteRenderers) sr.material = MatDefault;
     }
     public IEnumerator NextRound()
     {
