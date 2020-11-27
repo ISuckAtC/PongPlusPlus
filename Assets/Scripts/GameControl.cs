@@ -25,6 +25,7 @@ public class GameControl : MonoBehaviour
     public float PlatformBoundary;
     public float PlatformBoundaryStart;
     public Transform[] BallSpawns;
+    
 
     private Text FPSCounter;
     // Start is called before the first frame update
