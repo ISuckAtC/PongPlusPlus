@@ -25,7 +25,7 @@ public class GameControl : MonoBehaviour
     public float PlatformBoundary;
     public float PlatformBoundaryStart;
     public Transform[] BallSpawns;
-    public Flap[] Flaps;
+    public List<Flap> Flaps;
     
 
     private Text FPSCounter;
