@@ -8,6 +8,8 @@ public class PlatformBehavior : MonoBehaviour
     public GameObject WinScreen;
     public GameObject WinScreenFinal;
     public GameObject deathBarrier;
+    public bool PostDeathControl;
+    public float PostDeathControlDelay;
     public GameObject playerCard;
     public Transform BoredBallSpawn;
     public int Health;

@@ -58,7 +58,7 @@ public class DeathBarrierBehavior : MonoBehaviour
             col.isTrigger = false;
             collider.gameObject.layer = 8;
             sr.material = dead;
-            if(player.GetComponent<PlatformBehavior>().Horizontal) player.GetComponent<HorizontalPlatformMovement>().Speed = 0;
+            if(platform.Horizontal) player.GetComponent<HorizontalPlatformMovement>().Speed = 0;
             else player.GetComponent<VerticalPlatformMovement>().Speed = 0;
             player.GetComponent<BoxCollider2D>().enabled = false;
             gc.players.Remove(player);
@@ -70,9 +70,15 @@ public class DeathBarrierBehavior : MonoBehaviour
                 pcb.KillCountUpdate(1);
                 pcb.BallCountUpdate(-1);
             }
-            player.GetComponent<PlatformBehavior>().CancelInvoke("Bored");
-            
-            string[] anims = player.GetComponent<PlatformBehavior>().deathAnims;
+            platform.CancelInvoke("Bored");
+            if (platform.PostDeathControl)
+            {
+                if (gc.Flaps.Exists(x => !x.GetComponent<Flap>().taken))
+                {
+                    gc.Flaps.First(x => !x.taken).AssignPlayer(player.GetComponent<BasePlatformMovement>());
+                }
+            }
+            string[] anims = platform.deathAnims;
             player.GetComponent<Animator>().Play(anims[Random.Range(0, anims.Length)], 0);
             player.GetComponent<AudioSource>().Play();
             foreach(GameObject ball in gc.balls) ball.GetComponent<Rigidbody2D>().velocity *= gc.SpeedUpOnKill;
