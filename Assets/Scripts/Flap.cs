@@ -17,6 +17,7 @@ public class Flap : MonoBehaviour
     void Start()
     {
         StartRotation = transform.rotation.eulerAngles.z;
+        Debug.Log(StartRotation);
     }
     void Update()
     {
@@ -28,10 +29,18 @@ public class Flap : MonoBehaviour
             {
                 transform.Rotate(new Vector3 (0, 0, ClockWise ? rotation : -rotation)); //perfor the actual rotation
             }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 0, ClockWise ? MaxRotate : -MaxRotate);
+            }
         } 
         else if (ClockWise ? currentRotation - rotation >= StartRotation : currentRotation + rotation <= StartRotation) //chek if within the bounds
         {
             transform.Rotate (new Vector3 (0, 0, ClockWise ? -rotation : rotation)); //perform the actual rotation
+        }
+        else 
+        {
+            transform.rotation = Quaternion.Euler(0, 0, StartRotation);
         }
     }
     public void AssignPlayer(BasePlatformMovement platmove, bool positive)
