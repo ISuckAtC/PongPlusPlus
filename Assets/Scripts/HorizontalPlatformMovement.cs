@@ -4,26 +4,23 @@ using UnityEngine;
 
 public class HorizontalPlatformMovement : BasePlatformMovement
 {
-    public int playerNumber;
-    // Public keycode properties allows you to set the keys in editor for easy testing
-    public KeyCode Left, Right;
 
     void Start()
     {
-
+        Axis = "Joy" + playerNumber + "Horizontal";
     }
 
     void Update()
     {
         if (GetComponent<PlatformBehavior>().AI) return;
-        float joyAxis = Input.GetAxis("Joy" + playerNumber + "Horizontal");
+        float joyAxis = Input.GetAxis(Axis);
         if (joyAxis != 0) Debug.Log(joyAxis);
-        if (Input.GetKey(Right)) 
+        if (Input.GetKey(Positive)) 
         {
             if (transform.position.x + (Speed * Time.deltaTime) < Boundary) transform.position = new Vector3(transform.position.x + (Speed * Time.deltaTime), transform.position.y, 0);
             else transform.position = new Vector3(Boundary, transform.position.y, 0);
         }
-        if(Input.GetKey(Left))
+        if(Input.GetKey(Negative))
         {
             if (transform.position.x - (Speed * Time.deltaTime) > -Boundary) transform.position = new Vector3(transform.position.x - (Speed * Time.deltaTime), transform.position.y, 0);
             else transform.position = new Vector3(-Boundary, transform.position.y, 0);

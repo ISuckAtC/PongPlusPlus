@@ -5,17 +5,10 @@ using UnityEngine;
 
 public class BasePlatformMovement : MonoBehaviour
 {
+    public int playerNumber;
     public float Speed;
     public float Boundary;
-    public event EventHandler FirePositive;
-    public event EventHandler FireNegative;
-    
-    public virtual void OnFirePositive(EventArgs e)
-    {
-        FirePositive.Invoke(this, e);
-    }
-    public virtual void OnFireNegative(EventArgs e)
-    {
-        FireNegative.Invoke(this, e);
-    }
+    public KeyCode Positive, Negative;
+    [HideInInspector]
+    public string Axis;
 }
