@@ -7,7 +7,6 @@ using UnityEngine.EventSystems;
 public class MainMenu : MonoBehaviour
 {
     public EventSystem es;
-    public string PlayScene;
     public GameObject SettingsInSelected;
     public GameObject SettingsOutSelected;
     public GameObject InfoInSelected;
@@ -20,7 +19,7 @@ public class MainMenu : MonoBehaviour
     //Switches scene from main menu to player select menu
     public void PlayMenu()
     {
-        SceneManager.LoadScene(PlayScene, LoadSceneMode.Single);
+        SceneManager.LoadScene(GameData.MapMenuScene, LoadSceneMode.Single);
     }
     public void EnterSettings()
     {

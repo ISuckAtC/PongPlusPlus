@@ -1422,7 +1422,7 @@ MonoBehaviour:
   AssignGhostWallsOnBored: 1
   AssignDisplayFPS: 0
   AssignMainMenuScene: Prototype 4 Menu
-  AssignMapMenuScene: Prototype 4 MapSelect
+  AssignMapMenuScene: Prototype 4 MapSelect Mikkel
   AssignPlayerMenuScene: Prototype 4 PlayerSelect
   Debug: 0
   DebugAIs: 
@@ -1480,7 +1480,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   es: {fileID: 504936432}
-  PlayScene: Prototype 4 MapSelect
   SettingsInSelected: {fileID: 26609554}
   SettingsOutSelected: {fileID: 434748232}
   InfoInSelected: {fileID: 768692086}
