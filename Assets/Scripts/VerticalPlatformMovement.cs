@@ -20,12 +20,12 @@ public class VerticalPlatformMovement : BasePlatformMovement
                 transform.position = new Vector3(transform.position.x, transform.position.y + (Speed * joyAxis * Time.deltaTime), 0);
             else transform.position = new Vector3(transform.position.x, joyAxis * Boundary, 0);
         }
-        if (Input.GetKey(Positive)) 
+        if (Input.GetKey(Negative)) 
         {
             if (transform.position.y - (Speed * Time.deltaTime) > -Boundary) transform.position = new Vector3(transform.position.x, transform.position.y - (Speed * Time.deltaTime), 0);
             else transform.position = new Vector3(transform.position.x, -Boundary, 0);
         }
-        if(Input.GetKey(Negative))
+        if(Input.GetKey(Positive))
         {
             if (transform.position.y + (Speed * Time.deltaTime) < Boundary) transform.position = new Vector3(transform.position.x, transform.position.y + (Speed * Time.deltaTime), 0);
             else transform.position = new Vector3(transform.position.x, Boundary, 0);
