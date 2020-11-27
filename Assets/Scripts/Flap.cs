@@ -9,6 +9,7 @@ public class Flap : MonoBehaviour
     public float HowMuchRotate;
     public float MaxRotate;
     public bool ClockWise;
+    public bool taken; //If currently used by player
 
     public void ToMoveFlap(object sender, EventArgs e)
     {
@@ -17,6 +18,5 @@ public class Flap : MonoBehaviour
     public void AssignPlayer(BasePlatformMovement platmove)
     {
         platmove.FirePositive += ToMoveFlap;
-
     }
 }
