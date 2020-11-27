@@ -4,7 +4,6 @@
 !ProjectSettings
 !Build
 !TemplateData
-!index.html
 Assets/*
 !Assets/*.meta
 !Assets/Scripts
