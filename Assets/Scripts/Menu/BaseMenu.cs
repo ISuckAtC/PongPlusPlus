@@ -10,6 +10,6 @@ public class BaseMenu : MonoBehaviour
     public void MenuClick()
     {
         AudioSource audio = GetComponent<AudioSource>();
-        audio.clip = GameData.S_ButtonSound;
+        audio.PlayOneShot(GameData.S_ButtonSound);
     }
 }

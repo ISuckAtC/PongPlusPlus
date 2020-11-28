@@ -34,6 +34,8 @@ public class MapSelection : BaseMenu
         rt.sizeDelta = new Vector2(Screen.height / 3.5f, Screen.height / 3.5f);
         float HorizontalSpace = rt.rect.width * SpaceMultiplier;
         float VerticalSpace = rt.rect.height * SpaceMultiplier;
+        Debug.Log(HorizontalSpace);
+        Debug.Log(MapContainer.name);
         MapContainer.position = new Vector3(HorizontalSpace, Screen.height / 2, 0);
         ScrollMin = MapContainer.position;
         int Columns = (Maps.Length + 1) / Rows;

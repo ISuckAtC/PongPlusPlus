@@ -9,7 +9,6 @@ public class PlayerSelectMenu : BaseMenu
 {
     public int MatchLimit;
     public int MatchCount;
-    public string MapSelectScene;
 
     public void PlayButton()
     {
@@ -97,7 +96,7 @@ public class PlayerSelectMenu : BaseMenu
 
     public void OnbackMenuButtonClick()
     {
-        SceneManager.LoadScene(MapSelectScene);
+        SceneManager.LoadScene(GameData.S_MapMenuScene);
     }
 
     public void SetBot(int p)
