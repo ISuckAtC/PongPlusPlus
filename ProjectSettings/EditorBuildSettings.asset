@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype 4 MapSelect Mikkel.unity
     guid: b821f1e6497a1ef4483d64300e6d5b05
+  - enabled: 1
+    path: Assets/Scenes/Map nine 0.unity
+    guid: 53fca6208c4e72446901a5fa7b23a57e
   m_configObjects: {}
