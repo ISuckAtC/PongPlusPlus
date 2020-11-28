@@ -51,6 +51,7 @@ public class MapSelection : BaseMenu
             button.name = Maps[(x * Rows) + y].Name;
             button.GetComponent<Image>().sprite = Maps[(x * Rows) + y].MapPreview;
             button.GetComponent<Button>().onClick.AddListener(button.GetComponent<MapClick>().Click);
+            button.GetComponent<Button>().onClick.AddListener(this.MenuClick);
             button.GetComponent<MapClick>().PlayerSelectScene = PlayerSelectScene;
         }
         es.SetSelectedGameObject(MapContainer.GetChild(0).gameObject);
