@@ -19,6 +19,7 @@ public class BallBehavior : MonoBehaviour
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.clip = GameData.S_BounceSound;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = InitialVelocity;
         lastPlayer = null;

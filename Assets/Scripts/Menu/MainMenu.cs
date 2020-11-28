@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : BaseMenu
 {
-    public EventSystem es;
     public GameObject SettingsInSelected;
     public GameObject SettingsOutSelected;
     public GameObject InfoInSelected;
@@ -19,7 +18,7 @@ public class MainMenu : MonoBehaviour
     //Switches scene from main menu to player select menu
     public void PlayMenu()
     {
-        SceneManager.LoadScene(GameData.MapMenuScene, LoadSceneMode.Single);
+        SceneManager.LoadScene(GameData.S_MapMenuScene, LoadSceneMode.Single);
     }
     public void EnterSettings()
     {
@@ -36,17 +35,5 @@ public class MainMenu : MonoBehaviour
     public void ExitInfo()
     {
         es.SetSelectedGameObject(InfoOutSelected);
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

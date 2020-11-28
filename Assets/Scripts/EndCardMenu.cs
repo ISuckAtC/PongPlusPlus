@@ -15,6 +15,6 @@ public class EndCardMenu : MonoBehaviour
     {
         GameData.PlayerWins = null;
         GameData.MatchCount = 0;
-        SceneManager.LoadScene(GameData.MainMenuScene);
+        SceneManager.LoadScene(GameData.S_MainMenuScene);
     }
 }

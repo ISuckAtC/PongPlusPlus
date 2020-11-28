@@ -7,13 +7,15 @@ public class BallSpeedBuff : Buff
     public string Anim;
     Animator anim;
 
-    void Start()
+    public override void Start()
     {
+        base.Start();
         anim = GetComponent<Animator>();
         DefaultSprite = GetComponent<SpriteRenderer>().sprite;
     }
-    void OnTriggerEnter2D(Collider2D collider)
+    public override void OnTriggerEnter2D(Collider2D collider)
     {
+        base.OnTriggerEnter2D(collider);
         if (collider.tag == "Ball")
         {
             BallBehavior bb = collider.GetComponent<BallBehavior>();

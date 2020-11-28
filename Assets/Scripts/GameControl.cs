@@ -29,18 +29,20 @@ public class GameControl : MonoBehaviour
     
 
     private Text FPSCounter;
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("START");
+        audioSource = GetComponent<AudioSource>();
         MatTransparent = Resources.Load<Material>("Transparent");
         MatDefault = Resources.Load<Material>("Default");
-        if (!GameData.DisplayFPS) GameObject.Find("FPS").SetActive(false);
+        if (!GameData.S_DisplayFPS) GameObject.Find("FPS").SetActive(false);
         else FPSCounter = GameObject.Find("FPS").GetComponent<Text>();
         if (!GetComponent<GameData>().Debug)
         {
-            endDelay = GameData.EndDelay;
-            startDelay = GameData.StartDelay;
+            endDelay = GameData.S_EndDelay;
+            startDelay = GameData.S_StartDelay;
         }
         Random.InitState(System.DateTime.Now.Millisecond);
         for(int i = 0; i < players.Count; ++i)
@@ -95,7 +97,7 @@ public class GameControl : MonoBehaviour
                 r.AddComponent<BoxCollider2D>();
             }
         }
-        if (GameData.DisplayFPS)
+        if (GameData.S_DisplayFPS)
         {
             FPSCounter.text = (1f / Time.deltaTime).ToString();
         }
@@ -104,6 +106,7 @@ public class GameControl : MonoBehaviour
     public void Winner(GameObject player)
     {
         Debug.Log(player.name + " wins!");
+        audioSource.PlayOneShot(GameData.S_WinSound);
         player.GetComponent<PlatformBehavior>().AISpeed = 0;
         player.GetComponent<BasePlatformMovement>().Speed = 0;
         GameObject db = player.GetComponent<PlatformBehavior>().deathBarrier;

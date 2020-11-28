@@ -8,4 +8,16 @@ public class Buff : MonoBehaviour
     public Sprite DefaultSprite;
     public bool Respawn;
     public float RespawnTime;
+    
+    AudioSource audioSource;
+
+    public virtual void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    public virtual void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Ball") audioSource.PlayOneShot(GameData.S_BuffSound);
+    }
 }

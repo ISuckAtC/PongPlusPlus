@@ -9,6 +9,7 @@ public class DeathBarrierBehavior : MonoBehaviour
 
     BoxCollider2D col;
     SpriteRenderer sr;
+    AudioSource audioSource;
     public bool Destroyed;
 
     public Material full;
@@ -20,6 +21,7 @@ public class DeathBarrierBehavior : MonoBehaviour
     {
         col = GetComponent<BoxCollider2D>();
         sr = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,6 +39,7 @@ public class DeathBarrierBehavior : MonoBehaviour
             if (pb.Health < Cracks.Length) sr.sprite = Cracks[Cracks.Length - pb.Health];
             return;
         }
+        audioSource.PlayOneShot(GameData.S_BreakSound);
         sr.sprite = Cracks[0];
         sr.material = faded;
         col.isTrigger = true;
@@ -55,6 +58,7 @@ public class DeathBarrierBehavior : MonoBehaviour
                 return;
             }
             Debug.Log("Killing player " + player.name);
+            audioSource.PlayOneShot(GameData.S_DeathSound);
             col.isTrigger = false;
             collider.gameObject.layer = 8;
             sr.material = dead;

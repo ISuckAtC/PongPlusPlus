@@ -13,7 +13,7 @@ public struct Map
     public Sprite MapPreview;
 
 }
-public class MapSelection : MonoBehaviour
+public class MapSelection : BaseMenu
 {
     public string PlayerSelectScene;
     public string MainMenuScene;
@@ -22,7 +22,6 @@ public class MapSelection : MonoBehaviour
     public Map[] Maps;
     public RectTransform MapContainer;
     public GameObject MapButton;
-    public EventSystem es;
 
     private Vector2 ScrollMin, ScrollMax;
     public Scrollbar scrollbar;

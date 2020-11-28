@@ -147,8 +147,8 @@ public class PlatformBehavior : MonoBehaviour
         if (++BoredCount >= BoredToSpawn)
         {
             BoredCount = 0;
-            if (GameData.SpawnBallsOnBored) GameObject.Find("GameControl").GetComponent<GameControl>().SpawnBallForPlayer(gameObject);
-            if (GameData.GhostWallsOnBored) GameObject.Find("GameControl").GetComponent<GameControl>().GhostWallsStart();
+            if (GameData.S_SpawnBallsOnBored) GameObject.Find("GameControl").GetComponent<GameControl>().SpawnBallForPlayer(gameObject);
+            if (GameData.S_GhostWallsOnBored) GameObject.Find("GameControl").GetComponent<GameControl>().GhostWallsStart();
         }
     }
 }

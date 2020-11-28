@@ -5,14 +5,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class PlayerSelectMenu : MonoBehaviour
+public class PlayerSelectMenu : BaseMenu
 {
     public int MatchLimit;
     public int MatchCount;
     public string MapSelectScene;
-    
-    public EventSystem es;
-
 
     public void PlayButton()
     {
