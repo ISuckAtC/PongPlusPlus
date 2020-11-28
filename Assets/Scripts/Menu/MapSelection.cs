@@ -18,39 +18,43 @@ public class MapSelection : MonoBehaviour
     public string PlayerSelectScene;
     public string MainMenuScene;
     public int Rows;
-    public int Columns;
+    public float SpaceMultiplier;
     public Map[] Maps;
     public RectTransform MapContainer;
     public GameObject MapButton;
     public EventSystem es;
 
     private Vector2 ScrollMin, ScrollMax;
-    public float ScrollLimit;
     public Scrollbar scrollbar;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        RectTransform rt = MapButton.GetComponent<RectTransform>();
+        rt.sizeDelta = new Vector2(Screen.height / 3.5f, Screen.height / 3.5f);
+        float HorizontalSpace = rt.rect.width * SpaceMultiplier;
+        float VerticalSpace = rt.rect.height * SpaceMultiplier;
+        MapContainer.position = new Vector3(HorizontalSpace, Screen.height / 2, 0);
         ScrollMin = MapContainer.position;
-        ScrollMax = new Vector2(ScrollMin.x - ScrollLimit, ScrollMin.y);
-        float PadLeft = MapButton.GetComponent<RectTransform>().rect.width;
-        float PadBottom = MapButton.GetComponent<RectTransform>().rect.height;
-        for(int y = 0; y < Rows; ++y) for(int x = 0; x < Columns; ++x)
+        int Columns = (Maps.Length + 1) / Rows;
+        for(int x = 0; x < Columns; ++x) for(int y = 0; y < Rows; ++y)
         {
-            if ((y * Columns) + x >= Maps.Length) break;
-            GameObject button = Instantiate(MapButton, new Vector3(
-                PadLeft + (x * ((Screen.width - (PadLeft * 2)) / Columns)), 
-                PadBottom + (y * (Screen.height / Rows)),
-                0), 
+            if ((x * Rows) + y > Maps.Length - 1) break;
+            GameObject button = Instantiate(MapButton, new Vector3(MapContainer.transform.position.x +
+                x * HorizontalSpace, 
+                MapContainer.transform.position.y + ((y % 2 == 0 ? -VerticalSpace : VerticalSpace) / 2),
+                0),
                 Quaternion.identity);
             button.transform.SetParent(MapContainer);
-            button.name = Maps[(y * Columns) + x].Name;
-            button.GetComponent<Image>().sprite = Maps[(y * Columns) + x].MapPreview;
+            button.name = Maps[(x * Rows) + y].Name;
+            button.GetComponent<Image>().sprite = Maps[(x * Rows) + y].MapPreview;
             button.GetComponent<Button>().onClick.AddListener(button.GetComponent<MapClick>().Click);
             button.GetComponent<MapClick>().PlayerSelectScene = PlayerSelectScene;
         }
         es.SetSelectedGameObject(MapContainer.GetChild(0).gameObject);
+        ScrollMax.x = MapContainer.childCount >= 7 ? (MapContainer.GetChild(6).position.x + MapContainer.GetChild(0).position.x) - MapContainer.GetChild(MapContainer.childCount - 1).position.x : ScrollMin.x;
+        ScrollMax.y = ScrollMin.y;
     }
 
     public void BackButton()
