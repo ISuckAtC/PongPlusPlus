@@ -4,13 +4,3 @@
 !ProjectSettings
 !Build
 !TemplateData
-Assets/*
-!Assets/*.meta
-!Assets/Scripts
-!Assets/Scenes
-!Assets/Physics\ Materials
-!Assets/Prefabs
-!Assets/Animation
-!Assets/Textures
-!Assets/Materials
-!Assets/Sound
