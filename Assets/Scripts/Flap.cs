@@ -5,61 +5,52 @@ using UnityEngine;
 
 public class Flap : MonoBehaviour
 {
-    public float HowMuchRotate;
     public float RotateAmount;
+    public float RotationSpeed;
     float StartRotation;
     float MaxRotation;
+    float CurrentRotation;
     public bool ClockWise;
     public bool taken; //If currently used by player
-    KeyCode ActivaionKey;
+    public KeyCode ActivationKey;
     bool Positive;
-    string Axis;
-    bool GoesOverFull;
+    public string Axis;
     
     void Start()
     {
         StartRotation = transform.rotation.eulerAngles.z;
-        if (StartRotation + RotateAmount > 360)
-        {
-            GoesOverFull = true;
-            MaxRotation = StartRotation + RotateAmount - 360;
-        }
-        else
-        {
-            MaxRotation = StartRotation + RotateAmount;
-        }
-        Debug.Log(StartRotation);
+        CurrentRotation = StartRotation;
+        MaxRotation = StartRotation + (ClockWise ? RotateAmount : -RotateAmount);
     }
     void Update()
     {
-        float currentRotation = transform.rotation.eulerAngles.z;
-        float rotation = HowMuchRotate * (ClockWise ? 1 : -1) * Time.deltaTime;
-        if (Input.GetKey(ActivaionKey) || (Positive ? Input.GetAxis(Axis) > 0 : Input.GetAxis(Axis) < 0)) //cheking if activation key is pressed or if axes is  positive or negative 
+        float rotation = RotationSpeed * (ClockWise ? 1 : -1) * Time.deltaTime;
+        if (Input.GetKey(ActivationKey) || (Positive ? Input.GetAxis(Axis) > 0 : Input.GetAxis(Axis) < 0)) //checking if activation key is pressed or if axes is  positive or negative 
         {
-            if (ClockWise ? currentRotation + rotation <= MaxRotation : currentRotation - rotation >= -MaxRotation) //ckek if the rotation within the bounds
+            if (ClockWise ? CurrentRotation + rotation <= MaxRotation : CurrentRotation - rotation >= MaxRotation) //check if the rotation within the bounds
             {
-                transform.Rotate(new Vector3 (0, 0, ClockWise ? rotation : -rotation)); //perfor the actual rotation
+                CurrentRotation += ClockWise ? rotation : -rotation;
             }
             else
             {
-                transform.rotation = Quaternion.Euler(0, 0, ClockWise ? MaxRotation : -MaxRotation);
+                CurrentRotation = MaxRotation;
             }
         } 
-        else if (ClockWise ? currentRotation - rotation >= StartRotation : currentRotation + rotation <= StartRotation) //chek if within the bounds
+        else if (ClockWise ? CurrentRotation - rotation >= StartRotation : CurrentRotation + rotation <= StartRotation) //check if within the bounds
         {
-            transform.Rotate (new Vector3 (0, 0, ClockWise ? -rotation : rotation)); //perform the actual rotation
+            CurrentRotation -= ClockWise ? rotation : -rotation;
         }
         else 
         {
-            transform.rotation = Quaternion.Euler(0, 0, StartRotation);
+            CurrentRotation = StartRotation;
         }
+
+        transform.rotation = Quaternion.Euler(0, 0, CurrentRotation); //perform the actual rotation
     }
     public void AssignPlayer(BasePlatformMovement platmove, bool positive)
     {
         Positive = positive;
         Axis = platmove.Axis;
-        ActivaionKey = positive ? platmove.Positive : platmove.Negative;
+        ActivationKey = positive ? platmove.Positive : platmove.Negative;
     }
-
-    public float GetRealMin(float min) {return GoesOverFull ? min - 360 : min;}
 }
