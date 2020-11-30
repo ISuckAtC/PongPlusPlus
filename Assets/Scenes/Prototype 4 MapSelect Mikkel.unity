@@ -838,6 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de14fcb5336d16749945e8dcdb6f1407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  es: {fileID: 412803391}
   PlayerSelectScene: Prototype 4 PlayerSelect
   MainMenuScene: Prototype 4 Menu
   Rows: 2
@@ -864,7 +865,6 @@ MonoBehaviour:
   MapContainer: {fileID: 1728832122}
   MapButton: {fileID: 1408303820931672883, guid: da231b24cfb6c644b8f2f217fd55c0a2,
     type: 3}
-  es: {fileID: 412803391}
   scrollbar: {fileID: 520710736}
 --- !u!1 &1728832121
 GameObject:
