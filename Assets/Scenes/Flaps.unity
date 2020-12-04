@@ -565,10 +565,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22583eeebe733c94eb1f4ab562dfc454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HowMuchRotate: 10
   RotateAmount: 0
+  RotationSpeed: 0
   ClockWise: 1
   taken: 0
+  ActivationKey: 0
+  Axis: 
 --- !u!60 &1809342290
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -894,8 +896,82 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagicJumpRight
       objectReference: {fileID: 0}
+    - target: {fileID: 3712645503172279117, guid: 0e1f89f4b70f678419373b106073b0d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e1f89f4b70f678419373b106073b0d3, type: 3}
+--- !u!1001 &6026451979707552389
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6026451979543418163, guid: 77db3b75ffdb9b14c8f981f871922bbd,
+        type: 3}
+      propertyPath: m_Name
+      value: Disco
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026451979543418173, guid: 77db3b75ffdb9b14c8f981f871922bbd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026451979543418173, guid: 77db3b75ffdb9b14c8f981f871922bbd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026451979543418173, guid: 77db3b75ffdb9b14c8f981f871922bbd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026451979543418173, guid: 77db3b75ffdb9b14c8f981f871922bbd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026451979543418173, guid: 77db3b75ffdb9b14c8f981f871922bbd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026451979543418173, guid: 77db3b75ffdb9b14c8f981f871922bbd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026451979543418173, guid: 77db3b75ffdb9b14c8f981f871922bbd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026451979543418173, guid: 77db3b75ffdb9b14c8f981f871922bbd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026451979543418173, guid: 77db3b75ffdb9b14c8f981f871922bbd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026451979543418173, guid: 77db3b75ffdb9b14c8f981f871922bbd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026451979543418173, guid: 77db3b75ffdb9b14c8f981f871922bbd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 77db3b75ffdb9b14c8f981f871922bbd, type: 3}
 --- !u!1001 &6359181164724572305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -981,6 +1057,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MagicJumpLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021738717631194196, guid: 1d358eff416c5a74ebd028830fcfcf86,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9021738717631194219, guid: 1d358eff416c5a74ebd028830fcfcf86,
         type: 3}
