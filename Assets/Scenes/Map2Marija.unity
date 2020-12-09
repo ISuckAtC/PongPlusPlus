@@ -446,6 +446,9 @@ MonoBehaviour:
   MainMenuScene: 
   MapMenuScene: 
   PlayerMenuScene: 
+  MainMixer: {fileID: 0}
+  LowMixer: {fileID: 0}
+  PostDeathDelay: 0
   WinSound: {fileID: 0}
   BuffSound: {fileID: 0}
   BumperSound: {fileID: 0}
@@ -453,6 +456,7 @@ MonoBehaviour:
   BounceSound: {fileID: 0}
   DeathSound: {fileID: 0}
   BreakSound: {fileID: 0}
+  AISpeed: 0
   Debug: 0
   DebugAIs: 
 --- !u!114 &185743725
@@ -611,7 +615,7 @@ PrefabInstance:
     - target: {fileID: 7734133514151820323, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7734133514151820334, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
         type: 3}
