@@ -915,6 +915,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlanetLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 3919231377962815874, guid: 2b5023ec2d722d445b85fd697a168b66,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3919231377962815879, guid: 2b5023ec2d722d445b85fd697a168b66,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -972,6 +977,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b5023ec2d722d445b85fd697a168b66, type: 3}
+--- !u!1001 &5578775871053907045
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5578775871553256792, guid: a993a56fd0e6c8f49b4171bf25b60edf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578775871553256792, guid: a993a56fd0e6c8f49b4171bf25b60edf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578775871553256792, guid: a993a56fd0e6c8f49b4171bf25b60edf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578775871553256792, guid: a993a56fd0e6c8f49b4171bf25b60edf,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578775871553256792, guid: a993a56fd0e6c8f49b4171bf25b60edf,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578775871553256792, guid: a993a56fd0e6c8f49b4171bf25b60edf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578775871553256792, guid: a993a56fd0e6c8f49b4171bf25b60edf,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578775871553256792, guid: a993a56fd0e6c8f49b4171bf25b60edf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578775871553256792, guid: a993a56fd0e6c8f49b4171bf25b60edf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578775871553256792, guid: a993a56fd0e6c8f49b4171bf25b60edf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578775871553256792, guid: a993a56fd0e6c8f49b4171bf25b60edf,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5578775871553256798, guid: a993a56fd0e6c8f49b4171bf25b60edf,
+        type: 3}
+      propertyPath: m_Name
+      value: Lemons
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a993a56fd0e6c8f49b4171bf25b60edf, type: 3}
 --- !u!1001 &6026451979707552389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1186,6 +1260,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlanetRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672363101622251495, guid: 26dd82a272d636645b4774131d6f96f1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26dd82a272d636645b4774131d6f96f1, type: 3}
