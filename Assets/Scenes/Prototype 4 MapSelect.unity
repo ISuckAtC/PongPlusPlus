@@ -598,24 +598,28 @@ MonoBehaviour:
   Rows: 2
   SpaceMultiplier: 0
   Maps:
-  - Name: Prototype 4 Map01
+  - Name: Pink Lemonade
     MapPreview: {fileID: 21300000, guid: f576d2b4124e3504aab83cebc7b9f918, type: 3}
-  - Name: Prototype 4 Darja
+  - Name: Downfall
     MapPreview: {fileID: 21300000, guid: 2634a4c3ac6784442a57911a367cbdda, type: 3}
-  - Name: Map SpeedUp 0
+  - Name: Mach Magic
     MapPreview: {fileID: 21300000, guid: fd15c0bd6da11794b9ada5b933e68893, type: 3}
-  - Name: Map SizeDown 0
+  - Name: Pizza
     MapPreview: {fileID: 21300000, guid: 91cc905fee36db84d851d8edac885eb1, type: 3}
-  - Name: Map Split 0
+  - Name: Under the Sea
     MapPreview: {fileID: 21300000, guid: fa0b56a939dd87648bc08f2aef4bb04f, type: 3}
-  - Name: Map Mikkel 01
+  - Name: Armor
     MapPreview: {fileID: 21300000, guid: c67082bd28c09df49b396f130788beea, type: 3}
-  - Name: Map Cogwheel 0
+  - Name: Disco
     MapPreview: {fileID: 21300000, guid: 60873de2483bb9d44be492b9e04c8fde, type: 3}
-  - Name: Map1Marija
+  - Name: Engine Head
     MapPreview: {fileID: 21300000, guid: a62d6a928fd8e794fa8dcf7a510149de, type: 3}
-  - Name: Map nine 0
+  - Name: Planets
     MapPreview: {fileID: 21300000, guid: fa6cce77ab4f8134bbb6a3d30abe1c92, type: 3}
+  - Name: Fishbones
+    MapPreview: {fileID: 21300000, guid: eb187583e7e60419499ed958f74d4f33, type: 3}
+  - Name: Circles
+    MapPreview: {fileID: 21300000, guid: 38522425fd39562418a9f4bb5447aa28, type: 3}
   MapContainer: {fileID: 1728832122}
   MapButton: {fileID: 1408303820931672883, guid: da231b24cfb6c644b8f2f217fd55c0a2,
     type: 3}

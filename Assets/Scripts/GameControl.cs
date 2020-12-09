@@ -47,8 +47,6 @@ public class GameControl : MonoBehaviour
         PauseGroup.transform.Find("Continue").GetComponent<Button>().onClick.AddListener(PauseContinueButton);
         PauseGroup.transform.Find("Quit").GetComponent<Button>().onClick.AddListener(PauseQuitButton);
 
-        UI.transform.Find("Canvas").Find("Debug").GetComponent<Text>().text = GameData.MatchesToWin.ToString();
-
         MatTransparent = Resources.Load<Material>("Transparent");
         MatDefault = Resources.Load<Material>("Default");
         if (!GameData.S_DisplayFPS) GameObject.Find("FPS").SetActive(false);
