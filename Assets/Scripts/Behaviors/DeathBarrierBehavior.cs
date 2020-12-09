@@ -92,7 +92,7 @@ public class DeathBarrierBehavior : MonoBehaviour
             }
             string[] anims = platform.deathAnims;
             player.GetComponent<Animator>().Play(anims[Random.Range(0, anims.Length)], 0);
-            player.GetComponent<AudioSource>().Play();
+            player.GetComponent<AudioSource>().PlayOneShot(GameData.S_DeathSound);
             foreach(GameObject ball in gc.balls) ball.GetComponent<Rigidbody2D>().velocity *= gc.SpeedUpOnKill;
             if (gc.players.Where(x => x.activeSelf).Count() == 1)
             {
