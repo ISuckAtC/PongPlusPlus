@@ -26,7 +26,7 @@ public class GameControl : MonoBehaviour
     public float PlatformBoundaryStart;
     public Transform[] BallSpawns;
     public List<Flap> Flaps;
-    
+    GameObject UI;
 
     private Text FPSCounter;
     private bool Paused;
@@ -36,6 +36,7 @@ public class GameControl : MonoBehaviour
     {
         Debug.Log("START");
         audioSource = GetComponent<AudioSource>();
+        UI = GameObject.Find("UI");
         if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
         MatTransparent = Resources.Load<Material>("Transparent");
         MatDefault = Resources.Load<Material>("Default");
