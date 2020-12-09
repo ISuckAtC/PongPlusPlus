@@ -122,7 +122,7 @@ public class GameControl : MonoBehaviour
                 r.AddComponent<BoxCollider2D>();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKey("joystick button 7"))
         {
             if (Paused) 
             {
@@ -176,6 +176,7 @@ public class GameControl : MonoBehaviour
             GameObject winFinal = Instantiate(player.GetComponent<PlatformBehavior>().WinScreenFinal, new Vector3(960, 540, -10), Quaternion.identity);
             winFinal.transform.SetParent(Canvas.transform);
             winFinal.transform.SetAsFirstSibling();
+            es.SetSelectedGameObject(winFinal.transform.Find("WinButtons/PlayAgain").gameObject);
         } else StartCoroutine(NextRound());
         
     }
