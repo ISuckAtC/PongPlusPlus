@@ -37,6 +37,7 @@ public class GameControl : MonoBehaviour
         Debug.Log("START");
         audioSource = GetComponent<AudioSource>();
         UI = GameObject.Find("UI");
+        GameObject pauseGroup = UI.transform.GetChild(0).Find("Pause").gameObject;
         if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
         MatTransparent = Resources.Load<Material>("Transparent");
         MatDefault = Resources.Load<Material>("Default");
