@@ -63,7 +63,7 @@ public class MapSelection : BaseMenu
 
     public void BackButton()
     {           //Loads another scene
-        SceneManager.LoadScene(MainMenuScene);
+        SceneManager.LoadScene(GameData.S_MainMenuScene);
     }
     public void OnScrollChanged()
     {

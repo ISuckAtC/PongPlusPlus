@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class GameControl : MonoBehaviour
 {
@@ -26,7 +27,8 @@ public class GameControl : MonoBehaviour
     public float PlatformBoundaryStart;
     public Transform[] BallSpawns;
     public List<Flap> Flaps;
-    GameObject UI;
+    GameObject UI, PauseGroup;
+    EventSystem es;
 
     private Text FPSCounter;
     private bool Paused;
@@ -37,7 +39,11 @@ public class GameControl : MonoBehaviour
         Debug.Log("START");
         audioSource = GetComponent<AudioSource>();
         UI = GameObject.Find("UI");
-        GameObject pauseGroup = UI.transform.GetChild(0).Find("Pause").gameObject;
+        es = UI.transform.Find("EventSystem").GetComponent<EventSystem>();
+        PauseGroup = UI.transform.Find("Canvas").GetChild(5).gameObject;
+        PauseGroup.transform.Find("Continue").GetComponent<Button>().onClick.AddListener(PauseContinueButton);
+        PauseGroup.transform.Find("Quit").GetComponent<Button>().onClick.AddListener(PauseQuitButton);
+
         if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
         MatTransparent = Resources.Load<Material>("Transparent");
         MatDefault = Resources.Load<Material>("Default");
@@ -109,14 +115,36 @@ public class GameControl : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Paused) Time.timeScale = 1;
-            else Time.timeScale = 0;
+            if (Paused) 
+            {
+                PauseGroup.SetActive(false);
+                Time.timeScale = 1;
+            }
+            else 
+            {
+                PauseGroup.SetActive(true);
+                es.SetSelectedGameObject(PauseGroup.transform.Find("Continue").gameObject);
+                Time.timeScale = 0;
+            }
             Paused = !Paused;
         }
         if (GameData.S_DisplayFPS)
         {
             FPSCounter.text = (1f / Time.deltaTime).ToString();
         }
+    }
+
+    public void PauseContinueButton()
+    {
+        Time.timeScale = 1;
+        Paused = false;
+        PauseGroup.SetActive(false);
+    }
+
+    public void PauseQuitButton()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(GameData.S_MainMenuScene, LoadSceneMode.Single);
     }
 
     public void Winner(GameObject player)
