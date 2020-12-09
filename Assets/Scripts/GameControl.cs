@@ -38,13 +38,15 @@ public class GameControl : MonoBehaviour
     {
         Debug.Log("START");
         audioSource = GetComponent<AudioSource>();
+        if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.outputAudioMixerGroup = GameData.S_MainMixer;
+
         UI = GameObject.Find("UI");
         es = UI.transform.Find("EventSystem").GetComponent<EventSystem>();
         PauseGroup = UI.transform.Find("Canvas").GetChild(5).gameObject;
         PauseGroup.transform.Find("Continue").GetComponent<Button>().onClick.AddListener(PauseContinueButton);
         PauseGroup.transform.Find("Quit").GetComponent<Button>().onClick.AddListener(PauseQuitButton);
 
-        if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
         MatTransparent = Resources.Load<Material>("Transparent");
         MatDefault = Resources.Load<Material>("Default");
         if (!GameData.S_DisplayFPS) GameObject.Find("FPS").SetActive(false);

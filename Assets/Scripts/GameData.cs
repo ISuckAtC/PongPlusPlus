@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class GameData : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameData : MonoBehaviour
     public string MainMenuScene;
     public string MapMenuScene;
     public string PlayerMenuScene;
+    public AudioMixerGroup MainMixer;
 
     public AudioClip WinSound, BuffSound, BumperSound, ButtonSound, BounceSound, DeathSound, BreakSound;
 
@@ -35,6 +37,7 @@ public class GameData : MonoBehaviour
     static public string S_MainMenuScene;
     static public string S_MapMenuScene;
     static public string S_PlayerMenuScene;
+    static public AudioMixerGroup S_MainMixer;
 
     static public AudioClip S_WinSound, S_BuffSound, S_BumperSound, S_ButtonSound, S_BounceSound, S_DeathSound, S_BreakSound;
     // Start is called before the first frame update
@@ -57,6 +60,7 @@ public class GameData : MonoBehaviour
             S_BounceSound = BounceSound;
             S_DeathSound = DeathSound;
             S_BreakSound = BreakSound;
+            S_MainMixer = MainMixer;
         }
         if (Debug)
         {
