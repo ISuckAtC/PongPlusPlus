@@ -28,7 +28,7 @@ public class PlatformBehavior : MonoBehaviour
     public int BoredToSpawn;
     private int BoredCount;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         BoredCount = 0;
         sr = GetComponent<SpriteRenderer>();
@@ -45,20 +45,23 @@ public class PlatformBehavior : MonoBehaviour
             light.transform.SetParent(transform);
             SpriteRenderer spriteRenderer = light.AddComponent<SpriteRenderer>();
             spriteRenderer.sortingOrder = 1;
+            spriteRenderer.sortingLayerName = "Overlay";
             if (i < score) spriteRenderer.sprite = ActiveScore;
             else spriteRenderer.sprite = InactiveScore;
             if (Horizontal)
             {
+                float offset = ((sr.bounds.size.x / (GameData.MatchesToWin + 3)) * (i + 2));
                 light.transform.position = new Vector3(
-                    (transform.position.x - (sr.bounds.size.x / 2) + ((sr.bounds.size.x / (GameData.MatchesToWin + 3)) * (i + 2))),
+                    (transform.position.x - (sr.bounds.size.x / 2) + offset),
                     transform.position.y, 
                     transform.position.z);
             }
             else
             {
+                float offset = ((sr.bounds.size.y / (GameData.MatchesToWin + 3)) * (i + 2));
                 light.transform.position = new Vector3(
                     transform.position.x,
-                    (transform.position.y - (sr.bounds.size.y / 2) + ((sr.bounds.size.y / (GameData.MatchesToWin + 3)) * (i + 2))),
+                    (transform.position.y - (sr.bounds.size.y / 2) + offset),
                     transform.position.z);
             }
         }

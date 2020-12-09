@@ -43,9 +43,11 @@ public class GameControl : MonoBehaviour
 
         UI = GameObject.Find("UI");
         es = UI.transform.Find("EventSystem").GetComponent<EventSystem>();
-        PauseGroup = UI.transform.Find("Canvas").GetChild(5).gameObject;
+        PauseGroup = UI.transform.Find("Canvas").Find("Pause").gameObject;
         PauseGroup.transform.Find("Continue").GetComponent<Button>().onClick.AddListener(PauseContinueButton);
         PauseGroup.transform.Find("Quit").GetComponent<Button>().onClick.AddListener(PauseQuitButton);
+
+        UI.transform.Find("Canvas").Find("Debug").GetComponent<Text>().text = GameData.MatchesToWin.ToString();
 
         MatTransparent = Resources.Load<Material>("Transparent");
         MatDefault = Resources.Load<Material>("Default");
