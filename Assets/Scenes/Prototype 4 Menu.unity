@@ -1426,7 +1426,7 @@ MonoBehaviour:
   MainMenuScene: Prototype 4 Menu
   MapMenuScene: Prototype 4 MapSelect Mikkel
   PlayerMenuScene: Prototype 4 PlayerSelect
-  MainMixer: {fileID: 0}
+  MainMixer: {fileID: 24300002, guid: c3b65039adf9f26489ec299ea34ebd2e, type: 2}
   WinSound: {fileID: 8300000, guid: 520f19d3adccad244a2fc9ef71ba2229, type: 3}
   BuffSound: {fileID: 8300000, guid: 73d6c78b23d5b29449c43cb2f7b0a1df, type: 3}
   BumperSound: {fileID: 8300000, guid: b6c4a25c015486a489a468e6f35ef24c, type: 3}
@@ -1434,6 +1434,7 @@ MonoBehaviour:
   BounceSound: {fileID: 8300000, guid: 178cfa665b7df0440bd1abaa01d25275, type: 3}
   DeathSound: {fileID: 8300000, guid: 6cbffdef555adc14a8cd390575b1ae6a, type: 3}
   BreakSound: {fileID: 8300000, guid: 234f74aa42edb094babf8de8894e1a17, type: 3}
+  AISpeed: 3
   Debug: 0
   DebugAIs: 
 --- !u!114 &816040501

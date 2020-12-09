@@ -22,6 +22,7 @@ public class DeathBarrierBehavior : MonoBehaviour
         col = GetComponent<BoxCollider2D>();
         sr = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
+        audioSource.outputAudioMixerGroup = GameData.S_MainMixer;
     }
 
     // Update is called once per frame

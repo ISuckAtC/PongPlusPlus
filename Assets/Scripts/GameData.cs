@@ -18,7 +18,7 @@ public class GameData : MonoBehaviour
     public AudioMixerGroup MainMixer;
 
     public AudioClip WinSound, BuffSound, BumperSound, ButtonSound, BounceSound, DeathSound, BreakSound;
-
+    public int AISpeed;
 
 
     public bool Debug;
@@ -37,6 +37,7 @@ public class GameData : MonoBehaviour
     static public string S_MainMenuScene;
     static public string S_MapMenuScene;
     static public string S_PlayerMenuScene;
+    static public int S_AISpeed;
     static public AudioMixerGroup S_MainMixer;
 
     static public AudioClip S_WinSound, S_BuffSound, S_BumperSound, S_ButtonSound, S_BounceSound, S_DeathSound, S_BreakSound;
@@ -61,6 +62,7 @@ public class GameData : MonoBehaviour
             S_DeathSound = DeathSound;
             S_BreakSound = BreakSound;
             S_MainMixer = MainMixer;
+            S_AISpeed = AISpeed;
         }
         if (Debug)
         {
