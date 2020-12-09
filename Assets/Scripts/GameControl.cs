@@ -122,13 +122,13 @@ public class GameControl : MonoBehaviour
         db.GetComponent<DeathBarrierBehavior>().Destroyed = true;
         GameData.MatchCount++;
         GameObject winScreen = Instantiate(player.GetComponent<PlatformBehavior>().WinScreen, new Vector3(960, 540, -10), Quaternion.identity);
-        winScreen.transform.parent = Canvas.transform;
-        winScreen.GetComponent<Animator>().Play("Win", 15);
+        winScreen.transform.SetParent(Canvas.transform);
+        winScreen.GetComponent<Animator>().Play("Win", 2);
         player.GetComponent<PlatformBehavior>().playerCard.transform.Find("Win").GetComponent<Text>().text = "Wins: " + ++GameData.PlayerWins[player.name];
         if (GameData.PlayerWins[player.name] >= GameData.MatchesToWin) 
         {
             GameObject winFinal = Instantiate(player.GetComponent<PlatformBehavior>().WinScreenFinal, new Vector3(960, 540, -10), Quaternion.identity);
-            winFinal.transform.parent = Canvas.transform;
+            winFinal.transform.SetParent(Canvas.transform);
             winFinal.transform.SetAsFirstSibling();
         } else StartCoroutine(NextRound());
         

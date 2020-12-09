@@ -44,6 +44,7 @@ public class PlatformBehavior : MonoBehaviour
             light.name = "PlayerLight " + i;
             light.transform.SetParent(transform);
             SpriteRenderer spriteRenderer = light.AddComponent<SpriteRenderer>();
+            spriteRenderer.sortingOrder = 1;
             if (i < score) spriteRenderer.sprite = ActiveScore;
             else spriteRenderer.sprite = InactiveScore;
             if (Horizontal)
@@ -176,7 +177,7 @@ public class PlatformBehavior : MonoBehaviour
         if (++BoredCount >= BoredToSpawn)
         {
             BoredCount = 0;
-            if (GameData.S_SpawnBallsOnBored) GameObject.Find("GameControl").GetComponent<GameControl>().SpawnBallForPlayer(gameObject);
+            if (GameData.S_SpawnBallsOnBored) GameObject.Find("GameControl").GetComponent<GameControl>().SpawnBall();
             if (GameData.S_GhostWallsOnBored) GameObject.Find("GameControl").GetComponent<GameControl>().GhostWallsStart();
         }
     }

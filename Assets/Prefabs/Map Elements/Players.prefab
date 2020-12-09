@@ -759,8 +759,8 @@ MonoBehaviour:
   playerNumber: 4
   Speed: 7
   Boundary: 4
-  Positive: 110
-  Negative: 109
+  Positive: 109
+  Negative: 110
   Axis: 
 --- !u!82 &1559265304
 AudioSource:
@@ -1040,8 +1040,8 @@ MonoBehaviour:
   playerNumber: 3
   Speed: 7
   Boundary: 4
-  Positive: 122
-  Negative: 120
+  Positive: 120
+  Negative: 122
   Axis: 
 --- !u!82 &585611501
 AudioSource:
