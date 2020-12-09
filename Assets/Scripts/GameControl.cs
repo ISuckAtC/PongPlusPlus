@@ -47,15 +47,17 @@ public class GameControl : MonoBehaviour
         Random.InitState(System.DateTime.Now.Millisecond);
         for(int i = 0; i < players.Count; ++i)
         {
+            PlatformBehavior pb = players[i].GetComponent<PlatformBehavior>();
+            DeathBarrierBehavior dbb = pb.deathBarrier.GetComponent<DeathBarrierBehavior>();
+
             if (i == GameData.AIs.Length)
             {
                 for (; i < players.Count; ++i) 
                 {
-                    GameObject db = players[i].GetComponent<PlatformBehavior>().deathBarrier;
-                    Debug.Log(db.name + "'s player is inactive, deactivating.");
-                    db.GetComponent<DeathBarrierBehavior>().Destroyed = true;
-                    db.GetComponent<SpriteRenderer>().material = db.GetComponent<DeathBarrierBehavior>().dead;
-                    players[i].GetComponent<PlatformBehavior>().playerCard.SetActive(false);
+                    Debug.Log(dbb.name + "'s player is inactive, deactivating.");
+                    dbb.Destroyed = true;
+                    dbb.GetComponent<SpriteRenderer>().material = dbb.dead;
+                    pb.playerCard.SetActive(false);
                     players[i].SetActive(false);
                 }
                 break;
@@ -63,19 +65,21 @@ public class GameControl : MonoBehaviour
             if (GameData.PlayerWins.Count < GameData.AIs.Count()) GameData.PlayerWins.Add(players[i].name, 0);
             if (GameData.AIs[i])
             {
-                players[i].GetComponent<PlatformBehavior>().AI = true;
+                pb.AI = true;
                 players[i].GetComponent<BasePlatformMovement>().Speed = 0;
-            } else players[i].GetComponent<PlatformBehavior>().AI = false;
+            } else pb.AI = false;
             Vector2 pos = new Vector2(players[i].transform.position.x * ballStartOffset, players[i].transform.position.y * ballStartOffset);
             GameObject ball = Instantiate(ballObject, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
             Vector2 initDir = new Vector2(players[i].transform.position.x - ball.transform.position.x, players[i].transform.position.y - ball.transform.position.y);
-            if (players[i].GetComponent<PlatformBehavior>().Horizontal) initDir.x += Random.Range(-ballStartRandomRange, ballStartRandomRange);
+            if (pb.Horizontal) initDir.x += Random.Range(-ballStartRandomRange, ballStartRandomRange);
             else initDir.y += Random.Range(-ballStartRandomRange, ballStartRandomRange);
             ball.GetComponent<Rigidbody2D>().velocity = initDir.normalized * startSpeed;
             ball.GetComponent<BallBehavior>().StartCoroutine(ball.GetComponent<BallBehavior>().Freeze(startDelay, players[i].transform));
             balls.Add(ball);
             players[i].GetComponent<BasePlatformMovement>().Boundary = PlatformBoundaryStart;
-            players[i].GetComponent<PlatformBehavior>().playerCard.transform.Find("Win").GetComponent<Text>().text = "Wins: " + GameData.PlayerWins[players[i].name];
+            pb.playerCard.transform.Find("Win").GetComponent<Text>().text = "Wins: " + GameData.PlayerWins[players[i].name];
+
+            pb.SetScore(GameData.PlayerWins[pb.name]);
         }
         foreach(KeyValuePair<string, int> pair in GameData.PlayerWins) Debug.Log(pair.Key + ": " + pair.Value);
         StartCoroutine(LateStart());

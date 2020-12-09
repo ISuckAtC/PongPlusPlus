@@ -34,6 +34,11 @@ public class PlatformBehavior : MonoBehaviour
         InvokeRepeating("Bored", 0, BoredCountRate);
     }
 
+    public void SetScore(int score)
+    {
+
+    }
+
     // Update is called once per frame
     void Update()
     {
