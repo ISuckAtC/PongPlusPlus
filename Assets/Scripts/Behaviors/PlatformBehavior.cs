@@ -33,7 +33,6 @@ public class PlatformBehavior : MonoBehaviour
         BoredCount = 0;
         sr = GetComponent<SpriteRenderer>();
         gc = GameObject.Find("GameControl").GetComponent<GameControl>();
-        InvokeRepeating("Bored", 0, BoredCountRate);
     }
 
     public void SetScore(int score)

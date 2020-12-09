@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prototype 4 Menu.unity
     guid: 43cf99cf7f6b4764eac087a3b5006f6b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu_MapSelection.unity
     guid: 2ff6394bebbd82042be7543d76aaf84a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Prototype 4 MapSelect.unity
     guid: 3b773c6bea0c3c54abc36c5e68bdb963
   - enabled: 1

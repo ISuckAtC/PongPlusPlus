@@ -89,6 +89,8 @@ public class GameControl : MonoBehaviour
                 pb.AI = false;
                 pb.PostDeathControl = true;
             }
+            pb.InvokeRepeating("Bored", 0, pb.BoredCountRate);
+
             Vector2 pos = new Vector2(players[i].transform.position.x * ballStartOffset, players[i].transform.position.y * ballStartOffset);
             GameObject ball = Instantiate(ballObject, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
             Vector2 initDir = new Vector2(players[i].transform.position.x - ball.transform.position.x, players[i].transform.position.y - ball.transform.position.y);
@@ -153,6 +155,7 @@ public class GameControl : MonoBehaviour
     public void PauseQuitButton()
     {
         Time.timeScale = 1;
+        GameData.PlayerWins = new Dictionary<string, int>();
         SceneManager.LoadScene(GameData.S_MainMenuScene, LoadSceneMode.Single);
     }
 
