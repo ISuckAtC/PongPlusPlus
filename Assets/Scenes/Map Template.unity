@@ -317,6 +317,7 @@ MonoBehaviour:
   PlatformBoundary: 4
   PlatformBoundaryStart: 2
   BallSpawns: []
+  Flaps: []
 --- !u!4 &402156579
 Transform:
   m_ObjectHideFlags: 0
@@ -344,14 +345,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Assign: 0
-  AssignStartDelay: 0
-  AssignEndDelay: 0
-  AssignSpawnBallsOnBored: 0
-  AssignGhostWallsOnBored: 0
-  AssignDisplayFPS: 0
-  AssignMainMenuScene: 
-  AssignMapMenuScene: 
-  AssignPlayerMenuScene: 
+  StartDelay: 0
+  EndDelay: 0
+  SpawnBallsOnBored: 0
+  GhostWallsOnBored: 0
+  DisplayFPS: 0
+  MainMenuScene: 
+  MapMenuScene: 
+  PlayerMenuScene: 
+  WinSound: {fileID: 0}
+  BuffSound: {fileID: 0}
+  BumperSound: {fileID: 0}
+  ButtonSound: {fileID: 0}
+  BounceSound: {fileID: 0}
+  DeathSound: {fileID: 0}
+  BreakSound: {fileID: 0}
   Debug: 0
   DebugAIs: 
 --- !u!1 &522162942
@@ -870,6 +878,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8145969087016488308, guid: bd25d4dfa5ae63049b237d7cca6cfb89,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd25d4dfa5ae63049b237d7cca6cfb89, type: 3}
