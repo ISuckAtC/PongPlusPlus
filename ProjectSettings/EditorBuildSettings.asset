@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map nine 0.unity
     guid: 53fca6208c4e72446901a5fa7b23a57e
+  - enabled: 1
+    path: Assets/Scenes/Map Template Mikkel 2.unity
+    guid: f29af36eaceb6de43b9635ca7026bcfe
   m_configObjects: {}
