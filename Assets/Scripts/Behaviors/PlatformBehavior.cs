@@ -176,6 +176,7 @@ public class PlatformBehavior : MonoBehaviour
     {
         if (++BoredCount >= BoredToSpawn)
         {
+            Debug.Log(name + " is bored");
             BoredCount = 0;
             if (GameData.S_SpawnBallsOnBored) GameObject.Find("GameControl").GetComponent<GameControl>().SpawnBall();
             if (GameData.S_GhostWallsOnBored) GameObject.Find("GameControl").GetComponent<GameControl>().GhostWallsStart();

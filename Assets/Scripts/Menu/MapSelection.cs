@@ -54,6 +54,7 @@ public class MapSelection : BaseMenu
             button.GetComponent<Button>().onClick.AddListener(this.MenuClick);
             button.GetComponent<MapClick>().PlayerSelectScene = PlayerSelectScene;
             button.GetComponent<MapClick>().container = MapContainer;
+            button.GetComponent<MapClick>().NameContainer.GetComponentInChildren<Text>().text = button.name;
         }
         es.SetSelectedGameObject(MapContainer.GetChild(0).gameObject);
         ScrollMax.x = MapContainer.childCount >= 7 ? (MapContainer.GetChild(6).position.x + MapContainer.GetChild(0).position.x) - MapContainer.GetChild(MapContainer.childCount - 1).position.x : ScrollMin.x;

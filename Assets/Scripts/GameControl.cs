@@ -29,6 +29,7 @@ public class GameControl : MonoBehaviour
     
 
     private Text FPSCounter;
+    private bool Paused;
     AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -103,6 +104,12 @@ public class GameControl : MonoBehaviour
                 r.AddComponent<Rigidbody2D>().gravityScale = 1;
                 r.AddComponent<BoxCollider2D>();
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Paused) Time.timeScale = 1;
+            else Time.timeScale = 0;
+            Paused = !Paused;
         }
         if (GameData.S_DisplayFPS)
         {
