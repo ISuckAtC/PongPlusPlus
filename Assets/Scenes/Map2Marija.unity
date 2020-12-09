@@ -453,8 +453,8 @@ MonoBehaviour:
   BounceSound: {fileID: 0}
   DeathSound: {fileID: 0}
   BreakSound: {fileID: 0}
-  Debug: 1
-  DebugAIs: 01010101
+  Debug: 0
+  DebugAIs: 
 --- !u!114 &185743725
 MonoBehaviour:
   m_ObjectHideFlags: 0
