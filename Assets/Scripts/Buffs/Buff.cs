@@ -14,6 +14,7 @@ public class Buff : MonoBehaviour
     public virtual void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.outputAudioMixerGroup = GameData.S_MainMixer;
     }
 
     public virtual void OnTriggerEnter2D(Collider2D other)
