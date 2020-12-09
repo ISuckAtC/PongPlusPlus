@@ -640,7 +640,7 @@ MonoBehaviour:
   BounceSound: {fileID: 0}
   DeathSound: {fileID: 0}
   BreakSound: {fileID: 0}
-  Debug: 1
+  Debug: 0
   DebugAIs: 01010101
 --- !u!4 &422595759 stripped
 Transform:

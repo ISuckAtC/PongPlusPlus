@@ -864,7 +864,7 @@ MonoBehaviour:
   - Name: Map nine 0
     MapPreview: {fileID: 21300000, guid: fa6cce77ab4f8134bbb6a3d30abe1c92, type: 3}
   - Name: Map Template Mikkel 2
-    MapPreview: {fileID: 21300000, guid: fa6cce77ab4f8134bbb6a3d30abe1c92, type: 3}
+    MapPreview: {fileID: 21300000, guid: 38522425fd39562418a9f4bb5447aa28, type: 3}
   MapContainer: {fileID: 1728832122}
   MapButton: {fileID: 1408303820931672883, guid: da231b24cfb6c644b8f2f217fd55c0a2,
     type: 3}
