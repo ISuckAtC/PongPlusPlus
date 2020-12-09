@@ -82,7 +82,13 @@ public class GameControl : MonoBehaviour
                 pb.AI = true;
                 players[i].GetComponent<BasePlatformMovement>().Speed = 0;
                 pb.AISpeed = GameData.S_AISpeed;
-            } else pb.AI = false;
+                pb.PostDeathControl = false;
+            } 
+            else 
+            {
+                pb.AI = false;
+                pb.PostDeathControl = true;
+            }
             Vector2 pos = new Vector2(players[i].transform.position.x * ballStartOffset, players[i].transform.position.y * ballStartOffset);
             GameObject ball = Instantiate(ballObject, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
             Vector2 initDir = new Vector2(players[i].transform.position.x - ball.transform.position.x, players[i].transform.position.y - ball.transform.position.y);
