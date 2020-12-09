@@ -16,7 +16,6 @@ public class BumperBehavior : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = GameData.S_BumperSound;
     }
 
     // Update is called once per frame
@@ -35,7 +34,7 @@ public class BumperBehavior : MonoBehaviour
             // Calculate bump vector by finding the difference in position and multiplying the normalized vector with the modifier
             //Vector2 bump = (new Vector2(rbo.transform.position.x - transform.position.x, rbo.transform.position.y - transform.position.y)).normalized * BumpPower;
             ball.GetComponent<BallBehavior>().StartCoroutine(ball.GetComponent<BallBehavior>().SpeedModBuff(SpeedUpDuration, SpeedUp, false));
-            audioSource.Play();
+            audioSource.PlayOneShot(GameData.S_BumperSound);
             anim.Play(bump.name);
         }
     }
