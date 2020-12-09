@@ -16,6 +16,7 @@ public class GameData : MonoBehaviour
     public string MapMenuScene;
     public string PlayerMenuScene;
     public AudioMixerGroup MainMixer;
+    public AudioMixerGroup LowMixer;
 
     public AudioClip WinSound, BuffSound, BumperSound, ButtonSound, BounceSound, DeathSound, BreakSound;
     public int AISpeed;
@@ -39,6 +40,7 @@ public class GameData : MonoBehaviour
     static public string S_PlayerMenuScene;
     static public int S_AISpeed;
     static public AudioMixerGroup S_MainMixer;
+    static public AudioMixerGroup S_LowMixer;
 
     static public AudioClip S_WinSound, S_BuffSound, S_BumperSound, S_ButtonSound, S_BounceSound, S_DeathSound, S_BreakSound;
     // Start is called before the first frame update
@@ -63,6 +65,7 @@ public class GameData : MonoBehaviour
             S_BreakSound = BreakSound;
             S_MainMixer = MainMixer;
             S_AISpeed = AISpeed;
+            S_LowMixer = LowMixer;
         }
         if (Debug)
         {

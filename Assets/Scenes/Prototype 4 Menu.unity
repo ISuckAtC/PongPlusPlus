@@ -1427,6 +1427,8 @@ MonoBehaviour:
   MapMenuScene: Prototype 4 MapSelect Mikkel
   PlayerMenuScene: Prototype 4 PlayerSelect
   MainMixer: {fileID: 24300002, guid: c3b65039adf9f26489ec299ea34ebd2e, type: 2}
+  LowMixer: {fileID: -7284189095141503011, guid: c3b65039adf9f26489ec299ea34ebd2e,
+    type: 2}
   WinSound: {fileID: 8300000, guid: 520f19d3adccad244a2fc9ef71ba2229, type: 3}
   BuffSound: {fileID: 8300000, guid: 73d6c78b23d5b29449c43cb2f7b0a1df, type: 3}
   BumperSound: {fileID: 8300000, guid: a37338569fd03bd40a2d399aa14c96fe, type: 3}
