@@ -635,6 +635,7 @@ MonoBehaviour:
   PlayerMenuScene: 
   MainMixer: {fileID: 0}
   LowMixer: {fileID: 0}
+  PostDeathDelay: 0
   WinSound: {fileID: 0}
   BuffSound: {fileID: 0}
   BumperSound: {fileID: 0}

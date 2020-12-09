@@ -932,6 +932,9 @@ MonoBehaviour:
   MainMenuScene: 
   MapMenuScene: 
   PlayerMenuScene: 
+  MainMixer: {fileID: 0}
+  LowMixer: {fileID: 0}
+  PostDeathDelay: 0
   WinSound: {fileID: 0}
   BuffSound: {fileID: 0}
   BumperSound: {fileID: 0}
@@ -939,6 +942,7 @@ MonoBehaviour:
   BounceSound: {fileID: 0}
   DeathSound: {fileID: 0}
   BreakSound: {fileID: 0}
+  AISpeed: 0
   Debug: 0
   DebugAIs: 01010101
 --- !u!82 &402156581
