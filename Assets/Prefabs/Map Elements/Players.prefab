@@ -158,6 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664be83828f192046975aba565cc7621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InactiveScore: {fileID: 21300000, guid: 297ca6d9069245a4a803dd7cd4143184, type: 3}
+  ActiveScore: {fileID: 21300000, guid: de987900eeef1c34d90f155ee47b5b45, type: 3}
   WinScreen: {fileID: 6268971957980347475, guid: 28d871092edb75a439f64f207c845afa,
     type: 3}
   WinScreenFinal: {fileID: 5444388270437816787, guid: bcc380857f981144ab79e9933247bd37,
@@ -437,6 +439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664be83828f192046975aba565cc7621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InactiveScore: {fileID: 21300000, guid: 297ca6d9069245a4a803dd7cd4143184, type: 3}
+  ActiveScore: {fileID: 21300000, guid: bf589a0c3c71eab49b93e9b210a729e7, type: 3}
   WinScreen: {fileID: 6268971957980347475, guid: 5674017cb208cc840bfb21433a90a13e,
     type: 3}
   WinScreenFinal: {fileID: 8736672769053254130, guid: 9b4d0f7d1bb0bf04580e4d446f15abc2,
@@ -716,6 +720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664be83828f192046975aba565cc7621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InactiveScore: {fileID: 21300000, guid: 297ca6d9069245a4a803dd7cd4143184, type: 3}
+  ActiveScore: {fileID: 21300000, guid: cbcd90052cd27b74c90623a16250bc47, type: 3}
   WinScreen: {fileID: 6268971957980347475, guid: 1bc16fdef7610f045980920e2619f08d,
     type: 3}
   WinScreenFinal: {fileID: 5004540700453548969, guid: e24b88332bc15fe40a105151b3837bad,
@@ -995,6 +1001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 664be83828f192046975aba565cc7621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InactiveScore: {fileID: 21300000, guid: 297ca6d9069245a4a803dd7cd4143184, type: 3}
+  ActiveScore: {fileID: 21300000, guid: 296e96e885260e54e89486c1880857a9, type: 3}
   WinScreen: {fileID: 6268971957980347475, guid: 8584e62e7a45ace419b94aea5e4ca374,
     type: 3}
   WinScreenFinal: {fileID: 8420500689815964312, guid: 8f1a375d827052547b1e10ddaa27c685,

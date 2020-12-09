@@ -83,7 +83,7 @@ public class DeathBarrierBehavior : MonoBehaviour
                     f.taken = true;
                     f.AssignPlayer(player.GetComponent<BasePlatformMovement>(), true);
                 }
-                if (gc.Flaps.Exists(x => !x.GetComponent<Flap>().taken))
+                if (gc.Flaps.Count > 3 && gc.Flaps.Exists(x => !x.GetComponent<Flap>().taken))
                 {
                     Flap f = gc.Flaps.First(x => !x.taken);
                     f.taken = true;

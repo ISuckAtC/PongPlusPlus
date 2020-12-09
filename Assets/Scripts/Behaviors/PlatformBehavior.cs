@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlatformBehavior : MonoBehaviour
 {
+    public Sprite InactiveScore;
+    public Sprite ActiveScore;
     public GameObject WinScreen;
     public GameObject WinScreenFinal;
     public GameObject deathBarrier;
@@ -36,7 +38,29 @@ public class PlatformBehavior : MonoBehaviour
 
     public void SetScore(int score)
     {
-
+        for (int i = 0; i < GameData.MatchesToWin; ++i)
+        {
+            GameObject light = Instantiate(new GameObject(), transform.position, Quaternion.identity);
+            light.name = "PlayerLight " + i;
+            light.transform.SetParent(transform);
+            SpriteRenderer spriteRenderer = light.AddComponent<SpriteRenderer>();
+            if (i < score) spriteRenderer.sprite = ActiveScore;
+            else spriteRenderer.sprite = InactiveScore;
+            if (Horizontal)
+            {
+                light.transform.position = new Vector3(
+                    (transform.position.x - (sr.bounds.size.x / 2) + ((sr.bounds.size.x / (GameData.MatchesToWin + 3)) * (i + 2))),
+                    transform.position.y, 
+                    transform.position.z);
+            }
+            else
+            {
+                light.transform.position = new Vector3(
+                    transform.position.x,
+                    (transform.position.y - (sr.bounds.size.y / 2) + ((sr.bounds.size.y / (GameData.MatchesToWin + 3)) * (i + 2))),
+                    transform.position.z);
+            }
+        }
     }
 
     // Update is called once per frame

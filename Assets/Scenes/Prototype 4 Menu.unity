@@ -1420,8 +1420,8 @@ MonoBehaviour:
   Assign: 1
   StartDelay: 3
   EndDelay: 5
-  SpawnBallsOnBored: 0
-  GhostWallsOnBored: 1
+  SpawnBallsOnBored: 1
+  GhostWallsOnBored: 0
   DisplayFPS: 0
   MainMenuScene: Prototype 4 Menu
   MapMenuScene: Prototype 4 MapSelect Mikkel

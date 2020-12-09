@@ -35,6 +35,7 @@ public class GameControl : MonoBehaviour
     {
         Debug.Log("START");
         audioSource = GetComponent<AudioSource>();
+        if (audioSource == null) audioSource = gameObject.AddComponent<AudioSource>();
         MatTransparent = Resources.Load<Material>("Transparent");
         MatDefault = Resources.Load<Material>("Default");
         if (!GameData.S_DisplayFPS) GameObject.Find("FPS").SetActive(false);
@@ -54,6 +55,8 @@ public class GameControl : MonoBehaviour
             {
                 for (; i < players.Count; ++i) 
                 {
+                    pb = players[i].GetComponent<PlatformBehavior>();
+                    dbb = pb.deathBarrier.GetComponent<DeathBarrierBehavior>();
                     Debug.Log(dbb.name + "'s player is inactive, deactivating.");
                     dbb.Destroyed = true;
                     dbb.GetComponent<SpriteRenderer>().material = dbb.dead;
