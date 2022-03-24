@@ -2725,14 +2725,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Assign: 0
-  AssignStartDelay: 0
-  AssignEndDelay: 0
-  AssignSpawnBallsOnBored: 0
-  AssignGhostWallsOnBored: 0
-  AssignDisplayFPS: 0
-  AssignMainMenuScene: 
-  AssignMapMenuScene: 
-  AssignPlayerMenuScene: 
+  StartDelay: 0
+  EndDelay: 0
+  SpawnBallsOnBored: 0
+  GhostWallsOnBored: 0
+  DisplayFPS: 0
+  MainMenuScene: 
+  MapMenuScene: 
+  PlayerMenuScene: 
+  MainMixer: {fileID: 0}
+  LowMixer: {fileID: 0}
+  PostDeathDelay: 0
+  WinSound: {fileID: 0}
+  BuffSound: {fileID: 0}
+  BumperSound: {fileID: 0}
+  ButtonSound: {fileID: 0}
+  BounceSound: {fileID: 0}
+  DeathSound: {fileID: 0}
+  BreakSound: {fileID: 0}
+  AISpeed: 0
   Debug: 0
   DebugAIs: 00000000
 --- !u!114 &1443329156
@@ -2767,6 +2778,7 @@ MonoBehaviour:
   PlatformBoundaryStart: 2
   BallSpawns:
   - {fileID: 941049809}
+  Flaps: []
 --- !u!4 &1443329157
 Transform:
   m_ObjectHideFlags: 0
@@ -2788,6 +2800,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 536120815212591267, guid: 8b7e863585ab0dd4491d93d4c930a515,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261441125098909729, guid: 8b7e863585ab0dd4491d93d4c930a515,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4380933886086420076, guid: 8b7e863585ab0dd4491d93d4c930a515,
         type: 3}
       propertyPath: m_Name

@@ -209,6 +209,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 536120815212591267, guid: 8b7e863585ab0dd4491d93d4c930a515,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261441125098909729, guid: 8b7e863585ab0dd4491d93d4c930a515,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4380933886086420076, guid: 8b7e863585ab0dd4491d93d4c930a515,
         type: 3}
       propertyPath: m_Name
@@ -1089,6 +1099,9 @@ MonoBehaviour:
   MainMenuScene: 
   MapMenuScene: 
   PlayerMenuScene: 
+  MainMixer: {fileID: 0}
+  LowMixer: {fileID: 0}
+  PostDeathDelay: 0
   WinSound: {fileID: 0}
   BuffSound: {fileID: 0}
   BumperSound: {fileID: 0}
@@ -1096,6 +1109,7 @@ MonoBehaviour:
   BounceSound: {fileID: 0}
   DeathSound: {fileID: 0}
   BreakSound: {fileID: 0}
+  AISpeed: 0
   Debug: 0
   DebugAIs: 01010101
 --- !u!114 &571983767
